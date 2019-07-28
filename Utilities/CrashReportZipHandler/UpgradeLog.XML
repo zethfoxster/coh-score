@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="CrashReportZipHandler">
+</Property><Property Name="Solution File" Value="C:\game\code\CoH\Utilities\CrashReportZipHandler\CrashReportZipHandler.sln">
+</Property><Property Name="Date" Value="Monday, August 20, 2012">
+</Property><Property Name="Time" Value="14:14 PM">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="CrashReportZipHandler.sln" Description="File successfully backed up as C:\game\code\CoH\Utilities\CrashReportZipHandler\CrashReportZipHandler.sln.old">
+</Event><Event ErrorLevel="2" Project="CrashReportZipHandler" Source="CrashReportZipHandler.vcproj" Description="The project file 'C:\game\code\CoH\Utilities\CrashReportZipHandler\CrashReportZipHandler.vcproj' cannot be updated to this Visual Studio 2005 version format because it is read-only on disk. Please set the permissions on the project file and re-open it to migrate the project.">
+</Event><Event ErrorLevel="2" Project="" Source="CrashReportZipHandler.sln" Description="Solution file 'C:\game\code\CoH\Utilities\CrashReportZipHandler\CrashReportZipHandler.sln' cannot be converted because it is read-only on disk. To convert the solution, change the permissions on the solution file to allow modification and re-open it.">
+</Event><Event ErrorLevel="3" Project="" Source="CrashReportZipHandler.sln" Description="Not Converted">
+</Event></UpgradeLog>

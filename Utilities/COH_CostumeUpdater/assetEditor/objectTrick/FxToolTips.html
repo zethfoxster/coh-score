@@ -1,0 +1,585 @@
+<html><head></head>
+<body>
+<id="Sample">
+<h1 style="color:255 0 0">Trick Files and Flags - City of Heroes - Confluence</h1>
+<h2 style="color:Blue">Trick Files and Flags - City of Heroes - Confluence</h2>
+<h3 style="color: #FF0000">Trick Files and Flags - City of Heroes - Confluence</h3>
+<p>Trick Files and Flags - City of Heroes - Confluence\r\n</p>
+</id>   
+
+<id="FX">
+<h2 style="color:Blue">FX</h2>
+<p>The FX script is a series of key names and values used to define the type and order of operations within an FX system. The FX scripts operate at 3 levels: FX, Conditions, and Events. FX Script - information affecting the entire FX script. These keys will appear only once. Unless otherwise specified, all external files called from an FX script are pathed to ...game\data\fx\ Alternately, using ":" before a filename will change the path to be relative to the path of the FX script. All FX Scripts begin with "FXInfo" tag and end with "end". Anything placed below FXInfo, but before any Condition is considered part of the FXInfo block, and applies to every Condition and Event in the entire script. Condition triggers: Time, TimeOfDay, PrimeHit, Prime1Hit, Prime2Hit, Prime3Hit, Prime4Hit, Prime5Hit, PrimeBeamHit, Force, Death.</p>
+</id>
+
+
+<id="Condition">
+<h2 style="color:Blue">Condition</h2>
+Conditions determine when the Events will actually trigger. The events inside the Condition start when *On XXXX becomes true. Each condition needs to be ended with an end statement. Condition- details the criteria for triggering an FX event. There can be multiple Conditions set.  A Condition can call multiple events. 
+</id>
+
+
+<id="Event">
+<h2 style="color:Blue">Event</h2>
+Event - describes the particulars of an FX event. Each event creates an FX node. 
+</id>
+
+
+<id="LifeSpan">
+<h2 style="color:Blue">LifeSpan</h2>
+LifeSpan 200 (set to -1 = ignore lifespan altogether) - Measured in frames (1/30s of a second). This is the simple way to specify an fx's life span. When it hits this age, it just dies. You can make more sophisticated lifespan info, and death actions by setting an age condition for death below, but this works for simple fx. It also is good as a fail safe if somehow the normal death conditions don't work (ex: the fireball has been travelling for 300 frames (10 seconds) and still hasn't hit anything, so kill it).
+Every FX system that is used as a one-shot effect (ie. not being used as a continuous effect) should have a Lifespan defined for it at the FX level.  Otherwise, the FX script will stay in memory.
+</id>
+
+<id="Flags">
+<h2 style="color:Blue">Flags</h2>
+Flags: InheritAlpha, IsArmor, InheritAnimScale, DontInheritBits, DontSuppress, DontInheritTexFromCostume, SoundOnly, PowerLoopingSound. Everything defined in the FX block applies to all conditions and events in the entire FX script.
+
+<h3 style="color:Green">InheritAlpha</h3>
+Inherit the alpha value from the entity the FX is attached to
+
+<h3 style="color:Green">IsArmor</h3>
+Is an armor-type FX... Sort of a hack. If you have an FX on you with IsArmor flag, then even though the FX turns your body is invisible, it won't make other FX on you, for examples swords, invisible.
+
+<h3 style="color:Green">InheritAnimScale</h3>
+The FX file's animation speed will be scaled based on the scales froming from the Animation system, this consists of both a- automatic scaling based on entity size and b- Scale parameter in the sequencer
+
+<h3 style="color:Green">DontInheritBits</h3>
+Presumably, this causes the FX script to not inherit any anim bits from the parent entity.  I'm unclear on when you'd want to use this.
+
+<h3 style="color:Green">DontSuppress</h3>
+Forces the FX script to ignore any suppression, namely from the graphic option to supress FX when close to the camera.  Probably want to make sure that FX scripts for weapons or costume pieces are flagged with this.
+
+<h3 style="color:Green">NoReticle</h3>
+Not used (replaced by a flag in the enttype file. If we ever had a situation where we wanted the reticle on a entity to be sometimes visible and sometimes not visible, we could revisit this
+
+<h3 style="color:Green">AdoptParentEntity</h3>
+unclear but its used to apply an effect onto the parent entity. "bot_invisible.fx"
+
+<h3 style="color:Green">AnimScale</h3>
+1.0 Scales the FX file's animation speed as if it was from inherited above. This currently scales the speed of particle systems, Geoms, and attached sequencers.
+
+<h3 style="color:Green">OnForceRadius</h3>
+0.0. Any "On Force" conditions under this fx system use this radius for their trigger. Unfortunately, they all have to share the same radius, and they also share the same epicenter.
+
+<h3 style="color:Green">ClampMinScale</h3>
+(X Y Z) Clamps the minimum scale value for all Events in the FX script.  Useful for keeping things like an arrow from getting too big or too small when attached to a radically scalled critter.  This will trump any scale values set through behavior scripts.
+
+<h3 style="color:Green">ClampMaxScale</h3>
+(X Y Z)Same as above, but for maximum scale.
+
+<h3 style="color:Green">DontInheritTexFromCostume</h3>
+When an FX script is attached to a costume piece, which uses the Tex tags to change it's base textures, geometry in the FX script can inherit the texture from that costume piece.  This flag prevents that from happening.
+
+<h3 style="color:Green">NotCompatibleWithAnimalHead</h3>
+Used specifically for eye auras, or effects containing eye auras. This prevents the effect from appearing on characters with animal heads, whose eye placements vary greatly from those of human heads.
+
+<h3 style="color:Red">SoundOnly</h3>
+OBSOLETE: Sets the size of the effect to the size of the sound. This flag is overridden if other flags are present and automatically set if no other flags are present. Therefore, it is not needed.
+
+<h3 style="color:Red">PowerLoopingSound</h3>
+OBSOLETE: Was intended to allow users to override the fade out of toggle powers. However, no option for enabling this behavior was ever exposed. Therefore, it is non-functional.
+</id>
+
+
+<id="Repeat">
+<h2 style="color:Blue">Repeat</h2>
+When this condition is met, do it this many ADDITIONAL times, not just once.
+</id>
+
+
+<id="RepeatJitter">
+<h2 style="color:Blue">RepeatJitter</h2>
+Takes one positive integer (below 256), jitter on the Repeat condition key, so if Repeat is 50 and RepeatJitter is 20, it will repeat between 30 and 70 times, randomly 
+</id>
+
+
+<id="Random">
+<h2 style="color:Blue">Random</h2>
+Random 1 Instead of doing every event under this condition, choose one at random. Works in tandem with repeat. 
+</id>
+
+
+<id="Chance">
+<h2 style="color:Blue">Chance</h2>
+Chance [%] - This is the chance the event will actually happen when condition is met. 0.1 = 10% chance. If you leave it zero or blank, it defaults to %100 
+</id>
+
+
+<id="DoMany">
+<h2 style="color:Blue">DoMany</h2>
+Do this condition every time this condition is met instead of just the first time. 
+</id>
+
+
+<id="Time">
+<h2 style="color:Blue">Time</h2>
+Used with "ON Time" Or "ON Cycle" with cycle time has to be greater than 0. Starts X frames (30 frames per second) from the time the effect started.  This is the default condition.
+</id>
+
+
+<id="DayStart">
+<h2 style="color:Blue">DayStart</h2>
+Used with "ON TimeOfDay" and it ccurs at the time of day between [DayStart,DayEnd). Decimal numbers are allowed, and ranges across midnight are allowed. For exampl: DayStart 1.5, DayEnd 2.25. 
+</id>
+
+
+<id="DayEnd">
+<h2 style="color:Blue">DayEnd</h2>
+Used with "ON TimeOfDay" and it ccurs at the time of day between [DayStart,DayEnd). Decimal numbers are allowed, and ranges across midnight are allowed. For exampl: DayStart 1.5, DayEnd 2.25. 
+</id>
+
+
+<id="ForceThreshold">
+<h2 style="color:Blue">ForceThreshold</h2>
+Used with "ON Force" If a physForceType force (from fxbhvr files) is applied and this node is within that radius, and the power applied to this fx object exceeds the ForceThreshold (a condition parameter), the condition is satisfied. The Time parameter determines how long it waits before becoming active again. That way, several forces in the same frame don't trigger the effect several times. ForceThreshold Defaults to 0. Only used if the "On" is "Force". Power from force trigger must equal or exceed this threshold before the condition is satisfied. If it is not set or is set to 0, any force will trigger condition. The Power is the physForcePower on the bhvr force, scaled down by greater distance from the epicenter of the force.
+</id>
+
+
+<id="TriggerBits">
+<h2 style="color:Blue">TriggerBits</h2>
+Used with  "ON Triggerbits". Means these events happen when the MUD bit is set. This event will only happen the first time the MUD bit is presenent, unless the DoMany flag is also used.
+</id>
+
+
+<id="On">
+<h2 style="color:Blue">On</h2>
+On triggers a condition or event when one of the following triggers is true
+
+<h3 style="color:Green">Time</h3>
+Starts X frames (30 frames per second) from the time the effect started.  This is the default condition.
+
+<h3 style="color:Green">TimeOfDay</h3>
+DayStart 1.5, DayEnd 2.25. Occurs at the time of day between [DayStart,DayEnd). Decimal numbers are allowed, and ranges across midnight are allowed.
+
+<h3 style="color:Green">PrimeHit or Prime#Hit</h3>
+Starts when the node named "Prime" arrives at it's target. Usually you will name the main part of a projectile as EName "Prime", then put the explosion part of the fx in a condition with "On PrimeHit". PrimeHit is also used by the system to track the timing of an effect that is flagged as "DelayedHit" in a PFX script. PrimeHit also works with other prime event names.
+
+<h3 style="color:Green">PrimeBeamHit</h3>
+Starts when the geometry on the node named "Prime" has stretched to the point that it has reached it's target. (This assumes that prime actually has geometry and a beam behavior)
+
+<h3 style="color:Green">Cycle</h3>
+needs Time # and time has to be greater than 0 or the game will have a divid by zero erro, Every # frames, trigger all of the events in this Condition. This will not trigger immediately. It's first instance will be delayed by the amount of time defined for the cycle. Also, every copy of this event will be created with the same EName. If other events refer to this events 'EName', they will use the very first instance of this event. A cycle event must have a Lifespan defined for it, otherwise it would build up indefinitely. Also, a Cycle event will get created even after a destroy all event.  The only thing that will stop a Cycle event from continuing to play is having a lifespan on the FX event itself.
+
+<h3 style="color:Green">Force</h3>
+needs ForceThreshold #. If a physForceType force (from fxbhvr files) is applied and this node is within that radius, and the power applied to this fx object exceeds the ForceThreshold (a condition parameter), the condition is satisfied. The Time parameter determines how long it waits before becoming active again. That way, several forces in the same frame don't trigger the effect several times. ForceThreshold Defaults to 0. Only used if the "On" is "Force". Power from force trigger must equal or exceed this threshold before the condition is satisfied. If it is not set or is set to 0, any force will trigger condition. The Power is the physForcePower on the bhvr force, scaled down by greater distance from the epicenter of the force.
+
+<h3 style="color:Green">Death</h3>
+Triggered when the FX system is told to die. When this dies, then the fx system starts fading out.  It is very important that this have a lifespan or the FX will never die.  Once Death has started, events in the condition are done, and then no other creation events are done, even if they evaluate to true. Existing events continue till all death events are dead before they are triggered to fade out.
+
+<h3 style="color:Green">Triggerbits</h3>
+needs Triggerbits MUD. Means these events happen when the MUD bit is set. This event will only happen the first time the MUD bit is presenent, unless the DoMany flag is also used.
+</id>
+
+
+<id="EName">
+<h2 style="color:Blue">EName</h2>
+EName [NodeName], Ename serves two purposes: 
+1. If this event is a call to create an fx node, EName is the name to give that new fx node. This name is used in the same way the InpName is used, to refer to the node elsewhere in the file. If you don't intend to refer to this event anywhere else in the file, you don't need an EName. 
+2. if this event changes an fxnode: for example if it destroys it, EName is how you specify which fx node you want to destroy. 
+</id>
+
+            "Create",
+            "Destroy",
+            "Local",
+            "Posit",
+            "PositOnly",
+            "SetLight",
+            "SetState",
+            "Start",
+            "StartPositOnly"
+<id="Type">
+<h2 style="color:Blue">Type</h2>
+This determines how the event behaves in relation to the node it's created at.  For the most part, these are functionally identical to what can be done using the Create, Inherit, and Update settings outlined below.
+
+<h3 style="color:Green">Create</h3>
+Create a node: Specify how you want the node to inherit or update relative to the creating node with the following flags.  
+
+<h3 style="color:Green">Destroy</h3>
+Destroys the named node.  Using ALL for the EName will destroy all events in the FX script 
+
+<h3 style="color:Green">Inherit</h3>
+Inherit - Works in conjunction with the Create type.  Inherits these values from the node: Position, Rotation, Scale, SuperRotation, All, None
+
+<h3 style="color:Green">Local</h3>
+Create a node: takes everything from the parent every frame. 
+
+<h3 style="color:Green">Posit</h3>
+Create a node: takes the initial rotation, scale, and position of the parent, and then updates the position every frame to match the parent 
+
+<h3 style="color:Green">PositOnly</h3>
+Create a node: takes the initial position (not rotation or scale) of the parent and then updates the position every frame to match the parent 
+
+<h3 style="color:Green">Start</h3>
+Create a node: takes the initial rotation, scale, and position of the parent, and never again gets anything from the parent 
+
+<h3 style="color:Green">StartPositOnly</h3>
+Create a node: takes the initial position (not rotation or scale) of the parent, and never again gets anything from the parent 
+
+<h3 style="color:Green">Update</h3>
+updates these values (Position, Rotation, Scale, SuperRotation, All, None) every frame after creation 
+</id>
+
+<id="Inherit">
+<h2 style="color:Blue">Inherit</h2>
+Inherit - Works in conjunction with the Create type.  Inherits these values from the node: Position, Rotation, Scale, SuperRotation, All, None
+</id>
+
+
+<id="Inherit_Position">
+<h2 style="color:Blue">Inherit Position</h2>
+Position Start with the position of the creating node. Inherit - Works in conjunction with the Create type.
+</id>
+
+
+<id="Inherit_Rotation">
+<h2 style="color:Blue">Inherit Rotation</h2>
+Start with the rotation of the creating node. Inherit - Works in conjunction with the Create type. 
+</id>
+
+
+<id="Inherit_SuperRotation">
+<h2 style="color:Blue">Inherit SuperRotation</h2>
+Same as rotation (includes that flag too), but also rotates velocities and position offsets. For backwards compatibility. Inherit - Works in conjunction with the Create type. 
+</id>
+
+
+<id="Inherit_Scale">
+<h2 style="color:Blue">Inherit Scale</h2>
+ Start with the scale of the creating node. Inherit - Works in conjunction with the Create type. 
+</id>
+
+
+<id="Update">
+<h2 style="color:Blue">Update</h2>
+updates these values (Position, Rotation, Scale, SuperRotation, All, None) every frame after creation 
+</id>
+
+<id="Update_Position">
+<h2 style="color:Blue">Update Position</h2>
+Updates Position values every frame after creation. 
+</id>
+
+
+<id="Update_Rotation">
+<h2 style="color:Blue">Update Rotation</h2>
+Updates Rotation values every frame after creation. 
+</id>
+
+
+<id="Update_SuperRotation">
+<h2 style="color:Blue">Update SuperRotation</h2>
+Updates not only Rotation  but also the Rotates Velocities and Position offsets values every frame after creation. For backwards compatibility. 
+</id>
+
+
+<id="Update_Scale">
+<h2 style="color:Blue">Update Scale</h2>
+Updates Scale values every frame after creation.
+</id>
+
+<!--
+</id>
+
+
+<id="">
+<h2 style="color:Blue"></h2>
+
+
+
+
+--------------------------------------------------------------------------------
+
+
+Events
+Events are things that happen when a condition is met. The most common event is a call to create a new fx node with geometry, particle systems, animations, or child fx. That node behaves in a way set by it's .bhvr behavior file. The other common event is a call to destroy an existing node (and with it all geometry, particles, animations, and child fxnodes attached to it) One condition can have several events. An fx file can have up to 50 events.
+
+
+SetLight - makes parent entity pulse (used for objective objects, and to add primitive blast flash to an entity or or to brighten or darken it. See the MaltaBot's missile powers and data/fx/hardcoded/pulse.fx for examples. 
+
+For Fx with SetLight Event that makes parent entity pulse (used for objective objects, and to add primitive blast flash to an entity or or to brighten or darken it. See the MaltaBot's missile powers and data/fx/hardcoded/pulse.fx for examples.
+
+ Example
+Event
+     Type SetLight
+     Bhvr :pulse.bhvr
+     LifeSpan 20
+End 
+
+Then in the behavior file referred to above, we would find the following values:
+
+ Behavior File
+Behavior
+PulseBrightness 3.0 (Ramp up to three times brighter than normal)
+PulsePeakTime 15 (After 15 ticks, be fully 3X brightness)
+PulseClamp 0 (This is a flag override. If 1, that says just be the brightness I told you to be and don't ramp up and down) 
+
+With this setup, the entity will go from normal brightness at frame 0 to 3 times brightness at frame 15. Then from 15 to the end of the Event's life at 20 it will ramp back down to normal brightnes.
+
+At [node]
+At tells where to create your new fx node. At is the name of another fx node or a bone name. For the purpose of FX scripts, these are all valid nodes:
+
+[bone_name] - uses a specifc bone on the parent entity 
+Target - Current target of power calling this effect, or target of entity playing the effect 
+[EName] - Other events within the FX script can be used as a node by referencing their EName 
+T_[bone_name] - uses a specific bone on the target 
+C_[bone_name]- uses a specfiic bone on a child entity attached to the parent entity (http://code:8081/display/cs/Bone+NamesReserved bone names for animated entities) 
+Origin - Used mainly for ChildFX, use the parent event that called them 
+AltPiv [#]
+If the fxnode you specified in At has geometry (Geom), and that geometry has Alternate pivot points, this tells the event to attach at one of the alternate pivot points instead of at the main pivot point. (Alternate Pivot points are set up by artists by giving the geometry child geometry named altpivot_01, altpivot_02, or altpivot_03, etc.)
+
+AnimPiv [bone_name]
+If the fxnode you specified in At has an animated entity (Anim) attached to it, this tells the event to attach to a specified bone in that entity's skeleton.
+
+CameraSpace
+Cameraspace tells the FX system to render in virtual cameraspace.  It's still placed in the world, but relative to the camera's position in the world...so it appears to render as a fullscreen, cameraspace effect.
+
+ C:gamefixdatafxGENERICFadesBlackout.fx
+    Event
+        Type    Start
+        CameraSpace
+        Part    :Blackout.part
+        Part    :Blackout_Edges.part
+    End 
+
+Bhvr [behavior_script.bhvr]
+Bhvr slowprjct1.bhvr
+Bhvr gives the name of the behavior file that will direct this new node's actions. See the bhvr file description for more. If there is no behavior file called, the node will just sit there. For more info, see [VFX - Behavior Scripts (.BHVR)]
+
+BhvrOverride
+Behavior Override allows you to override values in a behavior script for the event that's calling it.  For example:
+
+ Example
+Event
+Type start
+     At origin
+     Bhvr behaviors/smallburst3.bhvr
+     BhvrOverride
+          PositionOffset 0.0 2.0 0.0
+          Gravity 0.05
+     End
+     Part1 :FireHands2Small.part
+     Part2 :FireHands2Small.part
+     Part3 :FireHands2Small.part
+     Lifespan 300
+End 
+
+The key "BhvrOverride" means that the values below it (here, PositionOffset + Gravity for example) will override the values for those keys in the Bhvr file (smallburst3.bhvr, here). You have to put the Behavior and End keys, just like it was a behavior file, but in between those you can include as many behavior keys as you want.  Behavior Overrides can also be used without calling a specific behavior script first.
+
+NOTE: A number of things defined in behavior scripts cannot be changed using behavior overrides.
+
+FadeIn/FadeOut values 
+ScaleRate or EndScale values 
+SetLight Pulse 
+Magnet [node]
+If the bhvr file has magnetism, or a trackrate (the bhvr file is not completely cleaned up here), this is the fx node toward which it heads. If the magnet node doesn't exist, or if it dies, the node will(obviously) stop moving toward it.
+
+LookAt [node]
+If the bhvr file has a lookat parameter (the bhvr file is not completely cleaned up here), this is the fx node the node faces. If the lookat node doesn't exist, or if it dies, the node will (obviously) stop looking at it. If LookAt Camera is specified, that's a special command that has the object always face the camera.
+
+Physics Tags
+These tags only work in conjunction with events using physics settings in a behavior script
+
+CEvent [fx_script.fx] - Collision Event: A physics enabled node calls this child fx file to play at time and place of collision. 
+CThresh [value] - Collision Threshold: Determines sensitivity of collision event. A value of 1 will glance off of most surfaces without calling the Collision Event. 
+CDestroy 1 - Toggle set to 1 h1. kill this physics enabled node upon collision. (Note that particles attached to this node are not also killed.) Otherwise, the node will continue after a collision. 
+JEvent [fx_script.fx] - If the fxgeo is jointed, and the joint breaks, this event is called, at the position of the joint anchor. 
+JDestroy 1 - The geo will be destroyed after the joint breaks. 
+PhysicsOnly
+If flag is present in the Event, it doesn't get created unless the client has physics enabled in their gfx options.
+
+SoftwareOnly
+If flag is present in the Event, it doesn't get created unless the client has hardware support enabled.
+
+HardwareOnly
+If flag is present in the Event, it doesn't get created unless the client has hardware support enabled.
+
+Geom [geo_name]
+If you want this node to have static geometry attached to it, this is the name of the geometry in the object library. Note you don't need any path for this, just a valid name. Valid names can be found in game/data/object_library/whateverfile whateverfile.txt, which lists all the geometry in that whateverfile. If multiple Geom cals are made, the event will use a randomly chosen one from the list.
+
+ C:gamedatafxPOWERSGravityControlGCPropel1.fx
+Event
+    EName    Prop_chunk_node2
+    Type    Posit
+    At    Prop_chunk
+    Geom    Prop_BoomBox
+    Geom    Prop_box_recruit
+    Geom    Prop_Jackhammer
+    Geom    Computer_Monitor_01
+...
+End 
+
+WorldGroup [library_piece]
+You can attach library pieces to events just like geometry or animations.  This is rarely used, and I'm not sure it actually works anymore.  We generally opt to call static geometry using the Geom command instead of calling whole library pieces.
+
+ C:gamefixdatafxHardcodedWorldGroupWorldGroup.fx
+Event                                
+    Type    Local                
+    At    Root                 
+    WorldGroup External  
+End                                  
+
+Anim [EntType]
+Calls an animated entity for this event.. Note that you don't put .txt at the end of the animation name.
+
+NewState [AnimBits]
+Presumably, works in conjunction with Anim as a way to set the entity into a particular move through animBits, rather than having it play it's ready move.
+
+Part [particle_script.part]
+Creates a particle emitter at this node. The path is game\data\fx\ so you need to give the full path from there.  Alternatively, you can use ":" to set the path relative to where the FX script is located.
+
+ Calls ..gamedatafxsmoke_trail.part
+    Event
+        EName     Prime
+        Type    Local
+        At    Origin
+        Part    smoke_trail.part
+    End 
+
+You can create multiple particle emitters in one Event and any of these are acceptable for calling a particle script.  There is no limitation on reusing them within the same Event
+
+Part 
+Part1 
+Part2 
+Part3 
+Part4 
+Part5 
+PMagnet [node]
+This is the name of the fxnode that this node's particle systems should use as their Magnet point (if the particle system has magnetism) By default, PMagnet is the node it is attached to (Prime in this case).
+
+POther [node]
+This is the name of the fxnode that this node's particle systems should if they use an Other parameter (See particle systems for what you might need other for) By default, POther is the node it is attached to (Prime in this case).
+
+While [AnimBits]
+Keep this event alive only while these AnimBits are present in the sequencer stack.
+
+ Example
+Event
+     Type Local
+     While FORWARD
+     At WepR
+     Part :Sparks.part
+End 
+
+Means as soon as the Forward bit is not set, turn this Event off.  Particularly useful in conjunction with On Triggerbits condition, DoMany condition flag, and OneAtATime event flag.
+
+Until [AnimBits]
+Turn this event off when these bits get set:
+
+ Example
+Event
+     Type Local
+     Until FORWARD
+     At WepR
+     Part :Sparks.part
+End 
+
+Means as soon as the Forward bit is set, turn this Event off. Particularly useful in conjunction with On Triggerbits condition, DoMany condition flag, and OneAtATime event flag.
+
+Flag OneAtATime
+Works in conjunction with the DoMany flag for Conditions.  This only allows one instance of this event to exist at a time.  You must use a unique EName for this event flag to work.
+
+ Example
+Condition
+     On TriggerBits
+     TriggerBits AIR #(Go off when this bit is set)
+     DoMany 1 #(Fire this condition over every time the triggerbit is set)
+          Event
+               EName Ribbons
+               While AIR #(End when this bit is not set)
+               Type Local
+               Flags OneAtATime #(Only do this event if there is no node named "ribbons" exists)
+               At Root
+               Geom FX_IceWeapon
+               Part1 :ribbon.part
+          End
+End 
+
+SetState [AnimBit]
+Set these AnimBits on the named node (including on any attached animation and child fx)
+
+Sound [sound_file] [radius] [ramp] [volume]
+Calls a sound asset to play.  Sound Name(from the bank file) Radius(In feet) FadeDist(In feet) Volume multiplier(1.0 - 0.0)
+
+If more than one sound is defined, the FX system will randomly pick one to play for that event.
+
+...
+
+Sound Femjump1 50 10 .33
+Sound Femjump2 50 10 .33
+Sound Femjump3 50 10 .33
+Sound Femjump4 50 10 .33
+...
+
+ChildFX [fx_script.fx]
+A new fx will be created with three inputs:
+*First input: this fx node.
+*Next input: this fx node's magnet, if any.
+*Next input, this fx node's LookAt point, if any.
+
+Note that you do put .fx at the end of the ChildFx's name.
+
+Cape [cape_file.cape]
+Attaches a cape or cloth onto this FX. If more than one cape is specified one is picked at random.  To attach more than one cape create more than one Event. See Capes.rtf for more information on cape files.
+
+Power [min] [max]
+There is a whole system in place for building an FX that can scale up or down based on a Power variable passed in by the system's creator. In the original design your power's FX changed as you grew more powerful.
+
+Power 0 5
+Means only play this Event if the FX is created at a power level between 0 and 5 (out of 10). However, the powers system doesn't support this - all powers fx are currently created at Power 10.
+
+This feature is currently used by the jump in the water fx. The faster you hit the water, the bigger the splash.
+
+There is a fancier system in the particles for scaling powers, too. Many of the parameters actually could take two values, a maximum and a minimum to be set by the power level, so the power changing was continuous as you improved your powers. This has yet to be used.
+
+LifeSpan [frames]
+Destroys event after X frames (30 fps)
+
+LifeSpanJitter [frames]
+Randomly adds or subtracts a value between 0 and this number from the event node's lifespan.
+
+
+--------------------------------------------------------------------------------
+
+Other Info
+Special Names
+1. Any bone name: if an input is named a bone name, it is attached to that bone of the first entity the fx parameters mention.
+
+2. Camera: If LookAt is "Camera", it will face the camera.
+
+3. Prime: Several conditions are based on what happens to the fx node named "Prime" Such as PrimeHit and PrimeBeamHit
+
+4. All: Type Destroy can take "All" at the EName, and the fx will be destroyed.
+
+Unused Variables
+PowerLoopingSound Don't worry about this. When we shipped, we had a problem that fx sounds on continuing fx could become very annoying after a while...Never mind, it's a long story.
+
+DefaultSurface. Specialty flag for bits. Example:
+Condition
+On DefaultSurface
+Means these Events are done if no Event triggered by Triggerbits anywhere else in the FX is done. Not an Elegant flag, it was just for a particular problem, and should only be used like Mike Henry uses it in his Footfall surface sound FX.
+
+PerformanceRadius Unused. Was going to be a way to tell the FX not to draw at after a certain distance.
+
+Lighting 1 this FX either doesn't have a parent entity or will be detached from its parent, but it has the lighting needs of an entity (it needs to calculate the weighted average of all nearby lights in a mission map, and to generate a custom light color and direction.) A world fx attached to a tray piece, but had an Anim in it might need this flag.
+
+Labels parameters      
+Labels
+Add Labels Done 
+Enter labels to add to this page:
+     Looking for a label? Just start typing. 
+     
+Add Comment 
+
+     
+
+Powered by Atlassian Confluence 3.4.9, the Enterprise Wiki 
+Printed by Atlassian Confluence 3.4.9, the Enterprise Wiki. 
+  |  Report a bug  |  Atlassian News Link to this PageLink to this Page
+Link:Tiny Link:Wiki Markup:
+Close   
+
+-->
+        
+</body>
+</html>

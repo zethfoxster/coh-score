@@ -1,0 +1,389 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{0066b6c1-a407-486a-a78c-9580866ed4e2}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat</Extensions>
+    </Filter>
+    <Filter Include="Source Files\Mapserver">
+      <UniqueIdentifier>{41001294-bbea-41c4-844e-9326e748acac}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Mapserver\entity">
+      <UniqueIdentifier>{d51d9949-aec0-42f9-a539-caa3d1bc49de}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Common">
+      <UniqueIdentifier>{65572da2-9f6a-414c-8d44-35acfa497d8e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{a03c4f8d-47c3-409f-b524-cf243ada1dd3}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="accountservercomm.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="arenacomm.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\auction\Auction.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="auctionservercomm.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\auth\auth.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="authcomm.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\auth\authUserData.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="backup.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="beaconservercomm.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="chatrelay.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="clientcomm.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="container.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="container_diff.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="container_flatfile.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="container_merge.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="container_sql.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="container_tplt.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="container_tplt_utils.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\container\container_util.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\container\containerEventHistory.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="dbdispatch.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="dbEventHistory.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="dbimport.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="dbinit.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="dblog.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="dbmission.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="dbmsg.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="dbperf.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="dbproxy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="dbproxyrelay.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="dbrelay.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="doors.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="launchercomm.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="loadBalancing.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="logserver.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mapcrashreport.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mapxfer.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="missionservercomm.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="namecache.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="offline.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="queueservercomm.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="serverAutoStart.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="servercfg.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="sql_fifo.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="statagg.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\MapServer\dbcomm\staticMapInfo.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="statservercomm.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="status.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="svrmoncomm.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="turnstileDb.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="waitingEntities.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="weeklyTFcfg.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\auction\Xact.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\account\AccountData.c">
+      <Filter>Source Files\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\ClientLogin\clientcommLogin.c">
+      <Filter>Source Files\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\MissionSearch.c">
+      <Filter>Source Files\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\MissionServer\missionserver_meta.c">
+      <Filter>Source Files\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\TurnstileServer\TurnstileCommon.c">
+      <Filter>Source Files\Common</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="accountservercomm.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\auction\Auction.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="auctionservercomm.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="beaconservercomm.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="dbproxy.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="dbproxyrelay.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\entity\gametypes.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="loadBalancing.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="missionservercomm.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="queueservercomm.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="serverAutoStart.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="statagg.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="turnstileDb.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\auction\Xact.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MapServer\entity\SgrpStats.h">
+      <Filter>Source Files\Mapserver\entity</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\account\AccountData.h">
+      <Filter>Source Files\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\ClientLogin\clientcommLogin.h">
+      <Filter>Source Files\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\container\containerEventHistory.h">
+      <Filter>Source Files\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\MissionSearch.h">
+      <Filter>Source Files\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\MissionServer\missionserver_meta.h">
+      <Filter>Source Files\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="arenacomm.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\auth\auth.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="authcomm.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\auth\authconn.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\auth\authUserData.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="backup.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="chatrelay.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="clientcomm.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\comm_backend.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="container.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="container_diff.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="container_flatfile.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="container_merge.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="container_sql.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="container_tplt.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="container_tplt_utils.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\container\container_util.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="dbdispatch.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="dbEventHistory.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="dbimport.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="dbinit.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="dblog.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="dbmission.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="dbmsg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="dbperf.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="dbrelay.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="doors.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="launchercomm.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="logserver.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="mapcrashreport.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="mapxfer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="namecache.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="offline.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\launcher\performance.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="servercfg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="sql_fifo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MapServer\dbcomm\staticMapInfo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="statservercomm.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="status.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="svrmoncomm.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\TurnstileServer\TurnstileCommon.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="waitingEntities.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="weeklyTFcfg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

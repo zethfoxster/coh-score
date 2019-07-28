@@ -1,0 +1,21 @@
+Microsoft Visual Studio Solution File, Format Version 7.00
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "IJGWin32", "IJGWin32.vcproj", "{1B081719-1565-4F99-840B-262ECB3C502F}"
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		ConfigName.0 = Debug
+		ConfigName.1 = Release
+	EndGlobalSection
+	GlobalSection(ProjectDependencies) = postSolution
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{1B081719-1565-4F99-840B-262ECB3C502F}.Debug.ActiveCfg = Debug|Win32
+		{1B081719-1565-4F99-840B-262ECB3C502F}.Debug.Build.0 = Debug|Win32
+		{1B081719-1565-4F99-840B-262ECB3C502F}.Release.ActiveCfg = Release|Win32
+		{1B081719-1565-4F99-840B-262ECB3C502F}.Release.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

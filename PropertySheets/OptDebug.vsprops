@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<VisualStudioPropertySheet
+	ProjectType="Visual C++"
+	Version="8.00"
+	Name="OptDebug"
+	>
+	<Tool
+		Name="VCCLCompilerTool"
+		AdditionalOptions="/fastcap"
+		Optimization="3"
+		WholeProgramOptimization="true"
+		PreprocessorDefinitions="_OPTDEBUG"
+		BasicRuntimeChecks="0"
+		RuntimeLibrary="0"
+		DebugInformationFormat="3"
+	/>
+	<Tool
+		Name="VCLibrarianTool"
+		AdditionalOptions="/LTCG"
+	/>
+	<Tool
+		Name="VCLinkerTool"
+		LinkIncremental="1"
+		IgnoreDefaultLibraryNames="LIBCMTD.lib"
+		LinkTimeCodeGeneration="1"
+	/>
+	<Tool
+		Name="VCResourceCompilerTool"
+		PreprocessorDefinitions="_OPTDEBUG"
+	/>
+</VisualStudioPropertySheet>

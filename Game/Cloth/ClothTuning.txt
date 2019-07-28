@@ -1,0 +1,83 @@
+// Tunable Cloth variables
+
+//============================================================================
+// clothnode.c
+
+// Tunable cape paramaters
+// Currently these are hard-coded in initCapeNode().
+// They should be extracted from an easily modifiable file associated with a cape.
+
+//  'mass_y_scale' scales the masses in the first (and thus all) LODs.
+//  'point_y_scale' scales the X values of the points in subsequent LODs.
+//     This is a hack to deal with the fact that capes with fewer particles
+//     will be effectively stiffer and so will otherwise appear wider.
+//  'stiffness' determines the amount of 'fold' allowed.
+//     1.0 would attempt to keep the cloth completely flat
+//     0.7 would allow the cloth to fold to angles of about 90 degrees.
+//  'colrad' is the collision radius of each particle (I wouldn't mess with it...)
+//  'drag' is the wind resistance, and should remain in the range [0.10, 0.30]
+//  See ClothObject.c for how 'lod0_[min/max]sublod' is used.
+
+F32 mass_y_scale; // 1.0 if masses are provided, 0.4 otherwise
+F32 point_y_scale = .80f;
+F32 stiffness = .90f;
+F32 colrad = 0.20f;
+F32 drag = 0.10f;
+int lod0_minsublod = 0;
+int lod0_maxsublod = 1;
+
+
+// LOD
+// if camdist < cloth_lod_mindist, use LOD 0
+// if camdist > cloth_lod_maxdist, use LOD MAX
+// If in between, evenly transition from LOD 1 to LOD MAX
+// NOTE: These values could (and SHOULD) be tuned based on CPU performance and
+//  possible average framerate.
+F32 cloth_lod_mindist = 20.0f; 
+F32 cloth_lod_maxdist = 150.0f;
+
+// PHYSICS
+F32 CLOTH_WINDSCALE = 64.f; 	// ~twice gravity // [0,1] -> [0, CLOTH_WINDSCALE]
+F32 CLOTH_GRAVITY = -32.0f;		// ft/s^2
+
+// WIND CONSTANTS
+// These should be controlled by some sort of global wind manager on the server.
+
+// Direction of world "ambient" wind.
+Vec3 world_wind_dir = { 0.0f, 0.0f, 1.0f };
+// Magnitude of world wind. 1.0 is the absolute maximum.
+// Currently set to .5 for testing, but realisticly should average ~0.20
+F32 world_wind_max_mag = 0.5f;
+
+// These paramaters define a wave (approximately a sin wave) used to
+// create a ripple effect along the cloth.
+//   Repeat is number of repetitions across the cloth.
+//     Theoretically this could be converted from a wavelength in feet,
+//     however, unless capes or flags vary significantly in width,
+//     that shouldn't be necessary.
+//  Period is the "speed" of the wave in seconds / wave
+//  Scale determines the relative significance of the ripple force.
+//    This is multiplied by a tunable per-animation value.
+F32 cloth_wind_ripple_repeat = 1.5f;
+F32 cloth_wind_ripple_period = 0.75f;
+F32 cloth_wind_ripple_scale = 1.0f;
+
+
+//============================================================================
+// Wind.c
+
+// The Wind code sets a prevailing or "world" wind with ClothWindSetDir().
+//   This only needs to be called when the wind changes.
+// In order to get the actual wind vector, ClothWindGetRandom() should be
+//   called each frame. This returns a vector that varies from the prevailing
+//   direction and magnitude according to the following tunable paramaters:
+
+// These are tunable paramaters affecting the Wind magnitude
+F32 WindDeltaScale = 0.25f;				// Max amt of change per frame of Magnitude
+F32 WindScaleMin = -.5f;				// Values < 0 will clamp to 0 (creating pauses)
+F32 WindScaleMax = 1.5f;				// Values > 1 will clamp to 1 (creating gusts)
+
+// These are tunable paramaters affecting the Wind direction
+F32 WindDirDeltaScale = 0.1f;			// Max amount of change per frame of tangent
+F32 WindDirDeltaMax = 1.0f;				// = tangent(max angle from WindDir) 1.0 = +/- 45 deg
+

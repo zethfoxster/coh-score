@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="external">
+      <UniqueIdentifier>{00877018-7c7d-42c9-817a-0282f1fb7458}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="external\dbserver">
+      <UniqueIdentifier>{48b7250c-bd94-40d1-9ce0-b08517d693f1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ShardMonitor">
+      <UniqueIdentifier>{913729d4-cfcf-4d4a-88f7-67c0a2a12514}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Relay">
+      <UniqueIdentifier>{4379ba20-4846-4151-83dc-7c93f2be6f7f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Processes">
+      <UniqueIdentifier>{88d9c79f-54d4-41dc-81cb-c4f5587f51e9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Chat">
+      <UniqueIdentifier>{7a0fd588-df30-4840-b73a-213637abdf19}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\Common\comm_backend.h">
+      <Filter>external</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dbserver\container.h">
+      <Filter>external\dbserver</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dbserver\svrmoncomm.h">
+      <Filter>external\dbserver</Filter>
+    </ClInclude>
+    <ClInclude Include="shardMonitor.h">
+      <Filter>ShardMonitor</Filter>
+    </ClInclude>
+    <ClInclude Include="shardMonitorConfigure.h">
+      <Filter>ShardMonitor</Filter>
+    </ClInclude>
+    <ClInclude Include="shardMonitorConfigureNewShard.h">
+      <Filter>ShardMonitor</Filter>
+    </ClInclude>
+    <ClInclude Include="updateServerList.h">
+      <Filter>ShardMonitor</Filter>
+    </ClInclude>
+    <ClInclude Include="relay_utils.h">
+      <Filter>Relay</Filter>
+    </ClInclude>
+    <ClInclude Include="relaycomm.h">
+      <Filter>Relay</Filter>
+    </ClInclude>
+    <ClInclude Include="serverMonitorCmdRelay.h">
+      <Filter>Relay</Filter>
+    </ClInclude>
+    <ClInclude Include="shardMonitorCmdRelay.h">
+      <Filter>Relay</Filter>
+    </ClInclude>
+    <ClInclude Include="processMonitor.h">
+      <Filter>Processes</Filter>
+    </ClInclude>
+    <ClInclude Include="chatMonitor.h">
+      <Filter>Chat</Filter>
+    </ClInclude>
+    <ClInclude Include="prompt.h" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="serverMonitor.h" />
+    <ClInclude Include="serverMonitorCommon.h" />
+    <ClInclude Include="serverMonitorCrashMsg.h" />
+    <ClInclude Include="serverMonitorEnts.h" />
+    <ClInclude Include="serverMonitorListener.h" />
+    <ClInclude Include="serverMonitorNet.h" />
+    <ClInclude Include="shardMonitorComm.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\CmdRelay\relay_util.c">
+      <Filter>external</Filter>
+    </ClCompile>
+    <ClCompile Include="..\dbserver\svrmoncomm.c">
+      <Filter>external\dbserver</Filter>
+    </ClCompile>
+    <ClCompile Include="shardMonitor.c">
+      <Filter>ShardMonitor</Filter>
+    </ClCompile>
+    <ClCompile Include="shardMonitorConfigure.c">
+      <Filter>ShardMonitor</Filter>
+    </ClCompile>
+    <ClCompile Include="shardMonitorConfigureNewShard.c">
+      <Filter>ShardMonitor</Filter>
+    </ClCompile>
+    <ClCompile Include="updateServerList.c">
+      <Filter>ShardMonitor</Filter>
+    </ClCompile>
+    <ClCompile Include="relay_utils.c">
+      <Filter>Relay</Filter>
+    </ClCompile>
+    <ClCompile Include="relaycomm.c">
+      <Filter>Relay</Filter>
+    </ClCompile>
+    <ClCompile Include="serverMonitorCmdRelay.c">
+      <Filter>Relay</Filter>
+    </ClCompile>
+    <ClCompile Include="shardMonitorCmdRelay.c">
+      <Filter>Relay</Filter>
+    </ClCompile>
+    <ClCompile Include="processMonitor.c">
+      <Filter>Processes</Filter>
+    </ClCompile>
+    <ClCompile Include="chatMonitor.c">
+      <Filter>Chat</Filter>
+    </ClCompile>
+    <ClCompile Include="prompt.c" />
+    <ClCompile Include="serverMonitor.c" />
+    <ClCompile Include="serverMonitorCommon.c" />
+    <ClCompile Include="serverMonitorCrashMsg.c" />
+    <ClCompile Include="serverMonitorEnts.c" />
+    <ClCompile Include="serverMonitorListener.c" />
+    <ClCompile Include="serverMonitorNet.c" />
+    <ClCompile Include="shardMonitorComm.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="CrypticPrc1.ico" />
+    <None Include="ShardMonitor.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="ServerMonitor.rc" />
+  </ItemGroup>
+</Project>

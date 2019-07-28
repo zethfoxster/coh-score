@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<VisualStudioPropertySheet
+	ProjectType="Visual C++"
+	Version="8.00"
+	Name="dbquery"
+	OutputDirectory="$(PlatformName)\$(ConfigurationName).DbQuery"
+	IntermediateDirectory="$(PlatformName)\$(ConfigurationName).DbQuery"
+	>
+	<Tool
+		Name="VCCLCompilerTool"
+		Optimization="4"
+		AdditionalIncludeDirectories=".\language;..\Game\win;..\Common\junk;../libs/UtilitiesLib\assert;../common/entity;beacon;ai;svr;player;entity;../Common/seq;combat;container;generator;../libs/UtilitiesLib/;../libs/UtilitiesLib/components;../libs/UtilitiesLib/network;../libs/UtilitiesLib/utils;group;cmdparse;../Common/cmdparse;../Common/entity;../Common/gameComm;gameComm;../Game/menu;../Game/player;../common/player;../common;../common/language;../common/utils;.;../game;../lf;../3rdparty/zlibsrc;../game/render;../glh;../3rdparty/cryptopp;../3rdparty/VTune;../dbserver;../common/gridcoll;../common/group;../common/cmdparse;../common/seq;../game/graphics;../game/clientcomm;dbcomm;storyarc;../common/version;../common/storyarc;../common/filter;./filter;script;../mapserver/gamesys;../game/render/thread"
+		PreprocessorDefinitions="DBQUERY;SERVER;AUX_SERVER_DEFINE;WIN32;_CONSOLE;USEZLIB;_CRT_SECURE_NO_DEPRECATE"
+		BasicRuntimeChecks="0"
+		BufferSecurityCheck="false"
+		WarningLevel="3"
+	/>
+	<Tool
+		Name="VCLinkerTool"
+		FixedBaseAddress="1"
+	/>
+</VisualStudioPropertySheet>

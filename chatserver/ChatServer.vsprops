@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<VisualStudioPropertySheet
+	ProjectType="Visual C++"
+	Version="8.00"
+	Name="ChatServer"
+	>
+	<Tool
+		Name="VCCLCompilerTool"
+		AdditionalOptions="/wd 4267"
+		AdditionalIncludeDirectories="..\Common\persist;..\ChatAdmin;..\launcher;..\ServerMonitor;..\common\filter;..\common\language;..\common\version;../libs/UtilitiesLib;../libs/UtilitiesLib\assert;..\common\utils;../libs/UtilitiesLib\network;../libs/UtilitiesLib\utils;../libs/UtilitiesLib\components;../libs/UtilitiesLib\version;../libs/UtilitiesLib\language;../common;..\common;..\mapserver\filter"
+		PreprocessorDefinitions="CHATSERVER;SECURE_STRINGS;WIN32;_CONSOLE"
+	/>
+	<Tool
+		Name="VCPreBuildEventTool"
+		CommandLine="..\utilities\bin\structparser X $(InputDir) X $(InputFileName) X $(PlatformName) X $(ConfigurationName) X $(VCInstallDir) X $(SolutionPath)"
+	/>
+</VisualStudioPropertySheet>

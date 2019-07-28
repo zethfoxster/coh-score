@@ -1,0 +1,9 @@
+This is a tool for programmers to get a list of extensions from the extensions.xml file which is part of the glview application.
+
+The glview application can be installed from:
+
+http://www.realtech-vr.com/glview
+
+In Game\render\thread\rt_init.c, the OGL_OVERRIDE_FILE define can be set to the path to a text file which will cause the game to load this file and if the extension is not present in the file, the game will assume the extension is not supported.
+
+Note:  If the extension is non supported by the current system (like most NVidia extensions on an ATI system) and the extension is listed in the text file, the extension will still not be available in the game.

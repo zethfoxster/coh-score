@@ -1,0 +1,25 @@
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "jpgdlib", "jpgdlib.vcproj", "{F2BA36BD-5DDB-45E6-9372-8E743BE93D18}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Debug|Xbox 360 = Debug|Xbox 360
+		Release|Win32 = Release|Win32
+		Release|Xbox 360 = Release|Xbox 360
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F2BA36BD-5DDB-45E6-9372-8E743BE93D18}.Debug|Win32.ActiveCfg = Debug|Win32
+		{F2BA36BD-5DDB-45E6-9372-8E743BE93D18}.Debug|Win32.Build.0 = Debug|Win32
+		{F2BA36BD-5DDB-45E6-9372-8E743BE93D18}.Debug|Xbox 360.ActiveCfg = Debug|Xbox 360
+		{F2BA36BD-5DDB-45E6-9372-8E743BE93D18}.Debug|Xbox 360.Build.0 = Debug|Xbox 360
+		{F2BA36BD-5DDB-45E6-9372-8E743BE93D18}.Release|Win32.ActiveCfg = Release|Win32
+		{F2BA36BD-5DDB-45E6-9372-8E743BE93D18}.Release|Win32.Build.0 = Release|Win32
+		{F2BA36BD-5DDB-45E6-9372-8E743BE93D18}.Release|Xbox 360.ActiveCfg = Release|Xbox 360
+		{F2BA36BD-5DDB-45E6-9372-8E743BE93D18}.Release|Xbox 360.Build.0 = Release|Xbox 360
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

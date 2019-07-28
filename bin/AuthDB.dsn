@@ -1,0 +1,10 @@
+[ODBC]
+DRIVER=ODBC Driver 17 for SQL Server
+UID=sa
+TrustServerCertificate=yes
+DATABASE=cohauth
+WSID=FREEDOM
+APP=Microsoft® Windows® Operating System
+Trusted_Connection=yes
+SERVER=FREEDOM
+Description=cohauth

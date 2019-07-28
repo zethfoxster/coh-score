@@ -1,0 +1,169 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Full Debug|Win32">
+      <Configuration>Full Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Opt Debug|Win32">
+      <Configuration>Opt Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="TextClientDebug|Win32">
+      <Configuration>TextClientDebug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{C9327828-4179-41BA-8A41-C95AAEA2D8BC}</ProjectGuid>
+    <RootNamespace>TestClientLauncher</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Full Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Opt Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='TextClientDebug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Full Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\PropertySheets\Common.props" />
+    <Import Project="..\PropertySheets\FullDebug.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Opt Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\PropertySheets\Common.props" />
+    <Import Project="..\PropertySheets\OptDebug.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='TextClientDebug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\PropertySheets\Common.props" />
+    <Import Project="..\PropertySheets\Debug.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\PropertySheets\Common.props" />
+    <Import Project="..\PropertySheets\Debug.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Opt Debug|Win32'">$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Opt Debug|Win32'">$(Configuration)\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Full Debug|Win32'">$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Full Debug|Win32'">$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>include/;../Game;../libs\UtilitiesLib\version;../libs\UtilitiesLib\language;../libs/UtilitiesLib/network;../libs/UtilitiesLib/utils;../libs/UtilitiesLib/components;../libs/UtilitiesLib/assert;../libs/UtilitiesLib/;../common/Utilitieslib/assert;../Common/cmdparse.h;../Game/cmdparse;../Common/entity;../Common/gameComm;../Game/gameComm/common;../Game/gameComm;../Common/player;../Game/UI/sprite;../Game/menu;../Game/entity;../Game/player;../Game/UI;../common/language;../common/utils;../common/components;../common/network;../common;.;../lf;../3rdparty/zlibsrc;../Game/render;../glh;../3rdparty/cryptopp;../3rdparty/VTune;../3rdparty/freetype-2.1.2/include;..\common\assert;../Game/edit;../common/gridcoll;../common/group;../Game/graphics;../Game/graphics/fx;../Game/win;../common/seq;../common/cmdparse;../game/clientcomm;../mapserver/dbcomm;../dbserver;../Game/sound;../mapserver/beacon;../mapserver/combat;../mapserver/entity;../MapServer;../Common/Junk;../Game/group;../3rdparty/jpgdlib\inc;../3rdparty/oggvorbis/include;../common/version;../Common/bases;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;UNICODE;_UNICODE;_CRT_SECURE_NO_DEPRECATE;_CRT_NON_CONFORMING_SWPRINTFS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ForcedIncludeFiles>%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ResourceCompile>
+      <AdditionalIncludeDirectories>include/;C:\Program Files\Microsoft Visual Studio .NET\Vc7\atlmfc\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>winmm.lib;oldnames.lib;ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='TextClientDebug|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>include/;../Game;../libs\UtilitiesLib\version;../libs\UtilitiesLib\language;../libs/UtilitiesLib/network;../libs/UtilitiesLib/utils;../libs/UtilitiesLib/components;../libs/UtilitiesLib/assert;../libs/UtilitiesLib/;../common/Utilitieslib/assert;../Common/cmdparse.h;../Game/cmdparse;../Common/entity;../Common/gameComm;../Game/gameComm/common;../Game/gameComm;../Common/player;../Game/UI/sprite;../Game/menu;../Game/entity;../Game/player;../Game/UI;../common/language;../common/utils;../common/components;../common/network;../common;.;../lf;../3rdparty/zlibsrc;../Game/render;../glh;../3rdparty/cryptopp;../3rdparty/VTune;../3rdparty/freetype-2.1.2/include;..\common\assert;../Game/edit;../common/gridcoll;../common/group;../Game/graphics;../Game/graphics/fx;../Game/win;../common/seq;../common/cmdparse;../game/clientcomm;../mapserver/dbcomm;../dbserver;../Game/sound;../mapserver/beacon;../mapserver/combat;../mapserver/entity;../MapServer;../Common/Junk;../Game/group;../3rdparty/jpgdlib\inc;../3rdparty/oggvorbis/include;../common/version;../Common/bases;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>TEXT_CLIENT;WIN32;_WINDOWS;UNICODE;_UNICODE;_CRT_SECURE_NO_DEPRECATE;_CRT_NON_CONFORMING_SWPRINTFS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ForcedIncludeFiles>%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ResourceCompile>
+      <AdditionalIncludeDirectories>include/;C:\Program Files\Microsoft Visual Studio .NET\Vc7\atlmfc\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>winmm.lib;oldnames.lib;ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>..\bin\$(Configuration)\TextClientLauncher.exe</OutputFile>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Opt Debug|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>include/;../Game;../libs\UtilitiesLib\version;../libs\UtilitiesLib\language;../libs/UtilitiesLib/network;../libs/UtilitiesLib/utils;../libs/UtilitiesLib/components;../libs/UtilitiesLib/assert;../libs/UtilitiesLib/;../common/Utilitieslib/assert;../Common/cmdparse.h;../Game/cmdparse;../Common/entity;../Common/gameComm;../Game/gameComm/common;../Game/gameComm;../Common/player;../Game/UI/sprite;../Game/menu;../Game/entity;../Game/player;../Game/UI;../common/language;../common/utils;../common/components;../common/network;../common;.;../lf;../3rdparty/zlibsrc;../Game/render;../glh;../3rdparty/cryptopp;../3rdparty/VTune;../3rdparty/freetype-2.1.2/include;..\common\assert;../Game/edit;../common/gridcoll;../common/group;../Game/graphics;../Game/graphics/fx;../Game/win;../common/seq;../common/cmdparse;../game/clientcomm;../mapserver/dbcomm;../dbserver;../Game/sound;../mapserver/beacon;../mapserver/combat;../mapserver/entity;../MapServer;../Common/Junk;../Game/group;../3rdparty/jpgdlib\inc;../3rdparty/oggvorbis/include;../../Utilities/gimme;../common/version;../Common/bases;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;UNICODE;_UNICODE;_CRT_SECURE_NO_DEPRECATE;_CRT_NON_CONFORMING_SWPRINTFS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ForcedIncludeFiles>%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ResourceCompile>
+      <AdditionalIncludeDirectories>include/;C:\Program Files\Microsoft Visual Studio .NET\Vc7\atlmfc\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>winmm.lib;oldnames.lib;ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Full Debug|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>include/;../Game;../libs\UtilitiesLib\version;../libs\UtilitiesLib\language;../libs/UtilitiesLib/network;../libs/UtilitiesLib/utils;../libs/UtilitiesLib/components;../libs/UtilitiesLib/assert;../libs/UtilitiesLib/;../common/Utilitieslib/assert;../Common/cmdparse.h;../Game/cmdparse;../Common/entity;../Common/gameComm;../Game/gameComm/common;../Game/gameComm;../Common/player;../Game/UI/sprite;../Game/menu;../Game/entity;../Game/player;../Game/UI;../common/language;../common/utils;../common/components;../common/network;../common;.;../lf;../3rdparty/zlibsrc;../Game/render;../glh;../3rdparty/cryptopp;../3rdparty/VTune;../3rdparty/freetype-2.1.2/include;..\common\assert;../Game/edit;../common/gridcoll;../common/group;../Game/graphics;../Game/graphics/fx;../Game/win;../common/seq;../common/cmdparse;../game/clientcomm;../mapserver/dbcomm;../dbserver;../Game/sound;../mapserver/beacon;../mapserver/combat;../mapserver/entity;../MapServer;../Common/Junk;../Game/group;../3rdparty/jpgdlib\inc;../3rdparty/oggvorbis/include;../common/version;../Common/bases;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;UNICODE;_UNICODE;_CRT_SECURE_NO_DEPRECATE;_CRT_NON_CONFORMING_SWPRINTFS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ForcedIncludeFiles>%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ResourceCompile>
+      <AdditionalIncludeDirectories>include/;C:\Program Files\Microsoft Visual Studio .NET\Vc7\atlmfc\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>winmm.lib;oldnames.lib;ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="Resources\DlgMain.c" />
+    <ClCompile Include="resources\DlgText.c" />
+    <ClCompile Include="PipeServer.c" />
+    <ClCompile Include="TestClientLauncher.c" />
+    <ClCompile Include="win\win_init.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Resources\DlgMain.h" />
+    <ClInclude Include="resources\DlgText.h" />
+    <ClInclude Include="Resources\resource.h" />
+    <ClInclude Include="PipeServer.h" />
+    <ClInclude Include="TestClientLauncher.h" />
+    <ClInclude Include="win\win_init.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Resources\Resources.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TestClientLauncher.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\libs\UtilitiesLib\UtilitiesLib.vcxproj">
+      <Project>{a6741f6e-5476-4f9f-9d65-62b54aaf1d08}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

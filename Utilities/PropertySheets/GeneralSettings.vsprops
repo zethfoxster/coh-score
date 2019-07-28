@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="shift_jis"?>
+<VisualStudioPropertySheet
+	ProjectType="Visual C++"
+	Version="8.00"
+	Name="GeneralSettings"
+	>
+	<Tool
+		Name="VCCLCompilerTool"
+		Optimization="0"
+		InlineFunctionExpansion="0"
+		EnableIntrinsicFunctions="true"
+		FavorSizeOrSpeed="1"
+		AdditionalIncludeDirectories=".;pub;AutoGen;..\UtilitiesLib;..\UtilitiesLib/assert;..\UtilitiesLib/components;..\UtilitiesLib/language;..\UtilitiesLib/network;..\UtilitiesLib/utils;..\UtilitiesLib/version;Common"
+		StringPooling="true"
+		BasicRuntimeChecks="1"
+		RuntimeLibrary="1"
+		EnableFunctionLevelLinking="true"
+		FloatingPointModel="2"
+		WarningLevel="3"
+		WarnAsError="true"
+		Detect64BitPortabilityProblems="true"
+		DebugInformationFormat="4"
+		CompileAs="0"
+		ForcedIncludeFiles="memcheck.h"
+		EnablePREfast="true"
+	/>
+	<Tool
+		Name="VCLinkerTool"
+		GenerateManifest="false"
+	/>
+<Tool
+	Name="VCCLX360CompilerTool"
+	Optimization="0"
+	InlineFunctionExpansion="0"
+	EnableIntrinsicFunctions="true"
+	FavorSizeOrSpeed="1"
+	AdditionalIncludeDirectories=".;pub;AutoGen;..\UtilitiesLib;..\UtilitiesLib/assert;..\UtilitiesLib/components;..\UtilitiesLib/language;..\UtilitiesLib/network;..\UtilitiesLib/utils;..\UtilitiesLib/version;Common"
+	StringPooling="true"
+	BasicRuntimeChecks="1"
+	RuntimeLibrary="1"
+	EnableFunctionLevelLinking="true"
+	FloatingPointModel="2"
+	WarningLevel="3"
+	WarnAsError="true"
+	DebugInformationFormat="4"
+	CompileAs="0"
+	ForcedIncludeFiles="memcheck.h"
+/>
+</VisualStudioPropertySheet>

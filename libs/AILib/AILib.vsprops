@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<VisualStudioPropertySheet
+	ProjectType="Visual C++"
+	Version="8.00"
+	Name="AILib"
+	>
+	<Tool
+		Name="VCCLCompilerTool"
+		AdditionalOptions="/wd 4389 /wd 4701"
+		PreprocessorDefinitions="AILIB;WIN32;_LIB;USEZLIB"
+	/>
+	<Tool
+		Name="VCPreBuildEventTool"
+		CommandLine="..\..\utilities\bin\structparser X $(InputDir) X $(InputFileName) X $(PlatformName) X $(ConfigurationName) X $(VCInstallDir) X $(SolutionPath)"
+	/>
+</VisualStudioPropertySheet>

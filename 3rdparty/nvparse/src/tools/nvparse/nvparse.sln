@@ -1,0 +1,44 @@
+Microsoft Visual Studio Solution File, Format Version 7.00
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "nvparse", "nvparse.vcproj", "{531FE6FB-66BC-45CE-9E5B-46030A2C802E}"
+EndProject
+Global
+	GlobalSection(SourceCodeControl) = preSolution
+		SccNumberOfProjects = 1
+		SccProjectUniqueName0 = nvparse.vcproj
+		SccProjectName0 = ceveritt-98
+		SccLocalPath0 = .
+		SccProvider0 = MSSCCI:Perforce\u0020SCM
+		CanCheckoutShared = true
+	EndGlobalSection
+	GlobalSection(SolutionConfiguration) = preSolution
+		ConfigName.0 = Debug
+		ConfigName.1 = Debug Multithreaded
+		ConfigName.2 = Debug Multithreaded DLL
+		ConfigName.3 = Hybrid
+		ConfigName.4 = Release
+		ConfigName.5 = Release Multithreaded
+		ConfigName.6 = Release Multithreaded DLL
+	EndGlobalSection
+	GlobalSection(ProjectDependencies) = postSolution
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{531FE6FB-66BC-45CE-9E5B-46030A2C802E}.Debug.ActiveCfg = Debug|Win32
+		{531FE6FB-66BC-45CE-9E5B-46030A2C802E}.Debug.Build.0 = Debug|Win32
+		{531FE6FB-66BC-45CE-9E5B-46030A2C802E}.Debug Multithreaded.ActiveCfg = Debug Multithreaded|Win32
+		{531FE6FB-66BC-45CE-9E5B-46030A2C802E}.Debug Multithreaded.Build.0 = Debug Multithreaded|Win32
+		{531FE6FB-66BC-45CE-9E5B-46030A2C802E}.Debug Multithreaded DLL.ActiveCfg = Debug Multithreaded DLL|Win32
+		{531FE6FB-66BC-45CE-9E5B-46030A2C802E}.Debug Multithreaded DLL.Build.0 = Debug Multithreaded DLL|Win32
+		{531FE6FB-66BC-45CE-9E5B-46030A2C802E}.Hybrid.ActiveCfg = Hybrid|Win32
+		{531FE6FB-66BC-45CE-9E5B-46030A2C802E}.Hybrid.Build.0 = Hybrid|Win32
+		{531FE6FB-66BC-45CE-9E5B-46030A2C802E}.Release.ActiveCfg = Release|Win32
+		{531FE6FB-66BC-45CE-9E5B-46030A2C802E}.Release.Build.0 = Release|Win32
+		{531FE6FB-66BC-45CE-9E5B-46030A2C802E}.Release Multithreaded.ActiveCfg = Release Multithreaded|Win32
+		{531FE6FB-66BC-45CE-9E5B-46030A2C802E}.Release Multithreaded.Build.0 = Release Multithreaded|Win32
+		{531FE6FB-66BC-45CE-9E5B-46030A2C802E}.Release Multithreaded DLL.ActiveCfg = Release Multithreaded DLL|Win32
+		{531FE6FB-66BC-45CE-9E5B-46030A2C802E}.Release Multithreaded DLL.Build.0 = Release Multithreaded DLL|Win32
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

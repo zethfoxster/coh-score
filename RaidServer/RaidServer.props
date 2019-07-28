@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalOptions>/wd 4267 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalIncludeDirectories>..\RaidServer;../libs/UtilitiesLib\utils;../libs/UtilitiesLib\assert;../libs/UtilitiesLib/components;../libs/UtilitiesLib;../libs/UtilitiesLib/network;../libs/UtilitiesLib/version;../libs/UtilitiesLib/language;../3rdparty/zlibsrc;../common/utils;../common/components;../common/network;../common/auction;../common;../3rdparty/cryptopp;..\common\network;../dbserver;../common/entity;../common/seq;../common/gridcoll;../game/render;../common/gameComm;../common/group;../mapserver/storyarc;../common/storyarc;../mapserver/container;../mapserver;../mapserver/svr;../mapserver/entity;../mapserver/cmdparse;../mapserver/dbcomm;../common/cmdparse;../common/gameData;../mapserver/gamesys;../game/render/thread;../common/language;../common/version;../common\player;../common/bases;../mapserver/group;../mapserver/gameComm;..\mapserver\language;..\StatServer;..\MapServer;..\NovodeXWrapper;..\Game\win;..\Common\junk;../mapserver/beacon;../mapserver/ai;../mapserver/player;../Common/seq;../mapserver/combat;../mapserver/generator;../libs/UtilitiesLib/;../libs/UtilitiesLib/utils;../Common/cmdparse;../Common/entity;../Common/gameComm;../Game/menu;../Game/player;../common/player;.;../game;../lf;../glh;../3rdparty/VTune;../game/graphics;../game/clientcomm;../common/filter;../mapserver/filter;../mapserver/script;../Common/skills;../mapserver/script/zoneevents;../mapserver/bases;entity;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>RAIDSERVER;AUX_SERVER_DEFINE;CONTAINER_SERVER;WIN32;_CONSOLE;_CRT_SECURE_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <WarningLevel>Level3</WarningLevel>
+    </ClCompile>
+  </ItemDefinitionGroup>
+</Project>

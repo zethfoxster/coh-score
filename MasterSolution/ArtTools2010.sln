@@ -1,0 +1,43 @@
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "gettex", "..\GetTex\gettex.vcxproj", "{EC92BF1A-398D-4F43-839B-90AA746066E6}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "getvrml", "..\GetVrml\getvrml.vcxproj", "{1F47D2CA-05A3-46F1-AD58-4756C1E928E6}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GetAnimation", "..\GetAnimation\GetAnimation.vcxproj", "{57E19F61-4D16-4D65-92C8-15127663DE4C}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "UtilitiesLib", "..\libs\UtilitiesLib\UtilitiesLib.vcxproj", "{A6741F6E-5476-4F9F-9D65-62B54AAF1D08}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GetAnimation2", "..\GetAnimation2\GetAnimation2.vcxproj", "{4AA11062-3CF4-4267-B1BF-0B735047A58E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Full Debug|Win32 = Full Debug|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EC92BF1A-398D-4F43-839B-90AA746066E6}.Debug|Win32.ActiveCfg = Debug|Win32
+		{EC92BF1A-398D-4F43-839B-90AA746066E6}.Debug|Win32.Build.0 = Debug|Win32
+		{EC92BF1A-398D-4F43-839B-90AA746066E6}.Full Debug|Win32.ActiveCfg = Full Debug|Win32
+		{EC92BF1A-398D-4F43-839B-90AA746066E6}.Full Debug|Win32.Build.0 = Full Debug|Win32
+		{1F47D2CA-05A3-46F1-AD58-4756C1E928E6}.Debug|Win32.ActiveCfg = Debug|Win32
+		{1F47D2CA-05A3-46F1-AD58-4756C1E928E6}.Debug|Win32.Build.0 = Debug|Win32
+		{1F47D2CA-05A3-46F1-AD58-4756C1E928E6}.Full Debug|Win32.ActiveCfg = Full Debug|Win32
+		{1F47D2CA-05A3-46F1-AD58-4756C1E928E6}.Full Debug|Win32.Build.0 = Full Debug|Win32
+		{57E19F61-4D16-4D65-92C8-15127663DE4C}.Debug|Win32.ActiveCfg = Debug|Win32
+		{57E19F61-4D16-4D65-92C8-15127663DE4C}.Debug|Win32.Build.0 = Debug|Win32
+		{57E19F61-4D16-4D65-92C8-15127663DE4C}.Full Debug|Win32.ActiveCfg = Full Debug|Win32
+		{57E19F61-4D16-4D65-92C8-15127663DE4C}.Full Debug|Win32.Build.0 = Full Debug|Win32
+		{A6741F6E-5476-4F9F-9D65-62B54AAF1D08}.Debug|Win32.ActiveCfg = Debug|Win32
+		{A6741F6E-5476-4F9F-9D65-62B54AAF1D08}.Debug|Win32.Build.0 = Debug|Win32
+		{A6741F6E-5476-4F9F-9D65-62B54AAF1D08}.Full Debug|Win32.ActiveCfg = Full Debug|Win32
+		{A6741F6E-5476-4F9F-9D65-62B54AAF1D08}.Full Debug|Win32.Build.0 = Full Debug|Win32
+		{4AA11062-3CF4-4267-B1BF-0B735047A58E}.Debug|Win32.ActiveCfg = Debug|Win32
+		{4AA11062-3CF4-4267-B1BF-0B735047A58E}.Debug|Win32.Build.0 = Debug|Win32
+		{4AA11062-3CF4-4267-B1BF-0B735047A58E}.Full Debug|Win32.ActiveCfg = Full Debug|Win32
+		{4AA11062-3CF4-4267-B1BF-0B735047A58E}.Full Debug|Win32.Build.0 = Full Debug|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="External">
+      <UniqueIdentifier>{3608dd4e-e895-4b42-ae3e-ef4a069d05f6}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="account_inventory.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="accountcmds.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\account\AccountData.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AccountDb.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AccountServer.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Billing.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="BillingMsgs.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="order_genericproduct.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="order_rename.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="order_respec.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="order_shardxfer.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="order_slot.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="product_mapping.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\account\AccountCatalog.c">
+      <Filter>External</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\cmdparse\AppServerCmd.c">
+      <Filter>External</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\cmdparse\cmdaccountserver.c">
+      <Filter>External</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\entity\LoadDefCommon.c">
+      <Filter>External</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\persist\textcrcdb.c">
+      <Filter>External</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\persist\textcrcjournal.c">
+      <Filter>External</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="account_inventory.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="accountcmds.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\account\AccountData.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AccountDb.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AccountServer.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Billing.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="BillingMsgs.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="order_genericproduct.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="order_rename.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="order_respec.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="order_shardxfer.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="order_slot.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="product_mapping.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\account\AccountCatalog.h">
+      <Filter>External</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\cmdparse\AppServerCmd.h">
+      <Filter>External</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\cmdparse\cmdaccountserver.h">
+      <Filter>External</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\cmdparse\cmdenum.h">
+      <Filter>External</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\entity\gametypes.h">
+      <Filter>External</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\persist\textcrcdb.h">
+      <Filter>External</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\persist\textcrcjournal.h">
+      <Filter>External</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

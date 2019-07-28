@@ -1,0 +1,508 @@
+<html><head></head>
+<body>
+<id="Sample">
+<h1 style="color:255 0 0">Trick Files and Flags - City of Heroes - Confluence</h1>
+<h2 style="color:Blue">Trick Files and Flags - City of Heroes - Confluence</h2>
+<h3 style="color: #FF0000">Trick Files and Flags - City of Heroes - Confluence</h3>
+<p>Trick Files and Flags - City of Heroes - Confluence\r\n</p>
+</id>   
+
+
+<id="Gravity">
+<h2 style="color:Blue">Gravity</h2>
+<p>Gravity 0.0</p>
+<p>Every frame, change the particle's velocity by this much on the y axis. Positive gravity moves down, negative gravity moves up. (rem: if WorldOrLocalPosition = local means local gravity, too)</p>
+</id>
+
+<id="Drag">
+<h2 style="color:Blue">Drag</h2>
+<p>Drag 0.0</p>
+<p>Range: 0 to 1</p>
+<p>Air resistance per frame, between 0.0 and 1.0. The particle's speed is multiplied by this number every frame. Therefore 0.0 = vacuum of space, 1.0 = air is like rock.</p>
+</id>
+
+<id="Burst">
+<h2 style="color:Blue">Burst</h2>
+<p>Burst 1</p>
+<p>The burst of particles that appears when the system is born. Useful for kick-starting systems.</p>
+</id>
+
+<id="NewPerFrame">
+<h2 style="color:Blue">NewPerFrame</h2>
+<p>NewPerFrame 0.0</p>
+<p>All time is measured in 30ths of a second. 1 frame = 1/30th of a second. This can be a fraction. Not making this unnecessarily high is important for performance.</p>
+</id>
+
+<id="BurbleAmplitude">
+<h2 style="color:Blue">BurbleAmplitude</h2>
+<p>BurbleAmplitude 1.0</p>
+<p>Burbling is a way to vary the number of particles that are newly created each frame. It's much easier to explain on a white board than write down. Mostly you can set BurbleAmplitude to 0.0 and ignore it.</p>
+</id>
+
+<id="BurbleType">
+<h2 style="color:Blue">BurbleType</h2>
+<p>BurbleType 0</p>
+<p>Which Burble function to use</p>
+<p>0 = Sine Wave: use a sine wave to vary the number of new particle.</p>
+<p>1 = Random Curve: use a noise function to vary the number of new particles. </p>
+</id>
+
+<id="BurbleFrequency">
+<h2 style="color:Blue">BurbleFrequency</h2>
+<p>BurbleFrequency 1.0</p>
+<p>How quickly to move through the burble function. </p>
+</id>
+
+<id="BurbleThreshold">
+<h2 style="color:Blue">BurbleThreshold</h2>
+<p>BurbleThreshold 0.0</p>
+<p>Between 0 and 1. The cut off below which the system won't burble at all this frame. </p>
+</id>
+
+<id="EmissionLifeSpan">
+<h2 style="color:Blue">EmissionLifeSpan</h2>
+<p>EmissionLifeSpan 0.0</p>
+<p>After the age of the particle system exceeds this number, the system continues to run but no longer emits. Similar to maxparticles, but does not require calculating rate of creation. Values of 0.0 or less are ignored.</p>
+</id>
+
+<id="EmissionLifeSpanJitter">
+<h2 style="color:Blue">EmissionLifeSpanJitter</h2>
+<p>EmissionLifeSpanJitter 0.0</p>
+<p>Adds +/- jitter to the emission lifespan. For example, EmissionLifeSpan of 100 with EmissionLifeSpanJitter of 50 means you will get values from 50 to 150, uniformly distributed.</p>
+</id>
+
+<id="EmissionType">
+<h2 style="color:Blue">EmissionType</h2>
+<p>EmissionType 0</p>
+<p>Where new particles appear</p>
+<p>0 = Point: Emit from system's origin position</p>
+<p>1 = Line: Emit at random points along a line between the system's origin point and 'other' point. (To use this parameter, you must define a second point using 'POther' in the fxinfo file that owns this system.)</p>
+<p>2 = Cylinder Emit at a random point on a cylinder defined in x and z by EmissionRadius and in y by EmissionHeight. (EmissionHeight 0.0 gives you a circle.)</p>
+<p>3 = Even Trail: Emit evenly along a line from the system's current position to its position last frame. Useful for preventing clumping in traveling effects.</p>
+<p>4 = Sphere: Emit randomly on a sphere defined by the EmissionRadius</p>
+<p>5 = Line Even: Emit evenly along a line between the system's origin point and 'other' point. (To use this parameter, you must define a second point using 'POther' in the fxinfo file that owns this system.)</p>
+</id>
+
+<id="EmissionRadius">
+<h2 style="color:Blue">EmissionRadius</h2>
+<p>EmissionRadius 0.0</p>
+<p>:Used when emission type is cylinder or sphere </p>
+</id>
+
+<id="EmissionHeight">
+<h2 style="color:Blue">EmissionHeight</h2>
+<p>EmissionHeight 0.0</p>
+<p>:Used when emission type is cylinder </p>
+</id>
+
+<id="EmissionStartJitter">
+<h2 style="color:Blue">EmissionStartJitter</h2>
+<p>EmissionStartJitter 0.0 0.0 0.0</p>
+<p>x, y, z. Area around emission point in which a new particle can randomly appear. (Bug note: for world space particles, EmissionStartJitter is NOT xformed by the particle system's matrix like InitialVelocity is. I'll try to fix this. )</p>
+</id>
+
+<id="InitialVelocity">
+<h2 style="color:Blue">InitialVelocity</h2>
+<p>InitialVelocity 0.0 0.0 0.0</p>
+<p>Starting speed of a particle in x,y,z.</p>
+</id>
+
+<id="InitialVelocityJitter">
+<h2 style="color:Blue">InitialVelocityJitter</h2>
+<p>InitialVelocityJitter 0.0 0.0 0.0</p>
+<p>Random Starting speed of a particle in x,y,z. Useful for burst effects. (Bug note: for world space particles, InitialVelocityJitter is NOT xformed by the particle system's matrix like InitialVelocity is. I'll try to fix this. )</p>
+</id>
+
+<id="VelocityJitter">
+<h2 style="color:Blue">VelocityJitter</h2>
+<p>VelocityJitter 0.0 0.0 0.0</p>
+<p>Per frame random change in speed and direction per particle. Makes particles seem to wander aimlessly. Combined with a strong initial velocity, they start out purposeful, then wander off. Combined with a magnet, they act mothlike. Too much of this quickly causes particles to leave the scene.</p>
+</id>
+
+<id="Magnetism">
+<h2 style="color:Blue">Magnetism</h2>
+<p>Magnetism 0.0</p>
+<p>Every frame, change the particle's velocity by this much on the x,y,and z axes in the direction of the magnet defined by the fx. (Negative magnetism repels)</p>
+</id>
+
+<id="WorldOrLocalPosition">
+<h2 style="color:Blue">WorldOrLocalPosition</h2>
+<p>WorldOrLocalPosition 0</p>
+<p>The fx system that owns this particle system will give it a matrix every frame based on the node the system is attached to. The particle system uses this matrix to position itself in one of two ways:</p>
+<p>0 = World: Particles are placed in world space. Particles use the matrix for their starting position, and to transform new particle's InitialVelocity </p>
+<p>1 = Local: Particles are placed in local space. All transforms on particles in this system are relative to this matrix. So when the matrix moves, all particles in the system move with it. </p>
+</id>
+
+<id="FrontOrLocalFacing">
+<h2 style="color:Blue">FrontOrLocalFacing</h2>
+<p>FrontOrLocalFacing 0</p>
+<p>0 = Front: particles face the camera (mostly this is right) </p>
+<p>1 = Local: particles face up the y axis of the particle system's matrix (See WorldOrLocalPostion) </p>
+</id>
+
+<id="Stickiness">
+<h2 style="color:Blue">Stickiness</h2>
+<p>Stickiness 1.0</p>
+<p>Special feature to keep particle systems whose origin point moves from breaking apart. Every frame the particle tries this much to keep up with the movements of its emitter.</p>
+<p>0.0 particles ignore the movements of the emitter </p>
+<p>1.0 particles copy 100% of the movement of the emitter in addition to their other movements </p>
+</id>
+
+<id="MoveScale">
+<h2 style="color:Blue">MoveScale</h2>
+<p>MoveScale 1.0</p>
+<p>Scale the number of particles emitted by the movement rate of the system. So if a system was motionless, emit zero particles, if the system moved 1 foot, emit NewPerFrame particles, and if the system moved 10 feet, emit NewPerFrame x 10 particles. Notes: EmissionType 3 (Even Trail) is a natural fit with this parameter. Also, remember that local systems (WorldOrLocalPosition 1) only know they are moving when they are moving relative to their parent.<br></p>
+<p>Negative MoveScale dampens new per frame. The curve is a little different than positive move scale, so small moves have relatively little effect on the particle output, but there's a pretty quick drop off to zero output.</p>
+</id>
+
+<id="TightenUp">
+<h2 style="color:Blue">TightenUp</h2>
+<p>TightenUp 0.0</p>
+<p>Pull the particle toward the camera by this much (or push it away for negative values). Useful for reducing clipping with geometry. For example, fire particles on a torch look better with a little TightenUp. Too much looks weird, especially on the edges of the screen because of the simple frontfacing particle draw routine.</p>
+</id>
+
+<id="StreakType">
+<h2 style="color:Blue">StreakType</h2>
+<p>StreakType 0</p>
+<p>0 = NOSTREAK ignore streaking</p>
+<p>1 = VELOCITY direction of velocity, Use StreakScale and StreakDirection</p>
+<p>2 = GRAVITY streak upwards by gravity times StreakScale</p>
+<p>3 = ORIGIN connect back to the start point</p>
+<p>4 = MAGNET connect back to the magnet point</p>
+<p>5 = OTHER connect back to the other point</p>
+<p>7 = CHAIN connect to the particle created right before you</p>
+<p>8 = VPARENT direction of parent's velocity, Use StreakScale and StreakDirection</p>
+</id>
+
+<id="StreakScale">
+<h2 style="color:Blue">StreakScale</h2>
+<p>StreakScale 20</p>
+<p>Makes streaks longer than they would otherwise be by this factor. For example, if you are scaling by velocity, and the velocity is 2, StreakScale 20 would make the actual scale value be 2 * 20 = 40 and stretch the particle to 40 times more than it would otherwise be.</p>
+</id>
+
+<id="StreakOrient">
+<h2 style="color:Blue">StreakOrient</h2>
+<p>StreakOrient 1</p>
+<p>Whether or not to try to orient stretched particles toward the camera. Almost always 1, (which incidentally disables spin). StreakOrient 0, Combined with spin, used for tree leaves. Possibly flying glass?</p>
+<p>1 = Orient try your best to make this particle front facing</p>
+<p>0 = No Orient don't try to make this particle front facing</p>
+</id>
+
+<id="StreakDirection">
+<h2 style="color:Blue">StreakDirection</h2>
+<p>StreakDirection 1</p>
+<p>Which direction to apply the StreakScale, in the direction you are going, or the direction you came from.</p>
+<p>0 = The direction you came from</p>
+<p>1 = The direction you are going</p>
+</id>
+
+<id="KickStart">
+<h2 style="color:Blue">KickStart</h2>
+<p>KickStart 1</p>
+<p>If you want a world effect to appear as if had been going on forever instead of initializing once it's draw distance is reached and then begin to create particles. If you use this, you also need to use TimeToFull. Example:</p>
+<p>KickStart 1 TimeToFull 30 (This will advance the particle system to one second into it's life.)</p>
+</id>
+
+<id="TimeToFull">
+<h2 style="color:Blue">TimeToFull</h2>
+<p>TimeToFull 0</p>
+<p>Default is 10. It is how long the system takes to get to full strength. Useful for world fx like fountains that need to appear and disappear.</p>
+</id>
+
+<id="AlwaysDraw">
+<h2 style="color:Blue">AlwaysDraw</h2>
+<p>Flags AlwaysDraw</p>
+<p>There is a new scheme for not updating particle systems that aren't visible. Some particle systems are tricky, though, and we might not want them to not update. For them we can add Flags ALWAYSDRAW.</p>
+</id>
+
+<id="SortBias">
+<h2 style="color:Blue">SortBias</h2>
+<p>SortBias 0.5</p>
+<p>adjusts draw order in the z buffer to compersate for alpha sorting issues. Particularly useful if you have several systems with almost, but not quite the same center point, and aren't additive. Fixes flickering as it changes which system gets drawn first.</p>
+</id>
+
+<id="DieLikeThis">
+<h2 style="color:Blue">DieLikeThis</h2>
+<p>DieLikeThis :BobbleDeath.part</p>
+<p>Gives system parameters to switch to when the system is told to die. New system can't have newperframe or burble. All the particles begin to obey the rules of the new system. (Note if the system died because it was out of particles in the first place, this parameter has no meaning.) 0 = don't go to any other system.</p>
+</id>
+
+<id="DeathAgeToZero">
+<h2 style="color:Blue">DeathAgeToZero</h2>
+<p>DeathAgeToZero 0</p>
+<p>0 = keep the particles' ages from the old system.</p>
+<p>1 = when you go to the death system, reset the age of all the particles to zero. </p>
+</id>
+
+<id="StartSize">
+<h2 style="color:Blue">StartSize</h2>
+<p>StartSize 5.0</p>
+<p>Start size of new particles (relative to sprite texture size).</p>
+</id>
+
+<id="StartSizeJitter">
+<h2 style="color:Blue">StartSizeJitter</h2>
+<p>StartSizeJitter 0.1</p>
+<p>Variation in StartSize per particle. Thus StartSize 5.0 and StartSizeJitter of 6.0 means particles will start between 2.0 and 8.0 in size.</p>
+</id>
+
+<id="ExpandRate">
+<h2 style="color:Blue">ExpandRate</h2>
+<p>ExpandRate 0.1</p>
+<p>Amount to change the size of the particle per frame. Positive or negative. Particle grows (or shrinks if ExpandRate is negative.)</p>
+</id>
+
+<id="ExpandType">
+<h2 style="color:Blue">ExpandType</h2>
+<p>ExpandType 0</p>
+<p>What to do when the particle reaches it's end size.</p>
+<p>0 = Expand Forever. Ignore EndSize and grow at the ExpandRate your whole life.</p>
+<p>1 = Expand and Stop. When you come to the EndSize, stop growing.</p>
+<p>2 = Ping Pong. When you come to EndSize, shrink back to StartSize, repeat.</p>
+</id>
+
+<id="EndSize">
+<h2 style="color:Blue">EndSize</h2>
+<p>EndSize 5.0</p>
+<p>Not used if ExpandRate or ExpandType is 0. </p>
+</id>
+
+<id="OrientationJitter">
+<h2 style="color:Blue">OrientationJitter</h2>
+<p>OrientationJitter 0</p>
+<p>When a particle is created, this is the range of angles it can appear at. Range is 0 to 128.</p>
+<p>0 = always appear straight up and down.</p>
+<p>128 = appear at a random orientation.</p>
+</id>
+
+<id="Spin">
+<h2 style="color:Blue">Spin</h2>
+<p>Spin 0</p>
+<p>turn this much (-127 to 127). Positive spins cw, negative, ccw. Disabled if streakorient is used. NEW: This is adjusted for framerate and has a reasonable range now...</p>
+</id>
+
+<id="SpinJitter">
+<h2 style="color:Blue">SpinJitter</h2>
+<p>SpinJitter 5</p>
+<p>Add or subtract as much as this from Spin</p>
+<p>A Spin of 5 with SpinJitter of 10 means each particle will be given a spin between -5 and 15. SpinJitter is only calculated once, when the particle is created.</p>
+</id>
+
+
+<id="Blend_mode">
+<h2 style="color:Blue">Blend_mode</h2>
+<p>Blend_mode Normal</p>
+<p>Normal (string, or integer 0). fog IS applied - Basically AlphaBlend </p>
+<p>Additive (string, or integer 1). fog IS NOT applied </p>
+<p>Subtractive (string, or integer 2). fog IS NOT applied </p>
+<p>PreMultipliedAlpha (string, or integer 3). Not working quite as expected right now </p>
+<p>Multiply (String, or integer 4). - Multiples background by RGB of sprite. </p>
+<p>SubtractiveInverse (String, or integer 5). - For use with subtractive color customization. Works like Subtractive mode, but inverts the RGB value right before rendering. (This allows the player, and the artist, to select color swatches in the character creator and see those same colors, instead of their inverses, appear in the power.) </p>
+</id>
+
+<id="TextureName">
+<h2 style="color:Blue">TextureName</h2>
+<p>TextureName white.tga</p>
+<p>Texture 1 name. Always maps the entire texture, so be sure to fill the texture up, otherwise the particle will seem small, but you are still paying the fill cost for a big particle.</p>
+</id>
+
+<id="TexScroll1">
+<h2 style="color:Blue">TexScroll1</h2>
+<p>TexScroll1 0.0 0.0 0.0</p>
+<p>Vector by which to scroll the texture every frame. The z value is disregarded. </p>
+</id>
+
+<id="TexScrollJitter1">
+<h2 style="color:Blue">TexScrollJitter1</h2>
+<p>TexScrollJitter1 0.0 0.0 0.0</p>
+<p>Vector by which to change TexScroll Vector each frame, much like VelocityJitter. </p>
+</id>
+
+<id="AnimFrames1">
+<h2 style="color:Blue">AnimFrames1</h2>
+<p>AnimFrames1 12</p>
+<p>Number of Frames of Animation to play. Zero (or one) is no animation. You've gotta set up the frames in the texure in this format:</p>
+<=2 frames: 2x1 <= 4 frames: 2x2 <= 8 frames 4x2 <=16 frames 4x4 <=32 frames: 8x4
+<p>AnimPace1 0.1</p>
+<p>How many animation frames to play every game frame. 0.5 means play one frame every other game frame, or 15 frames per second</p>
+<p>AnimType1 0</p>
+<p>What happens when the animation ends:</p>
+<p>0 = loop</p>
+<p>1 = go to the end and stop</p>
+<p>2 = ping pong </p>
+</id>
+
+<id="TextureName2">
+<h2 style="color:Blue">TextureName2</h2>          
+<p>TextureName2 spark.tga</p>
+<p>Name of the second texture (default white) This texture has it's own version of all the parameters of the first(TexScroll2, TexScrollJitter2, AnimFrames2, AnimPace2, AnimType2)</p>
+</id>
+
+<id="Alpha">
+<h2 style="color:Blue">Alpha</h2>
+<p>Alpha 255</p>
+<p>Maximum alpha value of the particles in this system. In other words, the alpha of the particle after it has faded completely in, but before it begins to fade out. If you leave it out, it will default to 255.</p>
+</id>
+
+<id="FadeInBy">
+<h2 style="color:Blue">FadeInBy</h2>
+<p>FadeInBy 20</p>
+<p>Alpha starts at zero, and goes to its full intensity (defined by Alpha) by this frame. Set this to 0 to get it to pop to full opacity.</p>
+</id>
+
+<id="FadeOutStart">
+<h2 style="color:Blue">FadeOutStart</h2>
+<p>FadeOutStart 40</p>
+<p>On this frame, start to fade out, and fade to 0 opacity by the FadeOutBy frame. Set FadeOutStart and FadeOutBy to the same to get it to pop out of existance.</p>
+</id>
+
+<id="FadeOutBy">
+<h2 style="color:Blue">FadeOutBy</h2>
+<p>FadeOutBy 60</p>
+<p>Die on this frame. Make sure FadeInBy <= FadeOutStart <= FadeOutBy.</p>
+</id>
+
+<id="StartColor">
+<h2 style="color:Blue">StartColor</h2>
+<p>StartColor 255 255 255</p>
+<p>The RGB color of the particle when it is created. If ByTime1 is 0, this will always be the particle's color.</p>
+</id>
+
+<id="ColorChangeType">
+<h2 style="color:Blue">ColorChangeType</h2>
+<p>ColorChangeType 0</p>
+<p>When the particle comes to the end of the ByTime/BeColor sequencer, what should it do?</p>
+<p>0 = Stop at the last color</p>
+<p>1 = Loop back to the beginning. (If you use this, you should make the last color equal the StartColor, or the color will pop.)</p>
+</id>
+
+<id="PrimaryTint">
+<h2 style="color:Blue">PrimaryTint</h2>
+<p>PrimaryTint 0 (Range 0-100) - Inherit this percentage of the Primary color tint from the parent.</p>
+</id>
+
+<id="SecondaryTint">
+<h2 style="color:Blue">SecondaryTint</h2>
+<p>SecondaryTint 0 (Range 0-100) - Inherit this percentage of the Primary color tint from the parent.</p>
+</id>
+
+
+<id="ByTime1">
+<h2 style="color:Blue">ByTime1</h2>
+<p>ByTime1 50</p>
+<p>ByTime/BeColor is used to change the color of particles over time.  ByTime defines the time in frames.  BeColor defines the RGB value to use.  A Particle System can use up to four ByTime/BeColor definitions. If ByTime is 0, that means stop with the previous Color and ignore this Color and every Color after this. Interpolation between colors is linear. If a ByTime value is greater than the particle's FadeOutBy, the particle will ramp towards the color untill it fades out, but it will never arrive at that final color value. Primary and Secondary tint values are used to specify how much of the primary and secondary tint colors the particle inherits at this point. If the FadeOutTime is longer than any defined Primary or Secondary tint value, the tint value will revert to 0% for both primary and secondary...so make sure that you have a ByTime defined that matches or exceeds the FadeOutTime.</p>
+</id>
+
+<id="BeColor1">
+<h2 style="color:Blue">BeColor1</h2>
+<p>BeColor1 100 200 50</p>
+<p>ByTime/BeColor is used to change the color of particles over time.  ByTime defines the time in frames.  BeColor defines the RGB value to use.  A Particle System can use up to four ByTime/BeColor definitions. If ByTime is 0, that means stop with the previous Color and ignore this Color and every Color after this. Interpolation between colors is linear. If a ByTime value is greater than the particle's FadeOutBy, the particle will ramp towards the color untill it fades out, but it will never arrive at that final color value. Primary and Secondary tint values are used to specify how much of the primary and secondary tint colors the particle inherits at this point. If the FadeOutTime is longer than any defined Primary or Secondary tint value, the tint value will revert to 0% for both primary and secondary...so make sure that you have a ByTime defined that matches or exceeds the FadeOutTime.</p>
+</id>
+
+<id="PrimaryTint1">
+<h2 style="color:Blue">PrimaryTint1</h2>
+<p>PrimaryTint1 0 (Range 0-100) - Inherit this percentage of the Primary color tint from the parent.</p>
+</id>
+
+<id="SecondaryTint1">
+<h2 style="color:Blue">SecondaryTint1</h2>
+<p>SecondaryTint1 0 (Range 0-100) - Inherit this percentage of the Primary color tint from the parent.</p>
+</id>
+
+<id="ByTime2">
+<h2 style="color:Blue">ByTime2</h2>
+<p>ByTime2 50</p>
+<p>ByTime/BeColor is used to change the color of particles over time.  ByTime defines the time in frames.  BeColor defines the RGB value to use.  A Particle System can use up to four ByTime/BeColor definitions. If ByTime is 0, that means stop with the previous Color and ignore this Color and every Color after this. Interpolation between colors is linear. If a ByTime value is greater than the particle's FadeOutBy, the particle will ramp towards the color untill it fades out, but it will never arrive at that final color value. Primary and Secondary tint values are used to specify how much of the primary and secondary tint colors the particle inherits at this point. If the FadeOutTime is longer than any defined Primary or Secondary tint value, the tint value will revert to 0% for both primary and secondary...so make sure that you have a ByTime defined that matches or exceeds the FadeOutTime.</p>
+</id>
+
+<id="BeColor2">
+<h2 style="color:Blue">BeColor2</h2>
+<p>BeColor2 100 200 50</p>
+<p>ByTime/BeColor is used to change the color of particles over time.  ByTime defines the time in frames.  BeColor defines the RGB value to use.  A Particle System can use up to four ByTime/BeColor definitions. If ByTime is 0, that means stop with the previous Color and ignore this Color and every Color after this. Interpolation between colors is linear. If a ByTime value is greater than the particle's FadeOutBy, the particle will ramp towards the color untill it fades out, but it will never arrive at that final color value. Primary and Secondary tint values are used to specify how much of the primary and secondary tint colors the particle inherits at this point. If the FadeOutTime is longer than any defined Primary or Secondary tint value, the tint value will revert to 0% for both primary and secondary...so make sure that you have a ByTime defined that matches or exceeds the FadeOutTime.</p>
+</id>
+
+<id="PrimaryTint2">
+<h2 style="color:Blue">PrimaryTint2</h2>
+<p>PrimaryTint2 0 (Range 0-100) - Inherit this percentage of the Primary color tint from the parent.</p>
+</id>
+
+<id="SecondaryTint2">
+<h2 style="color:Blue">SecondaryTint2</h2>
+<p>SecondaryTint2 0 (Range 0-100) - Inherit this percentage of the Primary color tint from the parent.</p>
+</id>
+
+<id="ByTime3">
+<h2 style="color:Blue">ByTime3</h2>
+<p>ByTime3 50</p>
+<p>ByTime/BeColor is used to change the color of particles over time.  ByTime defines the time in frames.  BeColor defines the RGB value to use.  A Particle System can use up to four ByTime/BeColor definitions. If ByTime is 0, that means stop with the previous Color and ignore this Color and every Color after this. Interpolation between colors is linear. If a ByTime value is greater than the particle's FadeOutBy, the particle will ramp towards the color untill it fades out, but it will never arrive at that final color value. Primary and Secondary tint values are used to specify how much of the primary and secondary tint colors the particle inherits at this point. If the FadeOutTime is longer than any defined Primary or Secondary tint value, the tint value will revert to 0% for both primary and secondary...so make sure that you have a ByTime defined that matches or exceeds the FadeOutTime.</p>
+</id>
+
+<id="BeColor3">
+<h2 style="color:Blue">BeColor3</h2>
+<p>BeColor3 100 200 50</p>
+<p>ByTime/BeColor is used to change the color of particles over time.  ByTime defines the time in frames.  BeColor defines the RGB value to use.  A Particle System can use up to four ByTime/BeColor definitions. If ByTime is 0, that means stop with the previous Color and ignore this Color and every Color after this. Interpolation between colors is linear. If a ByTime value is greater than the particle's FadeOutBy, the particle will ramp towards the color untill it fades out, but it will never arrive at that final color value. Primary and Secondary tint values are used to specify how much of the primary and secondary tint colors the particle inherits at this point. If the FadeOutTime is longer than any defined Primary or Secondary tint value, the tint value will revert to 0% for both primary and secondary...so make sure that you have a ByTime defined that matches or exceeds the FadeOutTime.</p>
+</id>
+
+<id="PrimaryTint3">
+<h2 style="color:Blue">PrimaryTint3</h2>
+<p>PrimaryTint3 0 (Range 0-100) - Inherit this percentage of the Primary color tint from the parent.</p>
+</id>
+
+<id="SecondaryTint3">
+<h2 style="color:Blue">SecondaryTint3</h2>
+<p>SecondaryTint3 0 (Range 0-100) - Inherit this percentage of the Primary color tint from the parent.</p>
+</id>
+
+<id="ByTime4">
+<h2 style="color:Blue">ByTime4</h2>
+<p>ByTime4 50</p>
+<p>ByTime/BeColor is used to change the color of particles over time.  ByTime defines the time in frames.  BeColor defines the RGB value to use.  A Particle System can use up to four ByTime/BeColor definitions. If ByTime is 0, that means stop with the previous Color and ignore this Color and every Color after this. Interpolation between colors is linear. If a ByTime value is greater than the particle's FadeOutBy, the particle will ramp towards the color untill it fades out, but it will never arrive at that final color value. Primary and Secondary tint values are used to specify how much of the primary and secondary tint colors the particle inherits at this point. If the FadeOutTime is longer than any defined Primary or Secondary tint value, the tint value will revert to 0% for both primary and secondary...so make sure that you have a ByTime defined that matches or exceeds the FadeOutTime.</p>
+</id>
+
+<id="BeColor4">
+<h2 style="color:Blue">BeColor4</h2>
+<p>BeColor4 100 200 50</p>
+<p>ByTime/BeColor is used to change the color of particles over time.  ByTime defines the time in frames.  BeColor defines the RGB value to use.  A Particle System can use up to four ByTime/BeColor definitions. If ByTime is 0, that means stop with the previous Color and ignore this Color and every Color after this. Interpolation between colors is linear. If a ByTime value is greater than the particle's FadeOutBy, the particle will ramp towards the color untill it fades out, but it will never arrive at that final color value. Primary and Secondary tint values are used to specify how much of the primary and secondary tint colors the particle inherits at this point. If the FadeOutTime is longer than any defined Primary or Secondary tint value, the tint value will revert to 0% for both primary and secondary...so make sure that you have a ByTime defined that matches or exceeds the FadeOutTime.</p>
+</id>
+
+<id="PrimaryTint4">
+<h2 style="color:Blue">PrimaryTint4</h2>
+<p>PrimaryTint4 0 (Range 0-100) - Inherit this percentage of the Primary color tint from the parent.</p>
+</id>
+
+<id="SecondaryTint4">
+<h2 style="color:Blue">SecondaryTint4</h2>
+<p>SecondaryTint4 0 (Range 0-100) - Inherit this percentage of the Primary color tint from the parent.</p>
+</id>
+
+
+<id="ColorOffset">
+<h2 style="color:Blue">ColorOffset</h2>
+<p>ColorOffset 0 0 0</p>
+<p>ColorOffset is RGB, but each color can be positive or negative, and is added to the whole color path.</p>
+<p>For example: ColorOffset -10 0 34 & ColorOffsetJitter 0 50 0, will shift the red by -10 (out of 255), the green by between -50 and 50, and the blue up by 34. If the offset or the jitter causes an RGB value to go below 0 or above 255, it is capped at those values.</p>
+</id>
+
+<id="ColorOffsetJitter">
+<h2 style="color:Blue">ColorOffsetJitter</h2>
+<p>ColorOffsetJitter 0 0 0</p>
+<p>ColorOffsetJitter is also RGB, and is added on top of ColorOffset to the whole colorpath. ColorOffsetJitter is randomly calculated once per particle system, but not per-particle. So each time you create a particle system, the ColorOffset will be jittered by the ColorOffsetJitter, but it will be the same for every particle in that particle system. Doing it per-particle would incur a significant performance hit.</p>
+<p>For example: ColorOffset -10 0 34 & ColorOffsetJitter 0 50 0, will shift the red by -10 (out of 255), the green by between -50 and 50, and the blue up by 34. If the offset or the jitter causes an RGB value to go below 0 or above 255, it is capped at those values.</p>
+</id>
+
+<id="IgnoreFxTint">
+<h2 style="color:Blue">IgnoreFxTint</h2>
+<p>Flags IgnoreFxTint</p>
+<p>This flag will prevent the system from being colorshifted by the parent FX. This normally occurs, for instance, when a particle system is attached to a costume piece.</p>
+</id>
+
+<!--
+</id>
+
+<id="">
+<h2 style="color:Blue"></h2>
+
+-->
+        
+</body>
+</html>

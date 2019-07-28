@@ -1,0 +1,5 @@
+!define VERSION "1850.201006050223.0" 
+!define SOURCE_DIR "D:\update-server\Images\Coh\1850.201006050223.0" 
+!define CHECKSUM_FILE "D:\update-server\Checksums\Coh\1850.201006050223.0.checksum" 
+!define UPDATER_SOURCE_DIR "D:\update-server\Images\CoH Updater\1800.201006040036.3T" 
+!define UPDATER_EXE_NAME "CohUpdater.exe" 

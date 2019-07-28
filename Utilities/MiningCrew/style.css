@@ -1,0 +1,270 @@
+BODY {
+	background: #eee;
+	color: black;
+	font-family: Verdana, sans-serif;
+	text-align: center;
+}
+
+A:link		{ color: #008; text-decoration: none; }
+A:visited	{ color: #008; text-decoration: none; }
+A:hover		{ color: #00f; text-decoration: underline;}
+
+IMG {
+	border: 0;
+}
+
+UL {
+	margin-top: 0;
+	margin-bottom: 0.5em;
+	margin-left: 2em;
+	padding: 0;
+}
+
+LI {
+	padding-bottom: 0.3em;
+}
+
+IMG.icon, IMG.listicon {
+	height: 16px;
+	width: 16px;
+}
+
+IMG.icon		{ vertical-align: -2px;	}
+IMG.listicon	{ vertical-align: middle; }
+
+TABLE {
+	vertical-align: middle;
+	border-spacing: 1px;
+	margin: 0 auto;
+}
+
+TD {
+	padding: 2px 4px;
+}
+
+.title {
+	font-weight: bolder;
+	font-size: larger;
+}
+
+.description {
+	font-size: smaller;
+}
+
+.infobox, .errorbox, .warnbox, .editbox, .newbox {
+	border: white solid 1px;
+	background: #ccc;
+	padding: 3px;
+	min-height: 64px;
+	margin-bottom: 16px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.infobox {
+	background: #ccf;
+}
+
+.errorbox {
+	background: #fcc;
+}
+
+.warnbox {
+	background: #ffc;
+}
+
+.editbox {
+}
+
+.newbox {
+}
+
+.boxicon {
+	float: left;
+	width: 64px;
+	height: 64px;
+}
+
+/*
+.infobox:before {
+	content: url(img/infobox.png);
+	float: left;
+	width: 64px;
+	height: 64px;
+}
+
+.errorbox:before {
+	content: url(img/errorbox.png);
+	float: left;
+	width: 64px;
+	height: 64px;
+}
+
+.warnbox:before {
+	content: url(img/warnbox.png);
+	float: left;
+	width: 64px;
+	height: 64px;
+}
+*/
+
+/* At least these look nice in opera... */
+.editbox:before {
+	content: url(img/editbox.png);
+	float: right;
+	width: 64px;
+	height: 64px;
+}
+
+.newbox:before {
+	content: url(img/newbox.png);
+	float: right;
+	width: 64px;
+	height: 64px;
+}
+/****************************************/
+
+.formrow, .formrowlong {
+	white-space: nowrap;
+	margin: 3px 1px;
+}
+
+.formrowlong {
+	clear: right;
+}
+
+.label {
+	font-weight: bolder;
+	font-size: smaller;
+}
+
+.butdanger {
+	background: #fff8f8;
+	border: #c44 solid 2px;
+}
+
+.butwarning {
+	background: #fffff8;
+	border: #cc4 solid 2px;
+}
+
+.butnew {
+	background: #f8fff8;
+	border: #4c4 solid 2px;
+}
+
+.butsearch {
+	background: #f8f8ff;
+	border: #44c solid 2px;
+}
+
+.butcancel {
+	background: #f8f8f8;
+	border: #888 solid 2px;
+}
+
+.rowt {
+	background: #444;
+	color: #eee;
+	text-align: center;
+}
+
+.rowh {
+	background: #666;
+	color: #eee;
+	font-size: smaller;
+	text-align: center;
+}
+
+.rowhh {
+	background: #66a;
+	color: #eee;
+	font-size: smaller;
+	text-align: center;
+	text-decoration: underline;
+}
+
+.row0 { background: #ddd; }
+.row1 { background: #ccc; }
+
+.rowf {
+	background: #f8f8f8;
+}
+
+.centerleft {
+	text-align: left;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.nodata {
+	font-style: italic;
+	text-align: center;
+}
+
+#main_table {
+	text-align: left;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	border-spacing: 0;
+	width: 100%;
+	white-space: nowrap;
+}
+
+#main_menu {
+	vertical-align: top;
+	width: 200px;
+}
+
+#main_body {
+	vertical-align: top;
+	padding: 0;
+}
+
+#body_table {
+	text-align: left;
+	margin: 0 auto;
+	padding: 0;
+	border: 0;
+	border-spacing: 0;
+}
+
+.mssql_error {
+	display: table;
+	color: black;
+	background: white;
+	border: solid black 1px;
+	font-family: sans-serif;
+	font-weight: normal;
+	font-style: normal;
+	padding: 5px;
+	margin: auto auto auto 0;
+	text-align: left;
+}
+
+.mssql_error_error {
+	color: red;
+}
+
+.mssql_error_db {
+	font-weight: bold;
+	color: navy;
+}
+
+.mssql_error_message {
+	color: blue;
+}
+
+.mssql_error_query {
+	font-family: monospace;
+	font-size: smaller;
+	white-space: pre;
+	white-space: pre-wrap;
+	color: maroon;
+}
+
+.mssql_error_trace {
+	font-family: monospace;
+	white-space: pre;
+}

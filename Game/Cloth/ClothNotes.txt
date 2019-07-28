@@ -1,0 +1,116 @@
+NPC's
+When attempting to attach capes to NPC's, the results were very
+glitchy. It seemed as though entClientUpdate() was not getting
+called frequently enough.
+
+
+HARNESS
+The test harness model has 14 vertices instead of the expected 10.
+The last 4 vertices duplicate other vertices, so I simply ignore them.
+This may not be a reliable solution.
+See ClothBuildAttachHarness().
+
+
+WEIGHTS
+The weights from the test cape model are not as expected. Instead
+I am using the upper row of vertices as eyelets and varying the
+weights from top to bottom according to the tuning paramater
+'mass_y_scale' in initCapeNode()
+
+
+RENDERING
+In the render hack implementation, back-side rendering is not being
+handled correctly. For rendering the backside, two things should be
+taken into account:
+1. Normals need to be inverted
+2. Normal Scale values need to be inverted 
+   (relative max -> relative min and vice versa)
+
+NOTE: The "darkening" of concave areas by shortening the normals
+using the Normal Scale values creates completely incorrect results 
+on the underside, which may or may not matter. The fix for this 
+is to use the Normal Scale in the shader and invert the value when
+rendering the underside.
+
+Also, binormals are currently not being calculated. This can be changed
+with the #define CLOTH_CALC_BINORMALS in Cloth.h. Normalization of the
+normals and the binormals can be controlled here as well.
+
+BUG: There is a very bad bug currently in the cape rendering that
+causes the mesh to be drawn way off screen a frame the first time a
+cape LOD is drawn with intermediate points. Thes seems to be a
+rendering bug which will hopefully go away once a proper renderer is
+implemented.
+
+
+ANIMATIONS
+The flight animation creates a natural curvature in the test cape.
+This gets exagerated by the wind ripple and may or may not be desired.
+Fixing it would be accomplished by changing the shape of the harness.
+
+There is only one flying animation for flying forward and flying
+forward/up. The result is that a nice amount of cloth ripple on the
+flying forward animation is not noticable when flying forward/up.
+The fix for this would be to have a different animation (or different
+animation state at least) for flying forard/up with different wind
+paramaters.
+
+
+LOD 0
+Currently LOD 0 is only used for the player. It should probably be used
+for any character close enough, where "close enough" might be different
+for the player and vary according to the PC performance.
+
+
+CLOTHFIX
+Obvious hacks should be commented with "CLOTHFIX"
+
+
+DELETION / CREATION
+Currently if a cape stops getting updated (entClientUpdate() not called)
+but it is not deleted, it will continue to be rendered in its last updated
+position. This needs to be fixed.
+
+
+FLAGS
+See test_flag.c in the Game/entity directory for a flag cloth example,
+and CLOTH_TEST_FLAG in entclient.c for an implementation example.
+The only difference between a cape and a flage other than the different
+orientation is CLOTH_FLAG_RIPPLE_VERTICAL which is set for flags to
+produce a nice diagonal ripple effect.
+
+
+TAILS
+There is a tail example (test_tail.c and CLOTH_TEST_TAIL) however it is
+far from polished. The tail is based on a 3x8 cloth, with 4 iterations,
+3 connections, and a stifness of -1. This produces a very stiff cloth
+that looks reasnably good. There is no gravity, and just a slight wind
+effect away from the player to keep the tail from bunching up.
+
+It's a bit expensive (4 iterations and 3 connections) but its only 
+24 points, and collisions could be greatly simplified.
+
+Obviously a tail should not be rendered like a cape. The thing to do
+would be to take the central column of particles and turne those into
+bone positions for the tail mesh. The position of the end particle
+should probably not be used because it is less well constrained
+and tends to flop a bit much.
+
+A better tail could be produced using a triangular tube of
+constrained particles. This would use the same constraint code,
+but would require a completely different method for organizing the
+particles since they can no longer be thought of as a grid. This
+would be a good first step towards generalizing this code for use
+in skirts and clothing.
+ 
+-----------------------------------------------------
+TO DO:
+
+WIND MANAGER.
+Some sort of wind manager should be inplemented that takes into account
+passing cars, attack effects, and time of day. This function should
+update or replace world_wind_dir and world_wind_max_mag in clothnode.c
+
+LOD SCALING
+Some sort of performance based LOD scaling should be inplemented affecting
+cloth_lod_mindist and cloth_lod_maxdist in clothnode.c.

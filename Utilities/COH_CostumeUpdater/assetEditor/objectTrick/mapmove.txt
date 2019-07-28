@@ -1,0 +1,63 @@
+Atlas Park,1
+Ouroboros (Event),2
+Cimerora,3
+Midnighter Club,4
+Kings' Row,5
+Steel Canyon,6
+Skyway City,7
+Talos Island,8
+Independence Port,9
+Founders' Falls,10
+Brickstown,11
+Perez Park,12
+Boomtown,13
+Dark Astoria,14
+Crey's Folly,15
+Ouroboros (Hero),16
+Ouroboros (Villain),17
+Sewer Network,18
+Terra Volta,20
+Eden,21
+The Hive,22
+Sewer Network (Abandoned),23
+Outbreak,25
+Galaxy City,29
+Nova Praetoria,36
+Imperial City,37
+Neutropolis,38
+Underground - Nova,39
+Precinct Five,40
+Underground - Imperial,42
+Behavioral Adjustment Facility (BAF),43
+TPN Campus,43
+Keyes Reactor,44
+Lambda Sector,45
+Mother of Mercy Psychiatric Hospital,47
+Magisterium (Tyrant's Tower),48
+First Ward,49
+Underground - Neutropolis,51
+Peregrine Island,61
+The Hollows,62
+Shadow Shard - Firebase Zulu,64
+Shadow Shard - Cascade Archipelago,65
+Shadow Shard - The Chantry,66
+Shadow Shard - The Storm Palace,67
+Striga Isle,69
+Breakout,70
+Mercy Island,71
+Port Oakes,72
+Cap au Diable,73
+Sharkhead Isle,74
+Nerva Archipelago,75
+St. Martial,76
+Grandville,77
+Bloody Bay,78
+Siren's Call,79
+Warburg,80
+Recluse's Victory,81
+Croatoa,82
+Pocket D,83
+Faultline,84
+Rikti War Zone,85
+The Abyss,86
+Monster Island,87

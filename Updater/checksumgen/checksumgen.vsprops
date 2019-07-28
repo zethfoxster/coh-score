@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<VisualStudioPropertySheet
+	ProjectType="Visual C++"
+	Version="8.00"
+	Name="checksumgen"
+	>
+	<Tool
+		Name="VCCLCompilerTool"
+		AdditionalIncludeDirectories="../UpdateCommon,..\../libs\UtilitiesLib\version;..\../libs\UtilitiesLib\language;../../libs/UtilitiesLib/network,../../libs/UtilitiesLib/utils,../../mapserver,../../libs/UtilitiesLib/,../../libs/UtilitiesLib/components/,../../3rdparty/zlibsrc/,../../libs/UtilitiesLib/assert,../../common/language"
+		PreprocessorDefinitions="WIN32;_CONSOLE;_CRT_SECURE_NO_DEPRECATE"
+		BasicRuntimeChecks="0"
+	/>
+	<Tool
+		Name="VCLinkerTool"
+		AdditionalDependencies=""
+		OutputFile="..\..\bin\$(ConfigurationName)\$(ProjectName).exe"
+		AdditionalLibraryDirectories="../../3rdparty/bin"
+		SubSystem="1"
+		OptimizeReferences="1"
+		FixedBaseAddress="1"
+	/>
+	<Tool
+		Name="VCPostBuildEventTool"
+		CommandLine="..\..\bin\CopyExecutable.bat &quot;$(ConfigurationName)&quot; &quot;$(TargetName)&quot; &quot;$(TargetExt)&quot;"
+	/>
+</VisualStudioPropertySheet>

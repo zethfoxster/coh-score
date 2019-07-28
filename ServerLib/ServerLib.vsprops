@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<VisualStudioPropertySheet
+	ProjectType="Visual C++"
+	Version="8.00"
+	Name="ServerLib"
+	>
+	<Tool
+		Name="VCCLCompilerTool"
+		AdditionalIncludeDirectories="..\Common;..\libs\UtilitiesLib;..\libs\UtilitiesLib\assert;..\libs\UtilitiesLib\components;..\libs\UtilitiesLib\utils;..\libs\UtilitiesLib\network;..\Common\persist;."
+		PreprocessorDefinitions="PROJECT_SERVERLIB=1;WIN32;_LIB;USEZLIB;_CRTDBG_MAP_ALLOC"
+	/>
+	<Tool
+		Name="VCPreBuildEventTool"
+		CommandLine="..\utilities\bin\structparser X $(InputDir) X $(InputFileName) X $(PlatformName) X $(ConfigurationName) X $(VCInstallDir) X $(SolutionPath)"
+	/>
+</VisualStudioPropertySheet>

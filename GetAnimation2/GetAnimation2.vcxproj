@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Full Debug|Win32">
+      <Configuration>Full Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{4AA11062-3CF4-4267-B1BF-0B735047A58E}</ProjectGuid>
+    <RootNamespace>GetAnimation2</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Full Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Full Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\PropertySheets\Common.props" />
+    <Import Project="..\PropertySheets\FullDebug.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\PropertySheets\Common.props" />
+    <Import Project="..\PropertySheets\Debug.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <PreBuildEvent>
+      <Command>..\utilities\bin\structparser2010 X $(ProjectDir) X $(ProjectFileName) X $(Platform) X $(Configuration) X $(VCInstallDir) X $(SolutionPath)</Command>
+    </PreBuildEvent>
+    <ClCompile>
+      <AdditionalIncludeDirectories>..\common;..\common\utils;../tricube;../glh;../common/gridcoll;../libs/UtilitiesLib/utils;../libs/UtilitiesLib/components;../common/seq;../getvrml;../common/group;../3rdparty/zlibsrc;../libs/UtilitiesLib;../GetAnimation;../common/cmdParse;../common/entity;../Game/render/thread;../libs/UtilitiesLib\network;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_CONSOLE;OFFLINE;GETANIMATION;_CRTDBG_MAP_ALLOC=1;_CRT_SECURE_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BrowseInformation>true</BrowseInformation>
+      <WarningLevel>Level3</WarningLevel>
+    </ClCompile>
+    <Link>
+      <IgnoreSpecificDefaultLibraries>libcmt;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Full Debug|Win32'">
+    <PreBuildEvent>
+      <Command>..\utilities\bin\structparser2010 X $(ProjectDir) X $(ProjectFileName) X $(Platform) X $(Configuration) X $(VCInstallDir) X $(SolutionPath)</Command>
+    </PreBuildEvent>
+    <ClCompile>
+      <AdditionalIncludeDirectories>..\common;..\common\utils;../tricube;../glh;../common/gridcoll;../libs/UtilitiesLib/utils;../libs/UtilitiesLib/components;../common/seq;../getvrml;../common/group;../3rdparty/zlibsrc;../libs/UtilitiesLib;../GetAnimation;../common/cmdParse;../common/entity;../Game/render/thread;../libs/UtilitiesLib/network;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_CONSOLE;OFFLINE;GETANIMATION;_CRTDBG_MAP_ALLOC=1;_CRT_SECURE_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BrowseInformation>true</BrowseInformation>
+      <WarningLevel>Level3</WarningLevel>
+    </ClCompile>
+    <Link>
+      <IgnoreSpecificDefaultLibraries>libcmt;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="mainanim.c" />
+    <ClCompile Include="outputanim.c" />
+    <ClCompile Include="process_animx.c" />
+    <ClCompile Include="process_skelx.c" />
+    <ClCompile Include="process_vrml.c" />
+    <ClCompile Include="processanim.c" />
+    <ClCompile Include="..\GetVrml\tree.c" />
+    <ClCompile Include="..\GetVrml\vrml.c" />
+    <ClCompile Include="..\Common\seq\animtrack.c" />
+    <ClCompile Include="..\Common\seq\animtrackanimate.c" />
+    <ClCompile Include="..\Common\seq\bones.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="outputanim.h" />
+    <ClInclude Include="process_animx.h" />
+    <ClInclude Include="process_skelx.h" />
+    <ClInclude Include="process_vrml.h" />
+    <ClInclude Include="processanim.h" />
+    <ClInclude Include="..\GetVrml\tree.h" />
+    <ClInclude Include="..\GetVrml\vrml.h" />
+    <ClInclude Include="..\Common\seq\animtrack.h" />
+    <ClInclude Include="..\Common\seq\animtrackanimate.h" />
+    <ClInclude Include="..\Common\seq\bones.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="GetAnimation2.ico" />
+    <None Include="small.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="GetAnimation2.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\libs\UtilitiesLib\UtilitiesLib.vcxproj">
+      <Project>{a6741f6e-5476-4f9f-9d65-62b54aaf1d08}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

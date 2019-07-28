@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<VisualStudioPropertySheet
+	ProjectType="Visual C++"
+	Version="8.00"
+	Name="FullDebug"
+	>
+	<Tool
+		Name="VCCLCompilerTool"
+		PreprocessorDefinitions="_FULLDEBUG;FULLDEBUG;_DEBUG;_CRTDBG_MAP_ALLOC"
+		BasicRuntimeChecks="3"
+		RuntimeLibrary="1"
+	/>
+	<Tool
+		Name="VCLinkerTool"
+		IgnoreDefaultLibraryNames="LIBC.lib;LIBCMT.lib"
+	/>
+	<Tool
+		Name="VCResourceCompilerTool"
+		PreprocessorDefinitions="_FULLDEBUG;_DEBUG"
+	/>
+</VisualStudioPropertySheet>

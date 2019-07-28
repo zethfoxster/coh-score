@@ -1,0 +1,845 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{28FBC709-F95E-48ED-8383-DB6985465E34}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>COH_CostumeUpdater</RootNamespace>
+    <AssemblyName>COH_CostumeUpdater</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <ApplicationIcon>Resources\cohCostumeUpdater.ico</ApplicationIcon>
+    <StartupObject>COH_CostumeUpdater.Program</StartupObject>
+    <TargetZone>LocalIntranet</TargetZone>
+    <GenerateManifests>true</GenerateManifests>
+    <SignManifests>true</SignManifests>
+    <ManifestCertificateThumbprint>ED91791404B59A99F0714CBF2EDDBFAAE5390613</ManifestCertificateThumbprint>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>COH_CostumeEditors.pfx</AssemblyOriginatorKeyFile>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+    <ManifestKeyFile>COH_CostumeUpdater_TemporaryKey.pfx</ManifestKeyFile>
+    <PublishUrl>N:\Perforce\updatesCOH_Editor\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Unc</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <InstallUrl>\\ncncfolders.paragon.ncwest.ncsoft.corp\dodo\Perforce\updatesCOH_Editor\</InstallUrl>
+    <ProductName>COH Art Assets Editors</ProductName>
+    <PublisherName>NCSoft, Paragon Studios</PublisherName>
+    <OpenBrowserOnPublish>false</OpenBrowserOnPublish>
+    <ApplicationRevision>181</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <CreateDesktopShortcut>true</CreateDesktopShortcut>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x64' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x64' ">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.DirectX, Version=1.0.2902.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+    <Reference Include="Microsoft.DirectX.Direct3D, Version=1.0.2902.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.DirectX.Direct3DX, Version=1.0.2902.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.DirectX.DirectInput, Version=1.0.2902.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="p4api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=ff968dc1933aba6f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Users\user\Documents\Visual Studio 2008\projects\P4.Net\bin\SN_CLR_2.0\p4api.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Design" />
+    <Reference Include="System.Runtime.Remoting" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="assetEditor\aeCommon\COH_ColorPicker.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="assetEditor\aeCommon\COH_ColorPicker.Designer.cs">
+      <DependentUpon>COH_ColorPicker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="assetEditor\aeCommon\CollapsablePanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="assetEditor\aeCommon\ColorSlider.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="assetEditor\aeCommon\ColorWheel.cs" />
+    <Compile Include="assetEditor\aeCommon\MatBlock.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="assetEditor\aeCommon\MatSpecLitCubeMapTintFlags.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="assetEditor\aeCommon\MatSpecLitCubeMapTintFlags.Designer.cs">
+      <DependentUpon>MatSpecLitCubeMapTintFlags.cs</DependentUpon>
+    </Compile>
+    <Compile Include="assetEditor\AssetTricks.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="assetEditor\AssetTricks.Designer.cs">
+      <DependentUpon>AssetTricks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="assetEditor\materialTrick\EndlessTricks.cs" />
+    <Compile Include="assetEditor\materialTrick\FB_GlobalOptionsPnl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="assetEditor\materialTrick\matBlockForm.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="assetEditor\materialTrick\matBlockForm.designer.cs">
+      <DependentUpon>matBlockForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="assetEditor\materialTrick\MatParser.cs" />
+    <Compile Include="assetEditor\materialTrick\MatTrick.cs" />
+    <Compile Include="assetEditor\objectTrick\CheckBox_SpinCombo.cs" />
+    <Compile Include="assetEditor\objectTrick\ObjectTrickParser.cs" />
+    <Compile Include="assetEditor\objectTrick\ObjectTrick.cs" />
+    <Compile Include="assetEditor\objectTrick\objectBlockForm.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="assetEditor\objectTrick\objectBlockForm.Designer.cs">
+      <DependentUpon>objectBlockForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="assetEditor\objectTrick\ObjectTrickPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="assetEditor\objectTrick\ObjectTrickPanel.Designer.cs">
+      <DependentUpon>ObjectTrickPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="assetEditor\objectTrick\ObjectTricksToolTips.cs">
+    </Compile>
+    <Compile Include="assetEditor\RemoveUnUsedTricks.cs" />
+    <Compile Include="assetEditor\textureTrick\TextureBlockForm.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="assetEditor\textureTrick\TextureBlockForm.Designer.cs">
+      <DependentUpon>TextureBlockForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="assetEditor\textureTrick\TextureTrick.cs" />
+    <Compile Include="assetEditor\textureTrick\TextureTrickParser.cs" />
+    <Compile Include="assetEditor\textureTrick\TextureTrickPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="assetEditor\textureTrick\TextureTrickPanel.Designer.cs">
+      <DependentUpon>TextureTrickPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="assetEditor\Trick.cs" />
+    <Compile Include="AssetsBrowser.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AssetsBrowser.Designer.cs">
+      <DependentUpon>AssetsBrowser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="assetsMangement\P4SubmitWin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="assetsMangement\P4SubmitWin.Designer.cs">
+      <DependentUpon>P4SubmitWin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="auras\AurasPropagator.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="auras\AurasPropagator.Designer.cs">
+      <DependentUpon>AurasPropagator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="auras\processAuras.cs" />
+    <Compile Include="common\COH_DataGridViewCheckBoxColumn.cs" />
+    <Compile Include="common\COH_htmlToolTips.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="common\COH_IO.cs" />
+    <Compile Include="common\DataGridViewNumericUpDownCell.cs" />
+    <Compile Include="common\DataGridViewNumericUpDownColumn.cs" />
+    <Compile Include="common\DataGridViewNumericUpDownEditingControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="common\MComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="common\MComboBoxItem.cs" />
+    <Compile Include="common\P4Panel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="common\P4Panel.Designer.cs">
+      <DependentUpon>P4Panel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="common\ShowSelectedInExplorer.cs" />
+    <Compile Include="common\TgaBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="common\TgaBox.designer.cs">
+      <DependentUpon>TgaBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="common\UserPrompt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="common\UserPrompt.Designer.cs">
+      <DependentUpon>UserPrompt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="common\WatingIconAnim.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="common\WatingIconAnim.Designer.cs">
+      <DependentUpon>WatingIconAnim.cs</DependentUpon>
+    </Compile>
+    <Compile Include="costume\AddCostumePiece.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="costume\AddCostumePiece.Designer.cs">
+      <DependentUpon>AddCostumePiece.cs</DependentUpon>
+    </Compile>
+    <Compile Include="costume\BoneSet.cs" />
+    <Compile Include="assetsMangement\CohAssetMang.cs" />
+    <Compile Include="COH_CostumeUpdaterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="COH_CostumeUpdaterForm.Designer.cs">
+      <DependentUpon>COH_CostumeUpdaterForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="assetsMangement\CheckedOutFiles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="assetsMangement\CheckedOutFiles.designer.cs">
+      <DependentUpon>CheckedOutFiles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="common\DirectoryTreeView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="common\FileListView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="costume\CharacterCostumeFile.cs" />
+    <Compile Include="costume\CostumeEditor.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="costume\CostumeEditor.Designer.cs">
+      <DependentUpon>CostumeEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="costume\CostumePropagationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="costume\CostumePropagationForm.Designer.cs">
+      <DependentUpon>CostumePropagationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="costume\CostumeUserInput.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="costume\ddsViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="costume\ddsViewer.Designer.cs">
+      <DependentUpon>ddsViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="costume\Fx.cs" />
+    <Compile Include="costume\Geo.cs" />
+    <Compile Include="costume\GeoPiece.cs" />
+    <Compile Include="costume\GeoSelectionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="costume\GeoSelectionForm.Designer.cs">
+      <DependentUpon>GeoSelectionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="costume\GeoSet.cs" />
+    <Compile Include="auras\Region.cs" />
+    <Compile Include="auras\auraCostume.cs" />
+    <Compile Include="costume\ListViewComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="costume\Texture.cs" />
+    <Compile Include="fxEditor\BehaviorParser.cs" />
+    <Compile Include="fxEditor\Behavior.cs" />
+    <Compile Include="fxEditor\BehaviorKey.cs" />
+    <Compile Include="fxEditor\BehaviorKeyPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="fxEditor\BehaviorKeys.cs" />
+    <Compile Include="fxEditor\BehaviorWin.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="fxEditor\BehaviorWin.Designer.cs">
+      <DependentUpon>BehaviorWin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fxEditor\BhvrNPartCommonFunctionPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="fxEditor\BhvrNPartCommonFunctionPanel.Designer.cs">
+      <DependentUpon>BhvrNPartCommonFunctionPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fxEditor\Condition.cs" />
+    <Compile Include="fxEditor\ConditionWin.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="fxEditor\ConditionWin.Designer.cs">
+      <DependentUpon>ConditionWin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fxEditor\GeomSelectionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fxEditor\GeomSelectionForm.Designer.cs">
+      <DependentUpon>GeomSelectionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fxEditor\ParticalParser.cs" />
+    <Compile Include="fxEditor\fxLuncher\AddFavFolderForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fxEditor\fxLuncher\AddFavFolderForm.designer.cs">
+      <DependentUpon>AddFavFolderForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fxEditor\fxLuncher\AddFavoriteForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fxEditor\fxLuncher\AddFavoriteForm.designer.cs">
+      <DependentUpon>AddFavoriteForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fxEditor\fxLuncher\FXLauncherForm.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="fxEditor\fxLuncher\FXLauncherForm.designer.cs">
+      <DependentUpon>FXLauncherForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fxEditor\fxLuncher\fxParser\FX_TreeParserForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fxEditor\fxLuncher\fxParser\FX_TreeParserForm.designer.cs">
+      <DependentUpon>FX_TreeParserForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fxEditor\fxLuncher\fxParser\tgaBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fxEditor\fxLuncher\fxParser\tgaBox.designer.cs">
+      <DependentUpon>tgaBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fxEditor\fxLuncher\FX_TreeParserForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fxEditor\fxLuncher\FX_TreeParserForm.designer.cs">
+      <DependentUpon>FX_TreeParserForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fxEditor\fxLuncher\progressForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fxEditor\fxLuncher\progressForm.designer.cs">
+      <DependentUpon>progressForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fxEditor\fxLuncher\tgaBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fxEditor\fxLuncher\tgaBox.designer.cs">
+      <DependentUpon>tgaBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fxEditor\fxLuncher\TreeViewMultiSelect.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="fxEditor\Partical.cs" />
+    <Compile Include="fxEditor\FilterActive.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fxEditor\FilterActive.Designer.cs">
+      <DependentUpon>FilterActive.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fxEditor\SplatPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="fxEditor\EventSound.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="fxEditor\EventSound.Designer.cs">
+      <DependentUpon>EventSound.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fxEditor\EventWin.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="fxEditor\EventWin.Designer.cs">
+      <DependentUpon>EventWin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fxEditor\Event.cs" />
+    <Compile Include="fxEditor\FX.cs" />
+    <Compile Include="fxEditor\FXWin.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="fxEditor\FXWin.Designer.cs">
+      <DependentUpon>FXWin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fxEditor\FX_FileWin.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="fxEditor\FX_FileWin.Designer.cs">
+      <DependentUpon>FX_FileWin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fxEditor\FX_Parser.cs" />
+    <Compile Include="fxEditor\ParticalKeyPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="fxEditor\ParticalsWin.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="fxEditor\ParticalsWin.Designer.cs">
+      <DependentUpon>ParticalsWin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fxEditor\ParticalKey.cs" />
+    <Compile Include="fxEditor\ParticalKeys.cs" />
+    <Compile Include="PicBxNTitle.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PicBxNTitle.Designer.cs">
+      <DependentUpon>PicBxNTitle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="auras\PropagationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="auras\PropagationForm.designer.cs">
+      <DependentUpon>PropagationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="COH_CostumeUpdaterForm.resx">
+      <DependentUpon>COH_CostumeUpdaterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="auras\PropagationForm.resx">
+      <DependentUpon>PropagationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="auras\Regions.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Visual.C++.9.0.x86">
+      <Visible>False</Visible>
+      <ProductName>Visual C++ Runtime Libraries %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\35FLOPPY.BMP" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\CLSDFOLD.BMP" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\DOC.BMP" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\EXE.BMP" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\OPENFOLD.BMP" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="assetsMangement\CheckedOutFiles.resx">
+      <DependentUpon>CheckedOutFiles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="costume\AddCostumePiece.resx">
+      <DependentUpon>AddCostumePiece.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="costume\ddsViewer.resx">
+      <DependentUpon>ddsViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\DOCR.BMP" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="Properties\app.manifest" />
+    <None Include="Resources\nDBDOC.BMP" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="assetEditor\aeCommon\COH_ColorPicker.resx">
+      <DependentUpon>COH_ColorPicker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="assetEditor\aeCommon\MatSpecLitCubeMapTintFlags.resx">
+      <DependentUpon>MatSpecLitCubeMapTintFlags.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="assetEditor\AssetTricks.resx">
+      <DependentUpon>AssetTricks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="assetEditor\materialTrick\matBlockForm.resx">
+      <DependentUpon>matBlockForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="assetEditor\objectTrick\objectBlockForm.resx">
+      <DependentUpon>objectBlockForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="assetEditor\objectTrick\ObjectTrickPanel.resx">
+      <DependentUpon>ObjectTrickPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="assetEditor\textureTrick\TextureBlockForm.resx">
+      <DependentUpon>TextureBlockForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="assetEditor\textureTrick\TextureTrickPanel.resx">
+      <DependentUpon>TextureTrickPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AssetsBrowser.resx">
+      <DependentUpon>AssetsBrowser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="assetsMangement\P4SubmitWin.resx">
+      <DependentUpon>P4SubmitWin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="auras\AurasPropagator.resx">
+      <DependentUpon>AurasPropagator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="common\P4Panel.resx">
+      <DependentUpon>P4Panel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="common\TgaBox.resx">
+      <DependentUpon>TgaBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="common\UserPrompt.resx">
+      <DependentUpon>UserPrompt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="common\WatingIconAnim.resx">
+      <DependentUpon>WatingIconAnim.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="costume\CostumeEditor.resx">
+      <DependentUpon>CostumeEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="costume\CostumePropagationForm.resx">
+      <DependentUpon>CostumePropagationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="costume\GeoSelectionForm.resx">
+      <DependentUpon>GeoSelectionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fxEditor\BehaviorWin.resx">
+      <DependentUpon>BehaviorWin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fxEditor\BhvrNPartCommonFunctionPanel.resx">
+      <DependentUpon>BhvrNPartCommonFunctionPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fxEditor\ConditionWin.resx">
+      <DependentUpon>ConditionWin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fxEditor\EventSound.resx">
+      <DependentUpon>EventSound.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fxEditor\EventWin.resx">
+      <DependentUpon>EventWin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fxEditor\FilterActive.resx">
+      <DependentUpon>FilterActive.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fxEditor\fxLuncher\AddFavFolderForm.resx">
+      <DependentUpon>AddFavFolderForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fxEditor\fxLuncher\AddFavoriteForm.resx">
+      <DependentUpon>AddFavoriteForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fxEditor\fxLuncher\FXLauncherForm.resx">
+      <DependentUpon>FXLauncherForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fxEditor\fxLuncher\fxParser\FX_TreeParserForm.resx">
+      <DependentUpon>FX_TreeParserForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fxEditor\fxLuncher\fxParser\tgaBox.resx">
+      <DependentUpon>tgaBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fxEditor\fxLuncher\FX_TreeParserForm.resx">
+      <DependentUpon>FX_TreeParserForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fxEditor\fxLuncher\progressForm.resx">
+      <DependentUpon>progressForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fxEditor\fxLuncher\tgaBox.resx">
+      <DependentUpon>tgaBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fxEditor\FXWin.resx">
+      <DependentUpon>FXWin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fxEditor\FX_FileWin.resx">
+      <DependentUpon>FX_FileWin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fxEditor\GeomSelectionForm.resx">
+      <DependentUpon>GeomSelectionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fxEditor\SplatPanel.resx">
+      <DependentUpon>SplatPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PicBxNTitle.resx">
+      <DependentUpon>PicBxNTitle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\add.ico" />
+    <EmbeddedResource Include="Resources\Add.bmp" />
+    <None Include="COH_CostumeEditors.pfx" />
+    <None Include="COH_CostumeUpdater_TemporaryKey.pfx" />
+    <None Include="Resources\AE_UI_MaterialTrick.png" />
+    <Content Include="assetEditor\objectTrick\BhvrToolTips.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="assetEditor\objectTrick\bones.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="assetEditor\objectTrick\FxToolTips.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="assetEditor\objectTrick\mapmove.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="assetEditor\objectTrick\ObjectTricksToolTips.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="fxEditor\fxinfo.c" />
+    <None Include="fxEditor\fxinfo.h" />
+    <Content Include="assetEditor\objectTrick\PartToolTips.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\AE_UI_MaterialTrickDelete.png" />
+    <Content Include="Resources\AE_UI_MaterialTrickDuplicate.png" />
+    <Content Include="Resources\AE_UI_MaterialTrickNew.png" />
+    <Content Include="Resources\AE_UI_MaterialTrickRename.png" />
+    <Content Include="Resources\BHVRIcon.ico" />
+    <Content Include="Resources\boneSet.bmp" />
+    <Content Include="Resources\FXIcon.ico" />
+    <Content Include="Resources\fxLauncherIcon.bmp" />
+    <Content Include="Resources\FxLauncherIcon.ico" />
+    <Content Include="Resources\GEOIcon.ico" />
+    <Content Include="Resources\ImgRedBlack.bmp" />
+    <Content Include="Resources\ImgRedGreen.bmp" />
+    <Content Include="Resources\ImgGreenGreen.bmp" />
+    <Content Include="Resources\cwMarkerIcon.bmp" />
+    <Content Include="Resources\eyeyDrop.cur">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\geoPDevOnly.bmp" />
+    <Content Include="Resources\displayName.bmp" />
+    <Content Include="Resources\fx.bmp" />
+    <Content Include="Resources\geo.bmp" />
+    <Content Include="Resources\geoP.bmp" />
+    <Content Include="Resources\gset.bmp" />
+    <Content Include="Resources\imgNotFound.bmp" />
+    <Content Include="Resources\include.bmp" />
+    <Content Include="Resources\key.bmp" />
+    <Content Include="Resources\legacyFlag.bmp" />
+    <Content Include="Resources\mask.bmp" />
+    <Content Include="Resources\ImgRedRed.bmp" />
+    <None Include="Resources\sub1.bmp" />
+    <Content Include="Resources\PARTIcon.ico" />
+    <Content Include="Resources\tag.bmp" />
+    <Content Include="Resources\texture.bmp" />
+    <Content Include="Resources\cohCostumeUpdater.ico" />
+    <Content Include="Resources\picBoxBkGrndImg.bmp" />
+    <Content Include="Resources\TGAIcon.ico" />
+    <Content Include="Resources\waiting.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <PublishFile Include="assetEditor\objectTrick\BhvrToolTips.html">
+      <Visible>False</Visible>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="assetEditor\objectTrick\bones.txt">
+      <Visible>False</Visible>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="assetEditor\objectTrick\FxToolTips.html">
+      <Visible>False</Visible>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="assetEditor\objectTrick\mapmove.txt">
+      <Visible>False</Visible>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="assetEditor\objectTrick\ObjectTricksToolTips.html">
+      <Visible>False</Visible>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="assetEditor\objectTrick\PartToolTips.html">
+      <Visible>False</Visible>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="COH_CostumeUpdater.pdb">
+      <Visible>False</Visible>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="Resources\eyeyDrop.cur">
+      <Visible>False</Visible>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <FileType>File</FileType>
+    </PublishFile>
+  </ItemGroup>
+  <ItemGroup>
+    <FileAssociation Include=".homoud">
+      <Visible>False</Visible>
+      <Description>homoudFile</Description>
+      <Progid>COHHomoud</Progid>
+      <DefaultIcon>Resources\FXIcon.ico</DefaultIcon>
+    </FileAssociation>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\x86\Release\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

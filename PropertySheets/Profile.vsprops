@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="shift_jis"?>
+<VisualStudioPropertySheet
+	ProjectType="Visual C++"
+	Version="8.00"
+	Name="Profile"
+	>
+	<Tool
+		Name="VCCLCompilerTool"
+		PreprocessorDefinitions="PROFILE"
+	/>
+	<Tool
+		Name="VCCLX360CompilerTool"
+		PreprocessorDefinitions="PROFILE"
+		RuntimeLibrary="0"
+	/>
+</VisualStudioPropertySheet>

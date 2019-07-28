@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<VisualStudioPropertySheet
+	ProjectType="Visual C++"
+	Version="8.00"
+	Name="TestClient"
+	>
+	<Tool
+		Name="VCCLCompilerTool"
+		AdditionalIncludeDirectories=".;../Game/edit/MissionEditor;..\MapServer\script\zoneevents;../libs\UtilitiesLib\version;../libs\UtilitiesLib\language;../libs/UtilitiesLib/network;../libs/UtilitiesLib/utils;../libs/UtilitiesLib/components;../libs/UtilitiesLib/assert;../libs/UtilitiesLib/;../common/Utilitieslib/assert;../Common/cmdparse.h;../Game/cmdparse;../Common/entity;../Common/gameComm;../common/turnstileserver;../Game/gameComm/common;../Game/gameComm;../Common/player;../Game/UI/sprite;../Game/UI/Hybrid;../Game/menu;../Game/entity;../Game/player;../Game/UI;../common/language;../common/utils;../common/components;../common/network;../common;../Game;../lf;../3rdparty/zlibsrc;../Game/render;../glh;../3rdparty/cryptopp;../3rdparty/VTune;../3rdparty/freetype/include;..\common\assert;../Game/edit;../common/gridcoll;../common/group;../Game/graphics;../Game/graphics/fx;../Game/win;../common/seq;../common/cmdparse;../game/clientcomm;../mapserver/dbcomm;../dbserver;../Game/sound;../mapserver/beacon;../mapserver/combat;../mapserver/entity;../MapServer;../Common/Junk;../Game/group;../3rdparty/jpgdlib\inc;../3rdparty/oggvorbis/include;../common/version;../common/storyarc;../Common/auth;../common/skills;../arenaserver;../common/gameData;../game/render/thread;../NovodeXWrapper;../Common/bases;../game/storyarc;../Common/auction;../Common/account;..\libs\UtilitiesLib\UtilsNew"
+		PreprocessorDefinitions="TEST_CLIENT;CLIENT;WIN32;_WINDOWS;BRANCH=10;UNICODE;_UNICODE;_CRT_SECURE_NO_DEPRECATE"
+		WarningLevel="3"
+	/>
+	<Tool
+		Name="VCLinkerTool"
+		AdditionalDependencies="winmm.lib oldnames.lib ws2_32.lib kernel32.lib"
+		IgnoreDefaultLibraryNames="LIBCD.lib"
+		SubSystem="2"
+		FixedBaseAddress="1"
+	/>
+	<Tool
+		Name="VCPreBuildEventTool"
+		CommandLine="..\utilities\bin\structparser X $(InputDir) X $(InputFileName) X $(PlatformName) X $(ConfigurationName) X $(VCInstallDir) X $(SolutionPath)"
+	/>
+</VisualStudioPropertySheet>

@@ -1,0 +1,483 @@
+
+BuildStep
+{
+	DisplayName: "Configuration"
+
+	BuildStep
+	{
+		DisplayName: "Standard configuration options"
+
+		Var: SVN_Machine		"simpson2"
+		Var: SVN_Root			"svn://%SVN_Machine%"
+		Var: SVN_Dev			"svn://%SVN_Machine%/dev"
+		
+		//Var: Folder_Src			"c:/src.build"
+		Var: Folder_Src			"c:/src.simpson2/dev"
+		Var: Folder_SrcExe		"%Folder_Src%/util"
+		Var: Folder_Game		"c:/game"
+		Var: Folder_Tools		"%Folder_Game%/tools"
+		Var: Folder_Tools		"%Folder_Game%/tools"
+		Var: Folder_Build		"c:/BuildSteps"
+
+		Var: Path_Gimme			"c:/game/tools/util/gimme.exe"
+		Var: Path_SVN			"c:/game/tools/util/svn.exe"
+
+		Var: MajorVersion		"10"
+		Var: Branch				"10"
+
+		Var: IncrementalBuild	"0"
+		Var: NoBins				"0"
+	}
+
+	BuildStep
+	{
+		DisplayName: <<Devenv.exe is in Win64's "Program Files (x86)" folder>>
+
+		Condition: Function::FileExists "c:/Program Files (x86)/Xoreax/IncrediBuild/BuildConsole"
+
+		Var: Path_Compiler	"c:/Program Files (x86)/Xoreax/IncrediBuild/BuildConsole"
+	}
+	ElseBuildStep
+	{
+		DisplayName: "Devenv.exe is in Win32 folder"
+		
+		Condition: Function::FileExists "c:/Program Files/Xoreax/IncrediBuild/BuildConsole"
+
+		Var: Path_Compiler	"c:/Program Files/Xoreax/IncrediBuild/BuildConsole"
+	}
+	ElseBuildStep
+	{
+		DisplayName: "Devenv.exe is in Win32 folder"
+		
+		Condition: Function::FileExists "c:/Program Files (x86)/Microsoft Visual Studio .NET 2003/Common7/IDE/devenv.com"
+
+		Var: Path_Compiler	"c:/Program Files (x86)/Microsoft Visual Studio .NET 2003/Common7/IDE/devenv.com"
+	}
+	ElseBuildStep
+	{
+		DisplayName: "Devenv.exe is in Win32 folder"
+		
+		Condition: Function::FileExists "c:/Program Files/Microsoft Visual Studio .NET 2003/Common7/IDE/devenv.com"
+
+		Var: Path_Compiler	"c:/Program Files/Microsoft Visual Studio .NET 2003/Common7/IDE/devenv.com"
+	}
+}
+
+BuildStep
+{
+	DisplayName: "Set project"
+
+	InputVar
+	{
+		Name: Project
+
+		Prompt: "Choose the project to build."
+		
+		Choice: "CoH"
+		Choice: "CoH Debug"
+		Choice: "CoH Server"
+		Choice: "CoH Web Images"
+		Choice: "CoH Source"
+		Choice: "CoH Updater"
+	}
+
+	InputVar
+	{
+		Name: IncrementalBuild
+
+		Prompt: "Is this an incremental build?"
+
+		Choice: "Yes", 1
+		Choice: "No", 0
+	}
+}
+
+BuildStep
+{
+	DisplayName: "Check some conditions"
+
+	Condition
+	{
+		if:	Project == "CoH"
+		&&: MajorVersion >= 10
+		||: Project == "CoH Debug"
+		&&: MajorVersion >= 10
+		||: MajorVersion >= 11
+		&&: Project == "CoH Server"
+	}
+}
+
+BuildStep
+{
+	DisplayName: "Determine patch version"
+
+	// Do something that replaces set_patch_version_envvar.bat.
+
+	Var: PatchVersion		"%MajorVersion%.20060303.0"
+}
+
+BuildStep
+{
+	DisplayName: "Kill running processes"
+
+	Cmd_KillProcesses: dbserver.exe
+	Cmd_KillProcesses: logserver.exe
+	Cmd_KillProcesses: launcher.exe
+	Cmd_KillProcesses: mapserver.exe
+	Cmd_KillProcesses: cityofheroes.exe
+	Cmd_KillProcesses: chatserver.exe
+}
+
+BuildStep
+{
+	DisplayName: "Delete old files"
+
+	Cmd_DeleteFiles: "%Folder_Game%/data/piggs/*.pigg"
+	Cmd_DeleteFiles: "%Folder_Game%/data/server/piggs/*.pigg"
+	Cmd_DeleteFiles: "%Folder_Game%/bin/*" /s
+	Cmd_DeleteFiles: "%Folder_Game%/data/server/bin/*" /s
+}
+
+BuildStep
+{
+	DisplayName: "Get latest data and tools"
+
+	BuildStep
+	{
+		DisplayName: "Branch 0"
+
+		Condition
+		{
+			if: Branch == 0
+		}
+
+		Cmd_Gimme: <<-approve 4 -approve 6 -nopause>>
+		Cmd_Gimme: <<-label Patch Built %PatchVersion%>>
+		Cmd_Gimme: <<-nounderscore -quiet -getapproved 4 -nowarn -nopause -getapproved 6>>
+		Cmd_Gimme: <<-glvfold "%Folder_Game%/src/texture_library/gui/Icons">>
+		Cmd_Gimme: <<-glvfold "%Folder_Game%/src/texture_library/gui/creation">>
+		Cmd_Gimme: <<-glvfold "%Folder_Game%/src/texture_library/gui/HUD">>
+	}
+	ElseBuildStep
+	{
+		DisplayName: "Branch > 0"
+
+		Cmd_Gimme: <<-nodaily -glvfile "C:/game/tools/util/gimme.exe">>
+		Cmd_Gimme: <<-nodaily -approve 0 -approve 1 -approve 2 -nopause>>
+		Cmd_Gimme: <<-nodaily -label Patch Built %PatchVersion%>>
+		Cmd_Gimme: <<-nodaily -nounderscore -quiet -getlatest 0 -nowarn -nopause -getlatest 2>>
+		Cmd_Gimme: <<-nodaily -glvfold "%Folder_Game%/src/texture_library/gui/Icons">>
+		Cmd_Gimme: <<-nodaily -glvfold "%Folder_Game%/src/texture_library/gui/creation">>
+		Cmd_Gimme: <<-nodaily -glvfold "%Folder_Game%/src/texture_library/gui/HUD">>
+	}
+}
+
+BuildStep
+{
+	DisplayName: "Removing old source folder"
+	
+	Cmd_DeleteFolder: "%Folder_Src%" /Q
+}
+
+BuildStep
+{
+	DisplayName: "Get source code and label"
+
+	BuildStep
+	{
+		DisplayName: "Create folder and get source code"
+
+		Cmd_MakeFolder: "%Folder_Src%"
+
+		Cmd_SVN: <<checkout "%SVN_Dev%" "%Folder_Src%">>
+	}
+	
+	BuildStep
+	{
+		DisplayName: "Create LABEL file and commit it to SVN"
+
+		Cmd_WriteLogFile
+		{
+			FileName:	%Folder_Src%\LABEL
+			Text:		"Patch Built %PatchVersion%"
+		}
+
+		Cmd_SVN: <<commit "%Folder_Src%\LABEL" -m "Patch Built %PatchVersion%">>
+	}
+	
+	BuildStep
+	{
+		DisplayName: "Remove old build branch from SVN"
+
+		ContinueOnError: 1
+		
+		Cmd_SVN: <<remove "%SVN_Root%/builds/%PatchVersion%" -m "Cleaning failed build">>
+	}
+	
+	BuildStep
+	{
+		DisplayName: "Create a SVN branch from the trunk"
+
+		Cmd_SVN: <<copy "%SVN_Dev%" "%SVN_Root%/builds/%PatchVersion%" -m "Patch Built %PatchVersion%">>
+	}
+}
+
+BuildStep
+{
+	DisplayName: "Build source code and update results to gimme and symstore"
+
+	BuildStep
+	{
+		DisplayName: "Modify project files (to remove extra debug info)"
+
+		Cmd_Tool: "shortcuts\Updater\modify_project_settings.bat" <<"%Folder_Src%">>
+	}
+
+	BuildStep
+	{
+		DisplayName: "TestClient TEMP!!!!"
+
+		BuildStep
+		{
+			DisplayName: "Rebuild TestClient"
+
+			Cmd_Compile: "CoH/Testclient/TestClient.sln" /rebuild Debug
+			Cmd_Compile: "CoH/Testclient/TestClient.sln" /rebuild TextClientDebug
+		}
+	}
+
+	BuildStep
+	{
+		DisplayName: "Rebuild MasterSolution"
+
+		Cmd_Compile: "CoH/MasterSolution/MasterSolution.sln" /rebuild Debug
+	}
+
+	BuildStep
+	{
+		DisplayName: "Update game and servers"
+
+		BuildStepIf: !IncrementalBuild
+		{
+			DisplayName: "Incremental"
+
+			BuildStep
+			{
+				DisplayName: "Disable gimme checkin for incrementals"
+
+				Cmd_Build: "Helpers/setvar.bat" NO_GIMME_CHECKIN NO_GIMME_CHECKIN
+			}
+
+			BuildStep
+			{
+				DisplayName: "Remove old build branch from SVN"
+
+				ContinueOnError: 1
+			
+				Cmd_SVN: <<remove "%SVN_Root%/builds/%PatchVersion%" -m "Cleaning failed build">>
+			}
+		
+			BuildStep
+			{
+				DisplayName: "Create a SVN branch for the incremental"
+
+				Cmd_SVN: <<copy "%Folder_Src%" "%SVN_Root%/builds/%PatchVersion%" -m "Patch Built %PatchVersion%">>
+			}
+		}
+		
+		BuildStep
+		{
+			DisplayName: "Update game and servers"
+			
+			Cmd_Tool: "shortcuts/programmer/update_gameand4servers.bat"
+		}
+	}
+
+	BuildStep
+	{
+		DisplayName: "TestClient"
+
+		BuildStep
+		{
+			DisplayName: "Rebuild TestClient"
+
+			Cmd_Compile: "CoH/Testclient/TestClient.sln" /rebuild Debug
+			Cmd_Compile: "CoH/Testclient/TestClient.sln" /rebuild TextClientDebug
+		}
+
+		BuildStep
+		{
+			DisplayName: "Update TestClient"
+
+			Cmd_Tool: "shortcuts/programmer/update_Testclient.bat"
+			Cmd_Tool: "shortcuts/programmer/update_TextClient.bat"
+		}
+	}
+
+	BuildStep
+	{
+		DisplayName: "ServerMonitor"
+
+		BuildStep
+		{
+			DisplayName: "Build ServerMonitor"
+
+			Cmd_Compile: "CoH/ServerMonitor/ServerMonitor.sln" /rebuild Debug
+		}
+
+		BuildStep
+		{
+			DisplayName: "Update ServerMonitor"
+
+			Cmd_Tool: "shortcuts/programmer/update_servermonitor.bat"
+		}
+	}
+
+	BuildStep
+	{
+		DisplayName: "ChatAdmin"
+
+		BuildStep
+		{
+			DisplayName: "Build ChatAdmin"
+
+			Cmd_Compile: "CoH/ChatAdmin/ChatAdmin.sln" /rebuild Debug
+		}
+
+		BuildStep
+		{
+			DisplayName: "Update ChatAdmin"
+
+			Cmd_Tool: "shortcuts/programmer/update_ChatAdmin.bat"
+		}
+	}
+}
+
+BuildStep
+{
+	DisplayName: "Build data"
+
+	BuildStep
+	{
+		DisplayName: "Kill running processes"
+
+		Cmd_KillProcesses: dbserver
+		Cmd_KillProcesses: launcher
+		Cmd_KillProcesses: mapserver
+		Cmd_KillProcesses: chatserver
+		Cmd_KillProcesses: logserver
+	}
+
+	BuildStep
+	{
+		DisplayName: "Start dbserver"
+
+		Condition
+		{
+			if: !NoBins
+		}
+		
+		BuildStep
+		{
+			DisplayName: "Change servers.cfg to point to localhost"
+
+			Cmd_Build: Helpers\fixdbcfg.bat <<"%Folder_Game%/data/server/db/servers.cfg">>
+		}
+
+		BuildStep
+		{
+			DisplayName: "Start dbserver"
+		
+			Cmd_SrcExe: "dbserver.exe"
+		}
+	}
+
+	BuildStep
+	{
+		DisplayName: "Make client bins"
+
+		Condition
+		{
+			if: !NoBins
+		}
+
+		Cmd_DeleteFiles: "%Folder_Game%/data/bin/*" /Q
+
+		Cmd_SrcExe: "CityOfHeroes.exe" -noaudio -createbins -console -cryptic
+	}
+
+	BuildStep
+	{
+		DisplayName: "Make server bins"
+
+		Condition
+		{
+			if: !NoBins
+		}
+
+		Cmd_DeleteFiles: "%Folder_Game%/data/server/bin/*" /Q
+
+		Cmd_SrcExe: "mapserver.exe" -db localhost -createbins
+	}
+
+	BuildStep
+	{
+		DisplayName: "Correct Binary Timestamps"
+
+		Cmd_Tool: "shortcuts/Updater/correct_binary_timestamps.bat" -gamedir "%Folder_Game%" -prefix "%PATCH_PREFIX%"
+	}
+
+	BuildStep
+	{
+		DisplayName: "Kill Old Processes"
+
+		Cmd_KillProcesses: mapserver
+		Cmd_KillProcesses: dbserver
+		Cmd_KillProcesses: launcher
+	}
+
+	BuildStep
+	{
+		DisplayName: "Check bin counts"
+
+		Cmd_Build: "Helpers/checkNumFiles.bat" -dir <<"%Folder_Game%/data/bin">> -numfiles %NUM_CLIENT_BINS%
+		Cmd_Build: "Helpers/checkNumFiles.bat" -dir <<"%Folder_Game%/data/server/bin">> -numfiles %NUM_SERVER_BINS%
+	}
+
+	BuildStep
+	{
+		DisplayName: "Make client piggs"
+
+		Cmd_Build: "Piggs/make_all_zipped_piggs_smart.bat"
+	}
+
+	BuildStep
+	{
+		DisplayName: "Make server piggs"
+
+		
+		Cmd_Build: "Piggs\make_server_piggs_smart.bat"
+	}
+
+	BuildStep
+	{
+		DisplayName: "Check number of piggs"
+
+		Cmd_Build: "Helpers/checkNumFiles.bat" -dir <<"%Folder_Game%/data/piggs">> -numfiles %NUM_TOTAL_PIGGS% -fileextension ".pigg"
+	}
+}
+
+BuildStep
+{
+	DisplayName: "Make image and start UpdateServer"
+	
+	BuildStep
+	{
+		DisplayName: "Create images"
+
+		Cmd_Build: "Helpers/MakeImage_CoH.bat"
+		Cmd_Build: "Helpers/MakeImage_CoH_Server.bat"
+		Cmd_Build: "Helpers/MakeImage_CoH_Source.bat"
+	}
+}
+

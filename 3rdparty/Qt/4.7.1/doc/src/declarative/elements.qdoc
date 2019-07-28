@@ -1,0 +1,177 @@
+/****************************************************************************
+**
+** Copyright (C) 2010 Nokia Corporation and/or its subsidiary(-ies).
+** All rights reserved.
+** Contact: Nokia Corporation (qt-info@nokia.com)
+**
+** This file is part of the documentation of the Qt Toolkit.
+**
+** $QT_BEGIN_LICENSE:FDL$
+** Commercial Usage
+** Licensees holding valid Qt Commercial licenses may use this file in
+** accordance with the Qt Commercial License Agreement provided with the
+** Software or, alternatively, in accordance with the terms contained in a
+** written agreement between you and Nokia.
+**
+** GNU Free Documentation License
+** Alternatively, this file may be used under the terms of the GNU Free
+** Documentation License version 1.3 as published by the Free Software
+** Foundation and appearing in the file included in the packaging of this
+** file.
+**
+** If you have questions regarding the use of this file, please contact
+** Nokia at qt-info@nokia.com.
+** $QT_END_LICENSE$
+**
+****************************************************************************/
+
+/*!
+  \page qdeclarativeelements.html
+  \target elements
+  \title QML Elements
+  \brief A dictionary of standard QML elements.
+
+  This is a dictionary of all standard QML elements made available
+  in the QtDeclarative module.
+
+  To see the QML elements listed by functional area, see the
+  \l{Groups Of Related QML Elements} page.
+
+  \generatelist qmlclasses
+
+*/
+
+
+/*!
+    \group qml-groups
+    \title Groups Of Related QML Elements
+
+    \brief If you know what kind of QML element you want (Basic Visual, 
+    Interaction, Animation, etc), look here.
+
+    This is a list of functional groups of QML elements.
+
+    \generatelist{related}
+
+*/
+
+/*!
+    \group qml-basic-visual-elements
+    \title Basic QML Visual Elements
+    \ingroup qml-groups
+
+    \brief Elements for constructing basic visual items.
+
+    \generatelist{related}
+
+*/
+
+/*!
+    \group qml-basic-interaction-elements
+    \title Basic QML Interaction Elements
+    \ingroup qml-groups
+
+    \brief Elements for handling basic interactions.
+
+    \generatelist{related}
+
+*/
+
+/*!
+    \group qml-state-elements
+    \title QML State Elements
+    \ingroup qml-groups
+
+    \brief Elements for handling state changes.
+
+    \generatelist{related}
+
+*/
+
+/*!
+    \group qml-event-elements
+    \title QML Event Elements
+    \ingroup qml-groups
+
+    \brief Elements for handling events.
+
+    \generatelist{related}
+
+*/
+
+/*!
+    \group qml-animation-transition
+    \title QML Animation and Transition Elements
+    \ingroup qml-groups
+
+    \brief Elements for handling animations and transitions.
+
+    \generatelist{related}
+
+*/
+
+/*!
+    \group qml-working-with-data
+    \title Working With Data in QML
+    \ingroup qml-groups
+
+    \brief Elements for working with data.
+
+    \generatelist{related}
+
+*/
+
+/*!
+    \group qml-view-elements
+    \title QML View Elements
+    \ingroup qml-groups
+
+    \brief Elements for handling views.
+
+    \generatelist{related}
+
+*/
+
+/*!
+    \group qml-positioning-elements
+    \title QML Positioning Elements
+    \ingroup qml-groups
+
+    \brief Elements for positioning items.
+
+    \generatelist{related}
+
+*/
+
+/*!
+    \group qml-utility-elements
+    \title QML Utility Elements
+    \ingroup qml-groups
+
+    \brief Elements for handling misc operations.
+
+    \generatelist{related}
+
+*/
+
+/*!
+    \group qml-transform-elements
+    \title QML Transform Elements
+    \ingroup qml-groups
+
+    \brief Elements for handling transformations.
+
+    \generatelist{related}
+
+*/
+
+/*!
+    \group qml-particle-elements
+    \title QML Particle Elements
+    \ingroup qml-groups
+
+    \brief Elements for handling particle effects.
+
+    \generatelist{related}
+
+*/

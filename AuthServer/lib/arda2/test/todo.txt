@@ -1,0 +1,17 @@
+
+
+Major items:
+
+
+
+Minor items:
+
+
+
+Wish list:
+
+Convert output for formatted html that is redirectable, for possible embedding within 
+another html report, such as build master.
+
+Add functions for "annotated" output (collapsable report elements), so that comments 
+can be output from the test cases

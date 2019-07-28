@@ -1,0 +1,26 @@
+*.aps
+*.ncb
+*.pdb
+*.suo
+*.vcproj.*.user
+*.SPFileList
+AutoGen/
+Beaconizer/
+Beaconizer Release/
+buildlog.htm
+Debug/
+Debug.DbQuery/
+Opt Debug/
+Opt Debug.dbquery/
+Release/
+Release.DbQuery/
+TextClientDebug/
+Win32_vc*/
+Win32_Release_vc*/
+
+/bin/*.dmp
+/bin/*.exe
+/bin/*.mdmp
+/Utilities/StructParser/Release
+/Utilities/bin/*
+!/Utilities/bin/*.dll

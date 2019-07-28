@@ -1,0 +1,5 @@
+D:\HypnosWork\NcSoft\Installs\NVIDIA\nvidia-texture-tools-2.0.7-1\project\vc8\Nvidia.TextureTools\bin\Debug\Nvidia.TextureTools.dll
+D:\HypnosWork\NcSoft\Installs\NVIDIA\nvidia-texture-tools-2.0.7-1\project\vc8\Nvidia.TextureTools\bin\Debug\Nvidia.TextureTools.pdb
+D:\HypnosWork\NcSoft\Installs\NVIDIA\nvidia-texture-tools-2.0.7-1\project\vc8\Nvidia.TextureTools\obj\Debug\ResolveAssemblyReference.cache
+D:\HypnosWork\NcSoft\Installs\NVIDIA\nvidia-texture-tools-2.0.7-1\project\vc8\Nvidia.TextureTools\obj\Debug\Nvidia.TextureTools.dll
+D:\HypnosWork\NcSoft\Installs\NVIDIA\nvidia-texture-tools-2.0.7-1\project\vc8\Nvidia.TextureTools\obj\Debug\Nvidia.TextureTools.pdb

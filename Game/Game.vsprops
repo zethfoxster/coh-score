@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<VisualStudioPropertySheet
+	ProjectType="Visual C++"
+	Version="8.00"
+	Name="Game"
+	>
+	<Tool
+		Name="VCCLCompilerTool"
+		FavorSizeOrSpeed="0"
+		AdditionalIncludeDirectories="../Game/edit/MissionEditor;../Game/storyarc;../common/bases;bases;../NovodeXWrapper;../common/gameData;../common/auth;../common/turnstileserver;../libs/UtilitiesLib/network;../libs/UtilitiesLib/utils;../libs/UtilitiesLib/components;../libs/UtilitiesLib/assert;../libs/UtilitiesLib/language;../libs/UtilitiesLib/version;../libs/UtilitiesLib/;cmdparse;../Common/cmdparse;../Common/entity;../Common/gameComm;gameComm;../Common/player;UI/sprite;UI/Hybrid;menu;entity;player;UI;../common/language;../common/utils;../common;.;../3rdparty/zlibsrc;render;../3rdparty/cryptopp;../3rdparty/VTune;../3rdparty/freetype/include;edit;../common/gridcoll;../common/group;graphics;graphics/fx;win;../common/seq;clientcomm;sound;group;../3rdparty/jpgdlib/inc;../3rdparty/DoubleFusion;../3rdparty/oggvorbis/include;../common/version;../common/storyarc;../common/filter;./formatter;./cloth;../common/skills;render/thread;../3rdparty/PhysX/SDKs/Foundation/include;../3rdparty/PhysX/SDKs/physics/include;../3rdparty/PhysX/SDKs/cooking/include;../3rdparty/PhysX/SDKs/PhysXLoader/include;../common/auction;../common/account;../Utilities/allegorithmic/1.x/include;../3rdparty/cg/include;&quot;../3rdparty/glew/glew-1.5.7/include&quot;;../3rdparty/nvdxt;../3rdparty/nvcpl;../3rdparty/nvperf/inc;../3rdparty/libcubemapgen;&quot;../3rdparty/AlienFX SDK/Unmanaged/includes&quot;"
+		PreprocessorDefinitions="CLIENT;WIN32;_WINDOWS;USEZLIB;BRANCH=13;_CRT_SECURE_NO_DEPRECATE;SUBSTANCE_PLATFORM_OGLCG"
+		BasicRuntimeChecks="0"
+		WarningLevel="3"
+	/>
+	<Tool
+		Name="VCLinkerTool"
+		AdditionalDependencies="winmm.lib ../3rdparty\directx\lib\Dxguid.lib ../3rdparty\directx\lib\dsound.lib ../3rdparty\directx\lib\dinput8.lib ../3rdparty\directx\lib\ddraw.lib opengl32.lib glu32.lib ws2_32.lib kernel32.lib Imm32.lib ../3rdparty\freetype\freetypeMT.lib ../3rdparty\jpgdlib\lib\jpgdlib.lib Msacm32.lib ../3rdparty\oggvorbis\lib/vorbis_static.lib ../3rdparty\oggvorbis\lib/ogg_static.lib ../3rdparty\oggvorbis\lib/vorbisfile_static.lib ../3rdparty\bin\IJGWin32.lib ../3rdparty/DoubleFusion/DFEngine.lib ../3rdparty\cg\lib\cg.lib ../3rdparty\cg\lib\cgGL.lib ..\3rdparty\nvdxt\Release\nvDXTlibMT_S.lib ..\3rdparty\nvperf\lib\winxp_x86\NVPerfSDK.lib"
+		OutputFile="..\bin\$(ConfigurationName)\CityOfHeroes.exe"
+		SubSystem="2"
+		OptimizeReferences="1"
+		FixedBaseAddress="1"
+	/>
+	<Tool
+		Name="VCPreBuildEventTool"
+		CommandLine="..\utilities\bin\structparser X $(InputDir) X $(InputFileName) X $(PlatformName) X $(ConfigurationName) X $(VCInstallDir) X $(SolutionPath)"
+	/>
+</VisualStudioPropertySheet>

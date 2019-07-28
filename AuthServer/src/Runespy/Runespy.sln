@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RunespyService", "RunespyService\RunespyService.csproj", "{D98A7390-D8A6-4965-950A-4F113923C775}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Runespy", "Runespy\Runespy.csproj", "{C088FE48-C987-4319-AB01-7D90F055FA78}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D98A7390-D8A6-4965-950A-4F113923C775}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D98A7390-D8A6-4965-950A-4F113923C775}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D98A7390-D8A6-4965-950A-4F113923C775}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D98A7390-D8A6-4965-950A-4F113923C775}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C088FE48-C987-4319-AB01-7D90F055FA78}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C088FE48-C987-4319-AB01-7D90F055FA78}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C088FE48-C987-4319-AB01-7D90F055FA78}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C088FE48-C987-4319-AB01-7D90F055FA78}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

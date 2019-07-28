@@ -1,0 +1,1 @@
+int doPatchTest(void);

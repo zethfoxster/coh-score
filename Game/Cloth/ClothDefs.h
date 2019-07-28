@@ -1,0 +1,10 @@
+#ifndef _CLOTHDEFS_H
+#define _CLOTHDEFS_H
+
+#define CLOTH_FLAGS_CONNECTIONS(x) 		((x<=0)?1:(x>3)?3:(x))
+#define CLOTH_FLAGS_CONNECTIONS_MAX 	   3
+#define CLOTH_FLAGS_CONNECTIONS_MASK 	0x03
+#define CLOTH_FLAGS_DIAGONAL1 			0x04
+#define CLOTH_FLAGS_DIAGONAL2 			0x08
+
+#endif // _CLOTHDEFS_H

@@ -1,0 +1,6 @@
+Notes on vrml exporter:
+
+Max8 doesn't seem to like the WrapperExp DLL.
+
+Remember to SymStore the .dle and the .pdb file!
+

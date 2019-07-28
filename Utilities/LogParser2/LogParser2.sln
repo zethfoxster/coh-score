@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogParser2", "LogParser2\LogParser2.csproj", "{1BED5441-ACA9-4626-9708-1C90C2A5B802}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CompressionLibrary", "CompressionLibrary\CompressionLibrary.vcxproj", "{5DD7B31E-32CE-449D-9FE6-C310E7B71F53}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogProcessing", "LogProcessing\LogProcessing.csproj", "{CBE44F49-C7A3-426D-8ECC-AF05323359ED}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1BED5441-ACA9-4626-9708-1C90C2A5B802}.Debug|Win32.ActiveCfg = Debug|x86
+		{1BED5441-ACA9-4626-9708-1C90C2A5B802}.Debug|Win32.Build.0 = Debug|x86
+		{1BED5441-ACA9-4626-9708-1C90C2A5B802}.Release|Win32.ActiveCfg = Release|x86
+		{1BED5441-ACA9-4626-9708-1C90C2A5B802}.Release|Win32.Build.0 = Release|x86
+		{5DD7B31E-32CE-449D-9FE6-C310E7B71F53}.Debug|Win32.ActiveCfg = Debug|Win32
+		{5DD7B31E-32CE-449D-9FE6-C310E7B71F53}.Debug|Win32.Build.0 = Debug|Win32
+		{5DD7B31E-32CE-449D-9FE6-C310E7B71F53}.Release|Win32.ActiveCfg = Release|Win32
+		{5DD7B31E-32CE-449D-9FE6-C310E7B71F53}.Release|Win32.Build.0 = Release|Win32
+		{CBE44F49-C7A3-426D-8ECC-AF05323359ED}.Debug|Win32.ActiveCfg = Debug|x86
+		{CBE44F49-C7A3-426D-8ECC-AF05323359ED}.Debug|Win32.Build.0 = Debug|x86
+		{CBE44F49-C7A3-426D-8ECC-AF05323359ED}.Release|Win32.ActiveCfg = Release|x86
+		{CBE44F49-C7A3-426D-8ECC-AF05323359ED}.Release|Win32.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,142 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="External">
+      <UniqueIdentifier>{0f1b769e-6bd5-4ac3-ae7b-e8c79ae2661e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="External\persist">
+      <UniqueIdentifier>{b20dd0a3-f561-4a61-b4ca-fd68e9a94e1e}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="admin.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="channels.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="csr.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="friends.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ignore.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="loadsave.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="messagefile.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="monitor.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="msgsend.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="shardnet.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="users.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\launcher\performance.c">
+      <Filter>External</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\filter\profanity.c">
+      <Filter>External</Filter>
+    </ClCompile>
+    <ClCompile Include="..\MapServer\filter\reserved_names.c">
+      <Filter>External</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\filter\validate_name.c">
+      <Filter>External</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\persist\persist.c">
+      <Filter>External\persist</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\persist\persist_diffbig.c">
+      <Filter>External\persist</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\persist\persist_diffsmall.c">
+      <Filter>External\persist</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\persist\persist_flat.c">
+      <Filter>External\persist</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\persist\textcrcdb.c">
+      <Filter>External\persist</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\persist\textcrcjournal.c">
+      <Filter>External\persist</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="admin.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="channels.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="csr.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="friends.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ignore.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="loadsave.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="messagefile.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="monitor.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="msgsend.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="shardnet.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="users.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ChatAdmin\ChatComm.h">
+      <Filter>External</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\chatdb.h">
+      <Filter>External</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\persist\persist.h">
+      <Filter>External\persist</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\persist\persist_diffbig.h">
+      <Filter>External\persist</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\persist\persist_diffsmall.h">
+      <Filter>External\persist</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\persist\persist_flat.h">
+      <Filter>External\persist</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\persist\persist_internal.h">
+      <Filter>External\persist</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\persist\textcrcdb.h">
+      <Filter>External\persist</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\persist\textcrcjournal.h">
+      <Filter>External\persist</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,155 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{09b4d0ab-a245-4ef1-b5f1-89b40ea3da1a}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{d65f7fb1-30ca-4b03-9fb2-0edd0e619098}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl</Extensions>
+    </Filter>
+    <Filter Include="parsers">
+      <UniqueIdentifier>{8fc2922a-d092-446a-8872-8b120b83d23d}</UniqueIdentifier>
+      <Extensions>l;y</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="_ps1.0_lexer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="_ps1.0_parser.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="_rc1.0_lexer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="_rc1.0_parser.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="_ts1.0_lexer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="_ts1.0_parser.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="_vs1.0_lexer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="_vs1.0_parser.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="nvparse.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="nvparse_errors.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ps1.0_program.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="rc1.0_combiners.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="rc1.0_final.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="rc1.0_general.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ts1.0_inst.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ts1.0_inst_list.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="vcp1.0_impl.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="vp1.0_impl.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="vs1.0_inst.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="vs1.0_inst_list.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="vsp1.0_impl.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="_ps1.0_parser.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="_rc1.0_parser.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="_ts1.0_parser.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="_vs1.0_parser.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="nvparse_errors.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="nvparse_externs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ps1.0_program.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="rc1.0_combiners.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="rc1.0_final.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="rc1.0_general.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="rc1.0_register.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ts1.0_inst.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ts1.0_inst_list.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="vs1.0_inst.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="vs1.0_inst_list.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="ps1.0_grammar.y">
+      <Filter>parsers</Filter>
+    </CustomBuild>
+    <CustomBuild Include="ps1.0_tokens.l">
+      <Filter>parsers</Filter>
+    </CustomBuild>
+    <CustomBuild Include="rc1.0_grammar.y">
+      <Filter>parsers</Filter>
+    </CustomBuild>
+    <CustomBuild Include="rc1.0_tokens.l">
+      <Filter>parsers</Filter>
+    </CustomBuild>
+    <CustomBuild Include="ts1.0_grammar.y">
+      <Filter>parsers</Filter>
+    </CustomBuild>
+    <CustomBuild Include="ts1.0_tokens.l">
+      <Filter>parsers</Filter>
+    </CustomBuild>
+    <CustomBuild Include="vs1.0_grammar.y">
+      <Filter>parsers</Filter>
+    </CustomBuild>
+    <CustomBuild Include="vs1.0_tokens.l">
+      <Filter>parsers</Filter>
+    </CustomBuild>
+  </ItemGroup>
+</Project>

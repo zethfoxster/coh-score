@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<VisualStudioPropertySheet
+	ProjectType="Visual C++"
+	Version="8.00"
+	Name="ArenaServer"
+	>
+	<Tool
+		Name="VCCLCompilerTool"
+		AdditionalOptions="/wd 4267 /wd 4389"
+		AdditionalIncludeDirectories="..\ArenaServer;../libs/UtilitiesLib\utils;../libs/UtilitiesLib\assert;../libs/UtilitiesLib/components;../libs/UtilitiesLib;../libs/UtilitiesLib/network;../libs/UtilitiesLib/language;../libs/UtilitiesLib/version;../3rdparty/zlibsrc;../common/utils;../common/components;../common/network;../common/auction;../common;../3rdparty/cryptopp;..\common\network;../dbserver;../common/entity;../common/seq;../common/gridcoll;../game/render;../common/gameComm;../common/group;../mapserver/storyarc;../common/storyarc;../mapserver/container;../mapserver;../mapserver/svr;../mapserver/entity;../mapserver/cmdparse;../mapserver/dbcomm;../common/cmdparse;../common/gameData;../mapserver/gamesys;../game/render/thread;../common/language;../common/version"
+		PreprocessorDefinitions="WIN32;_CONSOLE;_CRTDBG_MAP_ALLOC;AUX_SERVER_DEFINE;_CRT_SECURE_NO_DEPRECATE"
+		WarningLevel="3"
+	/>
+</VisualStudioPropertySheet>

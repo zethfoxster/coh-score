@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Full Debug|Win32">
+      <Configuration>Full Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{EC92BF1A-398D-4F43-839B-90AA746066E6}</ProjectGuid>
+    <RootNamespace>gettex</RootNamespace>
+    <SccProvider>MSSCCI:Microsoft Visual SourceSafe</SccProvider>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Full Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Full Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\PropertySheets\Common.props" />
+    <Import Project="..\PropertySheets\FullDebug.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\PropertySheets\Common.props" />
+    <Import Project="..\PropertySheets\Debug.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>../common;../mapserver;../game;../game/render;../game/graphics;../3rdparty/glew/glew-1.5.7/include;../common/utils;../common/gridcoll;../common/seq;../3rdparty/zlibsrc;../common/group;../libs/UtilitiesLib\utils;../libs/UtilitiesLib/components;../libs/UtilitiesLib;../libs/UtilitiesLib/assert;../Game/render/thread;../libs/UtilitiesLib/network;../3rdparty/cg/include;../3rdparty/nvidia_texture_tools_2/include;../3rdparty/nvidia-texture-tools-2.0.7-1/project/vc8/release.win32/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>GIMME_INIT_WSA;WIN32;_DEBUG;_CONSOLE;GETTEX;OFFLINE;_CRTDBG_MAP_ALLOC=1;_CRT_SECURE_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <WarningLevel>Level3</WarningLevel>
+    </ClCompile>
+    <Link>
+      <IgnoreSpecificDefaultLibraries>LIBCMT;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Full Debug|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>../common;../mapserver;../game;../game/render;../game/graphics;.../3rdparty/glew/glew-1.5.7/include;../common/utils;../common/gridcoll;../common/seq;../3rdparty/zlibsrc;../common/group;../libs/UtilitiesLib\utils;../libs/UtilitiesLib/components;../libs/UtilitiesLib;../libs/UtilitiesLib/assert;../Game/render/thread;../libs/UtilitiesLib/network;../3rdparty/cg/include;../3rdparty/nvidia-texture-tools-2.0.7-1/project/vc8/release.win32/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>GIMME_INIT_WSA;WIN32;_DEBUG;_CONSOLE;GETTEX;OFFLINE;_CRTDBG_MAP_ALLOC=1;_CRT_SECURE_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <WarningLevel>Level3</WarningLevel>
+    </ClCompile>
+    <Link>
+      <IgnoreSpecificDefaultLibraries>LIBCMT;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="askOptions.c" />
+    <ClCompile Include="..\Common\seq\AutoLOD.c" />
+    <ClCompile Include="gettex.c" />
+    <ClCompile Include="mipmap.c" />
+    <ClCompile Include="tdither.c" />
+    <ClCompile Include="texloaddesc.c" />
+    <ClCompile Include="texture_tools.cpp" />
+    <ClCompile Include="..\Common\seq\tricks.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\Common\seq\AutoLOD.h" />
+    <ClInclude Include="mipmap.h" />
+    <ClInclude Include="..\Common\seq\tricks.h" />
+    <ClInclude Include="askOptions.h" />
+    <ClInclude Include="gettex.h" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="tdither.h" />
+    <ClInclude Include="..\Game\render\tex.h" />
+    <ClInclude Include="texloaddesc.h" />
+    <ClInclude Include="texture_tools.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="CrypticIcn.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="GetTexResources.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\libs\UtilitiesLib\UtilitiesLib.vcxproj">
+      <Project>{a6741f6e-5476-4f9f-9d65-62b54aaf1d08}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

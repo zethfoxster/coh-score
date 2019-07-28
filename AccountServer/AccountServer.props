@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>..\Common\persist;..\AuctionAdmin;..\launcher;..\ServerMonitor;..\common\filter;..\MapServer\cmdparse;..\common\cmdparse;..\common\language;..\common\version;../libs/UtilitiesLib;../libs/UtilitiesLib\assert;..\common\utils;../libs/UtilitiesLib\network;../libs/UtilitiesLib\utils;../libs/UtilitiesLib\components;../libs/UtilitiesLib\version;../libs/UtilitiesLib\language;..\common\auction;..\common;..\common\entity;..\mapserver\filter;..\common\account;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>ACCOUNTSERVER;SECURE_STRINGS;WIN32;_CONSOLE;_CRTDBG_MAP_ALLOC=1;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+  </ItemDefinitionGroup>
+</Project>

@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="dbcomm">
+      <UniqueIdentifier>{479d5d0d-9beb-4fc3-9da9-c9fca00c5b54}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="misc">
+      <UniqueIdentifier>{f3151680-e58c-4525-ba7a-cf7a876d033b}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\dbserver\container_diff.c">
+      <Filter>dbcomm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\container\container_store.c">
+      <Filter>dbcomm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\dbserver\container_tplt_utils.c">
+      <Filter>dbcomm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\container\container_util.c">
+      <Filter>dbcomm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mapserver\dbcomm\dbcomm.c">
+      <Filter>dbcomm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mapserver\dbcomm\dbcontainer.c">
+      <Filter>dbcomm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\container\dbcontainerpack.c">
+      <Filter>dbcomm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\dbserver\servercfg.c">
+      <Filter>misc</Filter>
+    </ClCompile>
+    <ClCompile Include="arenadb.c" />
+    <ClCompile Include="arenaevent.c" />
+    <ClCompile Include="arenaplayer.c" />
+    <ClCompile Include="arenaranking.c" />
+    <ClCompile Include="..\Common\gameData\arenaschedule.c" />
+    <ClCompile Include="arenaserver.c" />
+    <ClCompile Include="..\common\gameData\arenastruct.c" />
+    <ClCompile Include="arenaupdates.c" />
+    <ClCompile Include="..\mapserver\container\containerArena.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\dbserver\container_diff.h">
+      <Filter>dbcomm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\container\container_store.h">
+      <Filter>dbcomm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dbserver\container_tplt_utils.h">
+      <Filter>dbcomm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\container\container_util.h">
+      <Filter>dbcomm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\mapserver\dbcomm\dbcomm.h">
+      <Filter>dbcomm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\mapserver\dbcomm\dbcontainer.h">
+      <Filter>dbcomm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\container\dbcontainerpack.h">
+      <Filter>dbcomm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dbserver\servercfg.h">
+      <Filter>misc</Filter>
+    </ClInclude>
+    <ClInclude Include="arenaevent.h" />
+    <ClInclude Include="arenaplayer.h" />
+    <ClInclude Include="arenaranking.h" />
+    <ClInclude Include="..\Common\gameData\arenaref.h" />
+    <ClInclude Include="..\Common\gameData\arenaschedule.h" />
+    <ClInclude Include="arenaserver.h" />
+    <ClInclude Include="..\common\gameData\arenastruct.h" />
+    <ClInclude Include="arenaupdates.h" />
+    <ClInclude Include="..\mapserver\container\containerArena.h" />
+  </ItemGroup>
+</Project>

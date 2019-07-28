@@ -1,0 +1,9 @@
+After cloning this repository, build the following solutions first:
+
+	code\CoH\3rdparty\cryptopp\cryptlib.sln
+	code\CoH\3rdparty\zlibsrc\zlibvc.sln
+	code\CoH\Utilities\StructParser\StructParser.sln
+
+Then you can build all the binaries from this solution:
+
+	code\CoH\MasterSolution\MasterSolution.sln

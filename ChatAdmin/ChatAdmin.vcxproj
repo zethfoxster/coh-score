@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{E7F065BB-3F72-4E63-8E80-F67B0AE1EFA3}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\PropertySheets\Common.props" />
+    <Import Project="..\PropertySheets\Debug.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>..\Common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_CRT_SECURE_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeaderFile>
+      </PrecompiledHeaderFile>
+      <DisableSpecificWarnings>4311;4312;4267;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <ForcedIncludeFiles>%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>comctl32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="ChannelList.c" />
+    <ClCompile Include="ChannelMonitor.c" />
+    <ClCompile Include="ChatAdmin.c" />
+    <ClCompile Include="ChatAdminNet.c" />
+    <ClCompile Include="ChatAdminUtils.c" />
+    <ClCompile Include="Login.c" />
+    <ClCompile Include="UserList.c" />
+    <ClCompile Include="UserMonitor.c" />
+    <ClCompile Include="CustomDialogs.c" />
+    <ClCompile Include="LangAdminUtil.c" />
+    <ClCompile Include="MessageView.c" />
+    <ClCompile Include="VirtualListView.c" />
+    <ClCompile Include="..\libs\UtilitiesLib\language\AppLocale.c" />
+    <ClCompile Include="..\libs\UtilitiesLib\version\AppRegCache.c" />
+    <ClCompile Include="..\libs\UtilitiesLib\language\MessageStore.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ChannelList.h" />
+    <ClInclude Include="ChannelMonitor.h" />
+    <ClInclude Include="ChatAdmin.h" />
+    <ClInclude Include="ChatAdminNet.h" />
+    <ClInclude Include="ChatAdminUtils.h" />
+    <ClInclude Include="ChatComm.h" />
+    <ClInclude Include="Login.h" />
+    <ClInclude Include="UserList.h" />
+    <ClInclude Include="UserMonitor.h" />
+    <ClInclude Include="CustomDialogs.h" />
+    <ClInclude Include="LangAdminUtil.h" />
+    <ClInclude Include="MessageView.h" />
+    <ClInclude Include="VirtualListView.h" />
+    <ClInclude Include="..\Common\chatdb.h" />
+    <ClInclude Include="..\Common\comm_backend.h" />
+    <ClInclude Include="..\libs\UtilitiesLib\language\MessageStore.h" />
+    <ClInclude Include="resource.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\game\data\texts\English\menuMessages.ms" />
+    <None Include="..\..\game\data\texts\menuMessages.types" />
+    <None Include="icon1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="ChatAdmin.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\libs\UtilitiesLib\UtilitiesLib.vcxproj">
+      <Project>{a6741f6e-5476-4f9f-9d65-62b54aaf1d08}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<VisualStudioPropertySheet
+	ProjectType="Visual C++"
+	Version="8.00"
+	Name="AuctionServer"
+	>
+	<Tool
+		Name="VCCLCompilerTool"
+		AdditionalIncludeDirectories="..\Common\persist;..\AuctionAdmin;..\launcher;..\ServerMonitor;..\common\filter;..\MapServer\cmdparse;..\common\cmdparse;..\common\language;..\common\version;../libs/UtilitiesLib;../libs/UtilitiesLib\assert;..\common\utils;../libs/UtilitiesLib\network;../libs/UtilitiesLib\utils;../libs/UtilitiesLib\components;../libs/UtilitiesLib\version;../libs/UtilitiesLib\language;..\common\auction;..\common;..\common\entity;..\mapserver\filter;..\Common\gameComm"
+		PreprocessorDefinitions="AUCTIONSERVER;SECURE_STRINGS;WIN32;_CONSOLE"
+	/>
+	<Tool
+		Name="VCLinkerTool"
+	/>
+</VisualStudioPropertySheet>

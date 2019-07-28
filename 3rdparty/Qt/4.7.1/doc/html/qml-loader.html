@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en_US" lang="en_US">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- qdeclarativeloader.cpp -->
+  <title>Qt 4.7: QML Loader Element</title>
+  <link rel="stylesheet" type="text/css" href="style/style.css" />
+  <script src="scripts/jquery.js" type="text/javascript"></script>
+  <script src="scripts/functions.js" type="text/javascript"></script>
+</head>
+<body class="offline narrow creator">
+ <div class="header" id="qtdocheader">
+    <div class="content"> 
+    <div id="nav-logo">
+      <a href="index.html">Home</a></div>
+    <a href="index.html" class="qtref"><span>Qt Reference Documentation</span></a>
+    <div id="nav-topright">
+      <ul>
+        <li class="nav-topright-home"><a href="http://qt.nokia.com/">Qt HOME</a></li>
+        <li class="nav-topright-dev"><a href="http://developer.qt.nokia.com/">DEV</a></li>
+        <li class="nav-topright-labs"><a href="http://labs.qt.nokia.com/blogs/">LABS</a></li>
+        <li class="nav-topright-doc nav-topright-doc-active"><a href="http://doc.qt.nokia.com/">
+          DOC</a></li>
+        <li class="nav-topright-blog"><a href="http://blog.qt.nokia.com/">BLOG</a></li>
+      </ul>
+    </div>
+    <div id="shortCut">
+      <ul>
+        <li class="shortCut-topleft-inactive"><span><a href="index.html">Qt 4.7</a></span></li>
+        <li class="shortCut-topleft-active"><a href="http://doc.qt.nokia.com">ALL VERSIONS        </a></li>
+      </ul>
+     </div>
+ <ul class="sf-menu sf-js-enabled sf-shadow" id="narrowmenu"> 
+		 <li><a href="#">API Lookup</a> 
+			 <ul id="topmenuLook"> 
+			   <li><a href="classes.html">Class index</a></li> 
+ 			  <li><a href="functions.html">Function index</a></li> 
+			   <li><a href="modules.html">Modules</a></li> 
+			   <li><a href="namespaces.html">Namespaces</a></li> 
+			   <li><a href="qtglobal.html">Global Declarations</a></li> 
+			   <li><a href="licensing.html">Licenses and Credits</a></li> 
+			   </ul> 
+		 </li> 
+		 <li><a href="#">Qt Topics</a> 
+			 <ul id="topmenuTopic"> 
+			   <li><a href="qt-basic-concepts.html">Programming with Qt</a></li> 
+			   <li><a href="qtquick.html">Device UI's &amp; Qt Quick</a></li> 
+			   <li><a href="qt-gui-concepts.html">UI Design with Qt</a></li> 
+			   <li><a href="developing-with-qt.html">Cross-platform and Platform-specific</a></li> 
+			   <li><a href="platform-specific.html">Platform-specific info</a></li> 
+			   <li><a href="technology-apis.html">Qt and Key Technologies</a></li> 
+			   <li><a href="best-practices.html">How-To's and Best Practices</a></li> 
+			 </ul> 
+		</li> 
+		 <li><a href="#">Examples</a> 
+			 <ul id="topmenuexample"> 
+				 <li><a href="all-examples.html">Examples</a></li> 
+				 <li><a href="tutorials.html">Tutorials</a></li> 
+				 <li><a href="demos.html">Demos</a></li> 
+				 <li><a href="qdeclarativeexamples.html">QML Examples</a></li> 
+			 </ul> 
+		 </li> 
+ </ul> 
+    </div>
+  </div>
+  <div class="wrapper">
+    <div class="hd">
+      <span></span>
+    </div>
+    <div class="bd group">
+      <div class="sidebar">
+        <div class="searchlabel">
+          Search index:</div>
+        <div class="search">
+          <form id="qtdocsearch" action="" onsubmit="return false;">
+            <fieldset>
+              <input type="text" name="searchstring" id="pageType" value="" />
+            </fieldset>
+          </form>
+        </div>
+        <div class="box first bottombar" id="lookup">
+          <h2 title="API Lookup"><span></span>
+            API Lookup</h2>
+          <div  id="list001" class="list">
+          <ul id="ul001" >
+              <li class="defaultLink"><a href="classes.html">Class index</a></li>
+              <li class="defaultLink"><a href="functions.html">Function index</a></li>
+              <li class="defaultLink"><a href="modules.html">Modules</a></li>
+              <li class="defaultLink"><a href="namespaces.html">Namespaces</a></li>
+              <li class="defaultLink"><a href="qtglobal.html">Global Declarations</a></li>
+              <li class="defaultLink"><a href="qdeclarativeelements.html">QML elements</a></li>
+            </ul> 
+          </div>
+        </div>
+        <div class="box bottombar" id="topics">
+          <h2 title="Qt Topics"><span></span>
+            Qt Topics</h2>
+          <div id="list002" class="list">
+            <ul id="ul002" >
+			   <li class="defaultLink"><a href="qt-basic-concepts.html">Programming with Qt</a></li> 
+			   <li class="defaultLink"><a href="qtquick.html">Device UI's &amp; Qt Quick</a></li> 
+			   <li class="defaultLink"><a href="qt-gui-concepts.html">UI Design with Qt</a></li> 
+			   <li class="defaultLink"><a href="developing-with-qt.html">Cross-platform and Platform-specific</a></li> 
+			   <li class="defaultLink"><a href="platform-specific.html">Platform-specific info</a></li> 
+			   <li class="defaultLink"><a href="technology-apis.html">Qt and Key Technologies</a></li> 
+			   <li class="defaultLink"><a href="best-practices.html">How-To's and Best Practices</a></li> 
+            </ul>  
+          </div>
+        </div>
+        <div class="box" id="examples">
+          <h2 title="Examples"><span></span>
+            Examples</h2>
+          <div id="list003" class="list">
+        <ul id="ul003">
+              <li class="defaultLink"><a href="all-examples.html">Examples</a></li>
+              <li class="defaultLink"><a href="tutorials.html">Tutorials</a></li>
+              <li class="defaultLink"><a href="demos.html">Demos</a></li>
+              <li class="defaultLink"><a href="qdeclarativeexamples.html">QML Examples</a></li>
+            </ul> 
+          </div>
+        </div>
+      </div>
+      <div class="wrap">
+        <div class="toolbar">
+          <div class="breadcrumb toolblock">
+            <ul>
+              <li class="first"><a href="index.html">Home</a></li>
+              <!--  Bread crumbs goes here -->
+              <li><a href="qdeclarativeelements.html">QML Elements</a></li>              <li>QML Loader Element</li>            </ul>
+          </div>
+          <div class="toolbuttons toolblock">
+            <ul>
+              <li id="smallA" class="t_button">A</li>
+              <li id="medA" class="t_button active">A</li>
+              <li id="bigA" class="t_button">A</li>
+              <li id="print" class="t_button"><a href="javascript:this.print();">
+                <span>Print</span></a></li>
+            </ul>
+        </div>
+        </div>
+        <div class="content">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#properties">Properties</a></li>
+<li class="level1"><a href="#signals">Signals</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+<li class="level2"><a href="#receiving-signals-from-loaded-items">Receiving signals from loaded items</a></li>
+<li class="level2"><a href="#focus-and-key-events">Focus and key events</a></li>
+</ul>
+</div>
+<h1 class="title">QML Loader Element</h1>
+<span class="subtitle"></span>
+<!-- $$$Loader-brief -->
+<p>The Loader item allows dynamically loading an Item-based subtree from a URL or Component. <a href="#details">More...</a></p>
+<!-- @@@Loader -->
+<p>Inherits <a href="qml-item.html">Item</a></p>
+<li><a href="qml-loader-members.html">List of all members, including inherited members</a></li>
+<a name="properties"></a>
+<h2>Properties</h2>
+<ul>
+<li class="fn"><b><b><a href="qml-loader.html#item-prop">item</a></b></b> : Item</li>
+<li class="fn"><b><b><a href="qml-loader.html#progress-prop">progress</a></b></b> : real</li>
+<li class="fn"><b><b><a href="qml-loader.html#source-prop">source</a></b></b> : url</li>
+<li class="fn"><b><b><a href="qml-loader.html#sourceComponent-prop">sourceComponent</a></b></b> : Component</li>
+<li class="fn"><b><b><a href="qml-loader.html#status-prop">status</a></b></b> : enumeration</li>
+</ul>
+<a name="signals"></a>
+<h2>Signals</h2>
+<ul>
+<li class="fn"><b><b><a href="qml-loader.html#onLoaded-signal">onLoaded</a></b></b></li>
+</ul>
+<!-- $$$Loader-description -->
+<a name="details"></a>
+<h2>Detailed Description</h2>
+<p>Loader is used to dynamically load visual QML components. It can load a QML file (using the <a href="qml-loader.html#source-prop">source</a> property) or a <a href="qml-component.html">Component</a> object (using the <a href="qml-loader.html#sourceComponent-prop">sourceComponent</a> property). It is useful for delaying the creation of a component until it is required: for example, when a component should be created on demand, or when a component should not be created unnecessarily for performance reasons.</p>
+<p>Here is a Loader that loads &quot;Page1.qml&quot; as a component when the <a href="qml-mousearea.html">MouseArea</a> is clicked:</p>
+<pre class="highlightedCode brush: cpp"> import QtQuick 1.0
+
+ Item {
+     width: 200; height: 200
+
+     Loader { id: pageLoader }
+
+     MouseArea {
+         anchors.fill: parent
+         onClicked: pageLoader.source = &quot;Page1.qml&quot;
+     }
+ }</pre>
+<p>The loaded item can be accessed using the <a href="qml-loader.html#item-prop">item</a> property.</p>
+<p>Loader is like any other visual item and must be positioned and sized accordingly to become visible. Once the component is loaded, the Loader is automatically resized to the size of the component.</p>
+<p>If the <a href="qml-loader.html#source-prop">source</a> or <a href="qml-loader.html#sourceComponent-prop">sourceComponent</a> changes, any previously instantiated items are destroyed. Setting <a href="qml-loader.html#source-prop">source</a> to an empty string or setting <a href="qml-loader.html#sourceComponent-prop">sourceComponent</a> to <tt>undefined</tt> destroys the currently loaded item, freeing resources and leaving the Loader empty.</p>
+<a name="receiving-signals-from-loaded-items"></a>
+<h2>Receiving signals from loaded items</h2>
+<p>Any signals emitted from the loaded item can be received using the <a href="qml-connections.html">Connections</a> element. For example, the following <tt>application.qml</tt> loads <tt>MyItem.qml</tt>, and is able to receive the <tt>message</tt> signal from the loaded item through a <a href="qml-connections.html">Connections</a> object:</p>
+<table class="generic">
+<tr class="odd topAlign"><td ><p>application.qml</p></td><td ><p>MyItem.qml</p></td></tr>
+<tr class="even topAlign"><td ><p><pre class="highlightedCode brush: cpp"> import QtQuick 1.0
+
+ Item {
+     width: 100; height: 100
+
+     Loader {
+        id: myLoader
+        source: &quot;MyItem.qml&quot;
+     }
+
+     Connections {
+         target: myLoader.item
+         onMessage: console.log(msg)
+     }
+ }</pre>
+</p></td><td ><p><pre class="highlightedCode brush: cpp"> import QtQuick 1.0
+
+ Rectangle {
+    id: myItem
+    signal message(string msg)
+
+    width: 100; height: 100
+
+    MouseArea {
+        anchors.fill: parent
+        onClicked: myItem.message(&quot;clicked!&quot;)
+    }
+ }</pre>
+</p></td></tr>
+</table>
+<p>Alternatively, since <tt>MyItem.qml</tt> is loaded within the scope of the Loader, it could also directly call any function defined in the Loader or its parent <a href="qml-item.html">Item</a>.</p>
+<a name="focus-and-key-events"></a>
+<h2>Focus and key events</h2>
+<p>Loader is a focus scope. Its <a href="qml-item.html#focus-prop">focus</a> property must be set to <tt>true</tt> for any of its children to get the <i>active focus</i>. (See <a href="qdeclarativefocus.html#acquiring-focus-and-focus-scopes">the focus documentation page</a> for more details.) Any key events received in the loaded item should likely also be <a href="qml-keyevent.html#accepted-prop">accepted</a> so they are not propagated to the Loader.</p>
+<p>For example, the following <tt>application.qml</tt> loads <tt>KeyReader.qml</tt> when the <a href="qml-mousearea.html">MouseArea</a> is clicked. Notice the <a href="qml-item.html#focus-prop">focus</a> property is set to <tt>true</tt> for the Loader as well as the <a href="qml-item.html">Item</a> in the dynamically loaded object:</p>
+<table class="generic">
+<tr class="odd topAlign"><td ><p>application.qml</p></td><td ><p>KeyReader.qml</p></td></tr>
+<tr class="even topAlign"><td ><p><pre class="highlightedCode brush: cpp"> import QtQuick 1.0
+
+ Rectangle {
+     width: 200; height: 200
+
+     Loader {
+         id: loader
+         focus: true
+     }
+
+     MouseArea {
+         anchors.fill: parent
+         onClicked: loader.source = &quot;KeyReader.qml&quot;
+     }
+
+     Keys.onPressed: {
+         console.log(&quot;Captured:&quot;, event.text);
+     }
+ }</pre>
+</p></td><td ><p><pre class="highlightedCode brush: cpp"> import QtQuick 1.0
+
+ Item {
+     Item {
+         focus: true
+         Keys.onPressed: {
+             console.log(&quot;Loaded item captured:&quot;, event.text);
+             event.accepted = true;
+         }
+     }
+ }</pre>
+</p></td></tr>
+</table>
+<p>Once <tt>KeyReader.qml</tt> is loaded, it accepts key events and sets <tt>event.accepted</tt> to <tt>true</tt> so that the event is not propagated to the parent <a href="qml-rectangle.html">Rectangle</a>.</p>
+<p>See also <a href="qml-qt.html#dynamic-object-creation">Dynamic Object Creation</a>.</p>
+<!-- @@@Loader -->
+<h2>Property Documentation</h2>
+<!-- $$$item -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr class="odd"><td class="tblQmlPropNode"><p><a name="item-prop"></a><span class="qmlreadonly">read-only</span>item : <a href="qml-item.html">Item</a></td></tr></table></div><div class="qmldoc"><p>This property holds the top-level item that is currently loaded.</p>
+</div></div><!-- @@@item -->
+<br/>
+<!-- $$$progress -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr class="odd"><td class="tblQmlPropNode"><p><a name="progress-prop"></a><span class="qmlreadonly">read-only</span>progress : <a href="qml-real.html">real</a></td></tr></table></div><div class="qmldoc"><p>This property holds the progress of loading QML data from the network, from 0.0 (nothing loaded) to 1.0 (finished). Most QML files are quite small, so this value will rapidly change from 0 to 1.</p>
+<p>See also <a href="qml-loader.html#status-prop">status</a>.</p>
+</div></div><!-- @@@progress -->
+<br/>
+<!-- $$$source -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr class="odd"><td class="tblQmlPropNode"><p><a name="source-prop"></a>source : <a href="qml-url.html">url</a></td></tr></table></div><div class="qmldoc"><p>This property holds the URL of the QML component to instantiate.</p>
+<p>Note the QML component must be an <a href="qml-item.html">Item</a>-based component. The loader cannot load non-visual components.</p>
+<p>To unload the currently loaded item, set this property to an empty string, or set <a href="qml-loader.html#sourceComponent-prop">sourceComponent</a> to <tt>undefined</tt>.</p>
+<p>See also <a href="qml-loader.html#sourceComponent-prop">sourceComponent</a>, <a href="qml-loader.html#status-prop">status</a>, and <a href="qml-loader.html#progress-prop">progress</a>.</p>
+</div></div><!-- @@@source -->
+<br/>
+<!-- $$$sourceComponent -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr class="odd"><td class="tblQmlPropNode"><p><a name="sourceComponent-prop"></a>sourceComponent : <a href="qml-component.html">Component</a></td></tr></table></div><div class="qmldoc"><p>This property holds the <a href="qml-component.html">Component</a> to instantiate.</p>
+<pre class="highlightedCode brush: cpp"> Item {
+     Component {
+         id: redSquare
+         Rectangle { color: &quot;red&quot;; width: 10; height: 10 }
+     }
+
+     Loader { sourceComponent: redSquare }
+     Loader { sourceComponent: redSquare; x: 10 }
+ }</pre>
+<p>To unload the currently loaded item, set this property to an empty string or <tt>undefined</tt>.</p>
+<p>See also <a href="qml-loader.html#source-prop">source</a> and <a href="qml-loader.html#progress-prop">progress</a>.</p>
+</div></div><!-- @@@sourceComponent -->
+<br/>
+<!-- $$$status -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr class="odd"><td class="tblQmlPropNode"><p><a name="status-prop"></a><span class="qmlreadonly">read-only</span>status : <a href="qml-enumeration.html">enumeration</a></td></tr></table></div><div class="qmldoc"><p>This property holds the status of QML loading. It can be one of:</p>
+<ul>
+<li>Loader.Null - no QML source has been set</li>
+<li>Loader.Ready - the QML source has been loaded</li>
+<li>Loader.Loading - the QML source is currently being loaded</li>
+<li>Loader.Error - an error occurred while loading the QML source</li>
+</ul>
+<p>Use this status to provide an update or respond to the status change in some way. For example, you could:</p>
+<p><i>Trigger a state change:</i></p>
+<pre class="highlightedCode brush: cpp"> State { name: 'loaded'; when: loader.status = Loader.Ready }</pre>
+<p><i>Implement an <tt>onStatusChanged</tt> signal handler:</i></p>
+<pre class="highlightedCode brush: cpp"> Loader {
+     id: loader
+     onStatusChanged: if (loader.status == Loader.Ready) console.log('Loaded')
+ }</pre>
+<p><i>Bind to the status value:</i></p>
+<pre class="highlightedCode brush: cpp"> Text { text: loader.status != Loader.Ready ? 'Not Loaded' : 'Loaded' }</pre>
+<p>Note that if the source is a local file, the status will initially be Ready (or Error). While there will be no onStatusChanged signal in that case, the <a href="qml-loader.html#onLoaded-signal">onLoaded</a> will still be invoked.</p>
+<p>See also <a href="qml-loader.html#progress-prop">progress</a>.</p>
+</div></div><!-- @@@status -->
+<br/>
+<h2>Signal Documentation</h2>
+<!-- $$$onLoaded -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr class="odd"><td class="tblQmlFuncNode"><p><a name="onLoaded-signal"></a>Loader::onLoaded ()</p></td></tr></table></div><div class="qmldoc"><p>This handler is called when the <a href="qml-loader.html#status-prop">status</a> becomes <tt>Loader.Ready</tt>, or on successful initial load.</p>
+</div></div><!-- @@@onLoaded -->
+<br/>
+<p>
+</p>
+        <div class="feedback t_button">
+          [+] Documentation Feedback</div>
+      </div>
+    </div>
+    </div> 
+    <div class="ft">
+      <span></span>
+    </div>
+  </div> 
+  <div class="footer">
+    <p>
+      <acronym title="Copyright">&copy;</acronym> 2008-2010 Nokia Corporation and/or its
+      subsidiaries. Nokia, Qt and their respective logos are trademarks of Nokia Corporation 
+      in Finland and/or other countries worldwide.</p>
+    <p>
+      All other trademarks are property of their respective owners. <a title="Privacy Policy"
+        href="http://qt.nokia.com/about/privacy-policy">Privacy Policy</a></p>
+    <br />
+    <p>
+      Licensees holding valid Qt Commercial licenses may use this document in accordance with the      Qt Commercial License Agreement provided with the Software or, alternatively, in accordance      with the terms contained in a written agreement between you and Nokia.</p>
+    <p>
+      Alternatively, this document may be used under the terms of the <a href="http://www.gnu.org/licenses/fdl.html">GNU
+      Free Documentation License version 1.3</a>
+      as published by the Free Software Foundation.</p>
+  </div>
+  <div id="feedbackBox">
+      <div id="feedcloseX" class="feedclose t_button">X</div>
+    <form id="feedform" action="http://doc.qt.nokia.com/docFeedbck/feedback.php" method="get">
+      <p id="noteHead">Thank you for giving your feedback.</p> <p class="note">Make sure it is related to this specific page. For more general bugs and 
+      requests, please use the <a href="http://bugreports.qt.nokia.com/secure/Dashboard.jspa">Qt Bug Tracker</a>.</p>
+      <p><textarea id="feedbox" name="feedText" rows="5" cols="40"></textarea></p>
+      <p><input id="feedsubmit" class="feedclose" type="submit" name="feedback" /></p>
+    </form>
+  </div>
+  <div id="blurpage">
+  </div>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<VisualStudioPropertySheet
+	ProjectType="Visual C++"
+	Version="8.00"
+	Name="dbserver"
+	>
+	<Tool
+		Name="VCCLCompilerTool"
+		AdditionalOptions="/wd 4267"
+		AdditionalIncludeDirectories="..\common\container;..\common\auth;../libs/UtilitiesLib\assert;..\common\utils;../libs/UtilitiesLib;../libs/UtilitiesLib\network;../libs/UtilitiesLib\utils;../libs/UtilitiesLib\components;../mapserver/dbcomm;../MapServer;../common;../common/auction;.;../game;../lf;../3rdparty/zlibsrc;../game/render;../3rdparty/cryptopp;..\common\assert;..\common\network;..\common\entity;..\common\account;..\common\turnstileserver;&quot;..\3rdparty\zeromq2-1\include&quot;;..\Common\gameComm"
+		PreprocessorDefinitions="WIN32;_CONSOLE;DBSERVER;_CRT_SECURE_NO_DEPRECATE"
+		WarningLevel="3"
+	/>
+	<Tool
+		Name="VCLinkerTool"
+		StackReserveSize="16777216"
+		StackCommitSize="262144"
+		FixedBaseAddress="1"
+	/>
+	<Tool
+		Name="VCPreBuildEventTool"
+		CommandLine="..\utilities\bin\structparser X $(InputDir) X $(InputFileName) X $(PlatformName) X $(ConfigurationName) X $(VCInstallDir) X $(SolutionPath)"
+	/>
+</VisualStudioPropertySheet>

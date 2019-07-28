@@ -1,0 +1,205 @@
+ALLEGORITHMIC EVALUATION SOFTWARE LICENCE TERMS
+
+USER RIGHTS AND WARRANTIES 
+
+We thank you for having acquired the Substance Package, a kit of software 
+products developed by Allegorithmic, (hereinafter Substance). 
+
+ALLEGORITHMIC, 37 Avenue Lavoisier, ZAC des Varennes, 63170 Aubière, 
+FRANCE, is the developer and owner of Software Product known as Substance 
+(the « Software »). 
+
+The Substance package includes two products: Substance Engine and 
+Substance Editor. Substance Editor allows the user to create, use or 
+modify procedural maps, textures and various media effects. Substance is a 
+software Engine allowing to provide those maps, textures and media 
+effects to more general media environments such as games or 
+animations. 
+
+Use of the software and data provided with the Substance Package is 
+subject to a licence granted by Allegorithmic, and/or other suppliers, 
+to the end-user (hereinafter  "Licensee”), for use in accordance with 
+the following end-user license agreement. 
+
+
+END-USER LICENSE AGREEMENT 
+
+Please read this end-user license agreement carefully. 
+
+Breaking the seal or opening the sleeve of the CD-ROM or DVD-ROM or 
+memory card or pressing the “I agree” button for pre-installed or 
+downloaded software means that you accept the terms and conditions of 
+this agreement.
+
+In any case, by using the software, you accept these terms. If you do 
+not accept them, do not use the software. 
+
+Evaluation Licence/Trial period: Allegorithmic and/or its suppliers 
+grant you a limited, non-exclusive and non-transferable licence to use 
+the Software and Data in accordance with the following conditions and 
+limitations. Under this agreement, the Substance Package is licensed on a 
+trial basis. Your rights to use trial software are limited to the 
+trial period. The length of the trial period is set to 90 days. You 
+may have the option to convert your trial rights to subscription or 
+perpetual rights. Conversion options will be available at 
+Allegorithmic’s web site. After the expiration of any trial period 
+without conversion, this license agreement shall terminate.
+
+
+USE OF THE SOFTWARE 
+
+For the purposes of this License, "Use" shall mean and include: a) 
+utilization of the Software by copying, transmitting or loading the 
+Software into the temporary memory (RAM) or installing into the 
+permanent memory (e.g. hard disk, CD Rom or other storage device) on 
+the Licensee’s computer system (the « System ») for use by the 
+Licensee and its employees; b) storing the whole or any part of the 
+Software on the System or other storage unit or disk, c) utilizing 
+(but not copying) the instructional and/or operational manuals 
+relating to the Software. You may make a back-up copy of the Software 
+solely for the purpose of restoring the original Software in the event 
+it is accidentally corrupted. You must reproduce all the information 
+regarding copyright and any other information relating to property 
+rights shown on the Software and affix said information to any copy 
+that you may make. 
+
+Restrictions on use: 
+
+You are not authorised to reproduce, modify, adapt, decompile or 
+disassemble the Software, perform reverse engineering. Allegorithmic 
+will provide you on written request with the information necessary for 
+the Software to be interoperable with other programs in accordance 
+with the statutory provisions in force. 
+
+You are not authorised to work around any limitations in the software. 
+
+You are not authorised to publish the software for others to copy. 
+
+You are not authorised to sale, rent, lease or lend the Software. You 
+may not grant a sub-licence to the Software, whether free of charge or 
+for valuable consideration, or grant or transfer a licence. 
+
+You are not authorised to use the software in any way that is against 
+the law. 
+
+You are not authorised to use the software for software hosting 
+services. 
+
+Intellectual property rights: 
+
+The Software and Data are protected by copyright, intellectual 
+property right regulations and by provisions of international 
+treaties. Any breach of these rights shall constitute copyright 
+infringement. Allegorithmic shall retain all rights that are not 
+expressly granted. 
+
+The Licensee acknowledges that any and all of the copyright, trade 
+marks, trade names, patents and other intellectual property rights 
+subsisting in or used or in connection with the Software including all 
+documentation and manuals relating thereto are and remain the sole 
+property of Allegorithmic. The Licensee shall not during or at any 
+time after the expiration or termination of this License in any way 
+question or dispute the ownership by Allegorithmic. 
+
+Media Elements and Textures: 
+
+The Substance Package software is provided with textures and/or other 
+media elements. You may use, copy, reproduce and distribute the 
+included textures in your projects either for personal, educational or 
+commercial purpose. Allegorithmic shall retain all rights, including 
+Copyrights of all Media elements provided with the Software. In any 
+case, for any use of the Media elements provided by Allegorithmic and 
+owned by Allegorithmic, Allegorithmic’s property and rights shall be 
+clearly mentioned in your project. Any breach to this requirement 
+shall terminate this agreement. 
+
+Term: This agreement shall be valid until it is terminated or ends for 
+any reason whatsoever. For trial software and license, this agreement 
+ends once the trial period has expired. It may be terminated at any 
+time in the event you breach any of the provisions hereof. Immediately 
+after its termination or end, you must return the Software and Data to 
+Allegorithmic and/or destroy any copies in your possession. 
+
+Severability: If one of the provisions of this agreement proves to be 
+invalid, unlawful or inapplicable, this shall not affect the validity, 
+lawfulness and applicability of the other provisions. 
+
+Governing law and jurisdiction: For sales or uses in Canada, Mexico or 
+the United States, this licensing agreement shall be governed by the 
+law of the State of New York. For all other sales, this licensing 
+agreement shall be governed by the law of France. 
+
+
+WARRANTY
+
+This warranty is granted by Allegorithmic to the initial acquirer, 
+i.e., the end-user, of the Substance Package software for his/her personal 
+use (hereinafter "you"). 
+
+Allegorithmic warrants that the Substance Package Software and any other 
+Allegorithmic branded Software (hereinafter "the Software») shall 
+comply with the specifications with which they are supplied, for a 
+period of thirty (30) days from the date of the initial acquisition. 
+
+Limit on the warranty: 
+
+1. This warranty does not apply to software or hardware produced by a 
+third-party and supplied with or embodied into the Allegorithmic 
+Product. Allegorithmic does not provide any warranty on behalf of said 
+third-parties. The hardware and software produced by third parties are 
+covered by a warranty from their supplier or licensor. 2. This 
+warranty does not apply to normal wear and tear to the Hardware and 
+Software. 3. This warranty does not include a warranty that the 
+operation of the Software shall be uninterrupted and free from error. 
+Any warranty as to the reliability, accuracy, completeness and 
+comprehensiveness of the data included in the Software is expressly 
+excluded. 
+
+Remedies: In the event of a hidden defect of which Allegorithmic is 
+informed during the warranty period, your sole remedy shall be to 
+obtain the repair or replacement of the Software, solely at 
+Allegorithmic's discretion and at its expense. If Allegorithmic cannot 
+reasonably repair or replace the product, Allegorithmic may, solely at 
+its discretion, provide you with an equivalent product. Allegorithmic 
+warrants all replaced Software for a period of thirty (30) days from 
+the date of shipment or until the end of the original warranty period 
+if this is later. 
+
+Implementation of the warranty: To implement this warranty, you should 
+contact Allegorithmic via the company’s web site or by mail or fax. 
+
+Exclusions from the warranty: This warranty excludes all other 
+express, implicit or statutory warrantees, conditions and terms, 
+including merchantability warrantees, suitability for a specific use, 
+accuracy, compliance with the description, regarding satisfactory 
+quality, the absence of any virus in the Software and non-copyright 
+and/or patent infringement. 
+
+However, no provision of this warranty shall affect your statutory 
+rights. 
+
+Limitation of responsibility and liability: Insofar as this is allowed 
+by the applicable regulations, Allegorithmic and/or its suppliers 
+shall under no circumstances be responsible for any direct and/or 
+indirect damage, special or subsequent damage, in particular, for 
+information purposes but not limited to, the loss of earnings or 
+profit, loss of business, loss of data and loss of software, or of 
+hardware, including the costs of recovery, reproduction or repairs 
+following the above-mentioned loss, caused by the use of and/or the 
+impossibility of using the Allegorithmic and/or its suppliers have 
+been informed of the possibility of said damage. In any event, 
+Allegorithmic's liability shall be limited to the eventual amount you 
+paid for the Allegorithmic Product. 
+
+Severability: If one of the provisions of this warranty proves to be 
+invalid, unlawful or inapplicable, this shall not affect the validity, 
+lawfulness and applicability of the other provisions. 
+
+Governing law and jurisdiction: For sales in Canada, Mexico or the 
+United States, this warranty agreement shall be governed by the law of 
+the State of New York. For all other sales, this warranty agreement 
+shall be governed by the law of France. The United Nations Convention 
+on Contracts for the International Sales of Goods is hereby excluded 
+from application to this warranty agreement. 
+
+

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="shift_jis"?>
+<VisualStudioPropertySheet
+	ProjectType="Visual C++"
+	Version="8.00"
+	Name="LibsDirectory"
+	>
+	<Tool
+		Name="VCCLCompilerTool"
+		AdditionalIncludeDirectories=".;pub;../../libs/UtilitiesLib;../../libs/UtilitiesLib/assert;../../libs/UtilitiesLib/components;../../libs/UtilitiesLib/language;../../libs/UtilitiesLib/network;../../libs/UtilitiesLib/utils;../../libs/UtilitiesLib/UtilsNew;../../libs/UtilitiesLib/UtilsCXX;../../libs/UtilitiesLib/version"
+	/>
+	<Tool
+		Name="VCPostBuildEventTool"
+		CommandLine=""
+	/>
+</VisualStudioPropertySheet>

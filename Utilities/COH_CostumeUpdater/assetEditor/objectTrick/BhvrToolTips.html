@@ -1,0 +1,591 @@
+<html><head></head>
+<body>
+<id="Sample">
+<h1 style="color:255 0 0">Trick Files and Flags - City of Heroes - Confluence</h1>
+<h2 style="color:Blue">Trick Files and Flags - City of Heroes - Confluence</h2>
+<h3 style="color: #FF0000">Trick Files and Flags - City of Heroes - Confluence</h3>
+<p>Trick Files and Flags - City of Heroes - Confluence\r\n</p>
+</id>   
+
+<id="CameraFace">
+<h2 style="color:Green">CameraFace</h2>
+<p>Always looks straight at the camera. For items such as lights and light glows,no matter what direction you look at the light at it will always appear to be facing you. This trick should be applied to items such as halo's, lights, and any other item that you would like to have appear facing you.</p>
+</id>
+
+<id="NightLight">
+<h2 style="color:green">NightLight</h2>
+<p>Fades alpha down to zero during day. See LampLightTime in scene file. This trick should be applied when you would like glows Etc.. to appear at night and not during the day.</p>
+</id>
+
+<id="SwayRandomize">
+<h2 style="color:Red">SwayRandomize &lt;speed factor&gt; &lt;angle factor&gt;</h2>
+<p>Add a random amount to the sway values, varying per frame, per object. This uniformly affects Sway, SwayPitch, and SwayRoll.</p>
+<p>These are the maximum values to get added, so if you enter the following:</p>
+<p>Sway 0.2 0.5</p>
+<p>SwayRandomize 0.3 0.3</p>
+<p>The resulting values will have a speed between 0.2 and 0.5 and an angle betwen 0.5 and 0.8.</p>
+</id>
+
+<id="PositionOffset">
+<h2 style="color:Blue">CameraFace</h2>
+<p>PositionOffset 0.0 0.0 0.0</p>
+<p>Moves attached mesh objects and any children nodes. X, Y, and Z values in feet</p>
+</id>
+
+<id="StartJitter">
+<h2 style="color:Blue">StartJitter</h2>
+<p>StartJitter 0.0 0.0 0.0</p>
+<p>Random value +/- added to the Position Offset</p>
+</id>
+
+
+<id="PyrRotate">
+<h2 style="color:Blue">PyrRotate</h2>
+<p>PyrRotate 0.0 0.0 0.0</p>
+<p>Initial Rotation of attached mesh objects and any children nodes. X, Y, and Z values in degrees.</p>
+</id>
+
+<id="PyrRotateJitter">
+<h2 style="color:Blue">PyrRotateJitter</h2>
+<p>PyrRotateJitter 0.0 0.0 0.0</p>
+<p>Random value +/- added to the pyrRotate</p>
+</id>
+
+<id="Spin">
+<h2 style="color:Blue">Spin</h2>
+<p>Spin 0.0 0.0 0.0</p>
+<p>Rotates attached mesh objects and any children nodes. X, Y, and Z values in degrees per frame.</p>
+</id>
+
+<id="SpinJitter">
+<h2 style="color:Blue">SpinJitter</h2>
+<p>SpinJitter 0.0 0.0 0.00</p>
+<p>Random value +/- added to the Spin</p>
+</id>
+
+<id="Scale">
+<h2 style="color:Blue">Scale</h2>
+<p>Scale 0.5 0.5 0.5</p>
+<p>Mesh object size is multiplied by these values in X, Y, and Z directions. Also scales the offsets of children nodes, and can inherit scale values from parents.</p>
+</id>
+
+<id="ScaleRate">
+<h2 style="color:Blue">ScaleRate</h2>
+<p>ScaleRate 1.0 1.0 1.0</p>
+<p>Multiplier to scale value per frame</p>
+</id>
+
+<id="EndScale">
+<h2 style="color:Blue">EndScale</h2>
+<p>EndScale 1.0 1.0 1.0 </p>
+<p>InitialVelocity 0.0 0.0 0.0</p>
+<p>propels attached mesh objects and any children nodes. X, Y, and Z values in feet/second</p>
+</id>
+
+<id="InitialVelocityJitter">
+<h2 style="color:Blue">InitialVelocityJitter</h2>
+<p>InitialVelocityJitter 0.0 0.0 0.0</p>
+<p>Random value +/- added to the Initial Velocity</p>
+</id>
+
+<id="TrackRate">
+<h2 style="color:Blue">TrackRate</h2>
+<p>TrackRate 1.0</p>
+<p>Speed at which a node magnets towards (or away from) a specified target (recommended values for game-play projectiles are between 2.0 and 3.0 - otherwise a ProjectileSpeed value will be needed in the .PFX file to reflect the extreme speed). </p>
+</id>
+
+<id="TrackMethod">
+<h2 style="color:Blue">TrackMethod</h2>
+<p>TrackMethod 0</p>
+<p>There is currently NO DIFFERENCE in the track methods</p>
+</id>
+
+<id="Gravity">
+<h2 style="color:Blue">Gravity</h2>
+<p>Gravity 0.04</p>
+<p>Negative values will cause the node to float up.  The value of 0.04 simulates normal earth gravity.</p>
+</id>
+
+<id="Drag">
+<h2 style="color:Blue">Drag</h2>
+<p>Drag 0.0</p>
+<p>Range: 0 to 1</p>
+<p>Takes one floating point number, decelerates node by this fraction of its velocity every second, works for physically enabled nodes as well. Drag does not affect motion resulting from gravity or magnetism (TrackRate)</p>
+</id>
+
+<id="LifeSpan">
+<h2 style="color:Blue">LifeSpan</h2>
+<p>LifeSpan -1</p>
+<p>LifeSpan -1 means don't die until the effect tells you to. Anything else means live for that many frames. A value of zero will generate an error. Leave this at the bottom of the file; it helps detect parsing errors.</p>
+</id>
+
+<id="FadeInLength">
+<h2 style="color:Blue">FadeInLength</h2>
+<p>FadeInLength 30</p>
+<p>How many frames it takes any geometry on this to come to full alpha value</p>
+</id>
+
+<id="FadeOutLength">
+<h2 style="color:Blue">FadeOutLength</h2>
+<p>FadeOutLength 60</p>
+<p>From time of node death, how many frames it takes any geometry on this to go from full alpha value</p>
+</id>
+
+<id="Alpha">
+<h2 style="color:Blue">Alpha</h2>
+<p>Alpha 255</p>
+<p>This is the maximum alpha value the object reaches when it is fully faded in. Range: 0 to 255 (255 is full opacity)</p>
+</id>
+
+<id="StartColor">
+<h2 style="color:Blue">StartColor</h2>
+<p>StartColor 40 45 35 R G B values. Range: 0 to 255</p>
+</id>
+
+<id="ColorChangeType">
+<h2 style="color:Blue">ColorChangeType</h2>
+<p>ColorChangeType 1 (This doesn't appear to work anymore)</p>
+</id>
+
+<id="PrimaryTint">
+<h2 style="color:Blue">PrimaryTint</h2>
+<p>PrimaryTint 0 (Range 0-100) - Inherit this percentage of the Primary color tint from the parent.</p>
+</id>
+
+<id="SecondaryTint">
+<h2 style="color:Blue">SecondaryTint</h2>
+<p>SecondaryTint 0 (Range 0-100) - Inherit this percentage of the Primary color tint from the parent.</p>
+</id>
+
+
+<id="ByTime1">
+<h2 style="color:Blue">ByTime1</h2>
+<p>ByTime1 50</p>
+<p>ByTime/BeColor is used to change the color of particles over time.  ByTime defines the time in frames.  BeColor defines the RGB value to use.  A Particle System can use up to four ByTime/BeColor definitions. If ByTime is 0, that means stop with the previous Color and ignore this Color and every Color after this. Interpolation between colors is linear. If a ByTime value is greater than the particle's FadeOutBy, the particle will ramp towards the color untill it fades out, but it will never arrive at that final color value. Primary and Secondary tint values are used to specify how much of the primary and secondary tint colors the particle inherits at this point. If the FadeOutTime is longer than any defined Primary or Secondary tint value, the tint value will revert to 0% for both primary and secondary...so make sure that you have a ByTime defined that matches or exceeds the FadeOutTime.</p>
+</id>
+
+<id="BeColor1">
+<h2 style="color:Blue">BeColor1</h2>
+<p>BeColor1 100 200 50</p>
+<p>ByTime/BeColor is used to change the color of particles over time.  ByTime defines the time in frames.  BeColor defines the RGB value to use.  A Particle System can use up to four ByTime/BeColor definitions. If ByTime is 0, that means stop with the previous Color and ignore this Color and every Color after this. Interpolation between colors is linear. If a ByTime value is greater than the particle's FadeOutBy, the particle will ramp towards the color untill it fades out, but it will never arrive at that final color value. Primary and Secondary tint values are used to specify how much of the primary and secondary tint colors the particle inherits at this point. If the FadeOutTime is longer than any defined Primary or Secondary tint value, the tint value will revert to 0% for both primary and secondary...so make sure that you have a ByTime defined that matches or exceeds the FadeOutTime.</p>
+</id>
+
+<id="PrimaryTint1">
+<h2 style="color:Blue">PrimaryTint1</h2>
+<p>PrimaryTint1 0 (Range 0-100) - Inherit this percentage of the Primary color tint from the parent.</p>
+</id>
+
+<id="SecondaryTint1">
+<h2 style="color:Blue">SecondaryTint1</h2>
+<p>SecondaryTint1 0 (Range 0-100) - Inherit this percentage of the Primary color tint from the parent.</p>
+</id>
+
+<id="ByTime2">
+<h2 style="color:Blue">ByTime2</h2>
+<p>ByTime2 50</p>
+<p>ByTime/BeColor is used to change the color of particles over time.  ByTime defines the time in frames.  BeColor defines the RGB value to use.  A Particle System can use up to four ByTime/BeColor definitions. If ByTime is 0, that means stop with the previous Color and ignore this Color and every Color after this. Interpolation between colors is linear. If a ByTime value is greater than the particle's FadeOutBy, the particle will ramp towards the color untill it fades out, but it will never arrive at that final color value. Primary and Secondary tint values are used to specify how much of the primary and secondary tint colors the particle inherits at this point. If the FadeOutTime is longer than any defined Primary or Secondary tint value, the tint value will revert to 0% for both primary and secondary...so make sure that you have a ByTime defined that matches or exceeds the FadeOutTime.</p>
+</id>
+
+<id="BeColor2">
+<h2 style="color:Blue">BeColor2</h2>
+<p>BeColor2 100 200 50</p>
+<p>ByTime/BeColor is used to change the color of particles over time.  ByTime defines the time in frames.  BeColor defines the RGB value to use.  A Particle System can use up to four ByTime/BeColor definitions. If ByTime is 0, that means stop with the previous Color and ignore this Color and every Color after this. Interpolation between colors is linear. If a ByTime value is greater than the particle's FadeOutBy, the particle will ramp towards the color untill it fades out, but it will never arrive at that final color value. Primary and Secondary tint values are used to specify how much of the primary and secondary tint colors the particle inherits at this point. If the FadeOutTime is longer than any defined Primary or Secondary tint value, the tint value will revert to 0% for both primary and secondary...so make sure that you have a ByTime defined that matches or exceeds the FadeOutTime.</p>
+</id>
+
+<id="PrimaryTint2">
+<h2 style="color:Blue">PrimaryTint2</h2>
+<p>PrimaryTint2 0 (Range 0-100) - Inherit this percentage of the Primary color tint from the parent.</p>
+</id>
+
+<id="SecondaryTint2">
+<h2 style="color:Blue">SecondaryTint2</h2>
+<p>SecondaryTint2 0 (Range 0-100) - Inherit this percentage of the Primary color tint from the parent.</p>
+</id>
+
+<id="ByTime3">
+<h2 style="color:Blue">ByTime3</h2>
+<p>ByTime3 50</p>
+<p>ByTime/BeColor is used to change the color of particles over time.  ByTime defines the time in frames.  BeColor defines the RGB value to use.  A Particle System can use up to four ByTime/BeColor definitions. If ByTime is 0, that means stop with the previous Color and ignore this Color and every Color after this. Interpolation between colors is linear. If a ByTime value is greater than the particle's FadeOutBy, the particle will ramp towards the color untill it fades out, but it will never arrive at that final color value. Primary and Secondary tint values are used to specify how much of the primary and secondary tint colors the particle inherits at this point. If the FadeOutTime is longer than any defined Primary or Secondary tint value, the tint value will revert to 0% for both primary and secondary...so make sure that you have a ByTime defined that matches or exceeds the FadeOutTime.</p>
+</id>
+
+<id="BeColor3">
+<h2 style="color:Blue">BeColor3</h2>
+<p>BeColor3 100 200 50</p>
+<p>ByTime/BeColor is used to change the color of particles over time.  ByTime defines the time in frames.  BeColor defines the RGB value to use.  A Particle System can use up to four ByTime/BeColor definitions. If ByTime is 0, that means stop with the previous Color and ignore this Color and every Color after this. Interpolation between colors is linear. If a ByTime value is greater than the particle's FadeOutBy, the particle will ramp towards the color untill it fades out, but it will never arrive at that final color value. Primary and Secondary tint values are used to specify how much of the primary and secondary tint colors the particle inherits at this point. If the FadeOutTime is longer than any defined Primary or Secondary tint value, the tint value will revert to 0% for both primary and secondary...so make sure that you have a ByTime defined that matches or exceeds the FadeOutTime.</p>
+</id>
+
+<id="PrimaryTint3">
+<h2 style="color:Blue">PrimaryTint3</h2>
+<p>PrimaryTint3 0 (Range 0-100) - Inherit this percentage of the Primary color tint from the parent.</p>
+</id>
+
+
+<id="SecondaryTint3">
+<h2 style="color:Blue">SecondaryTint3</h2>
+<p>SecondaryTint3 0 (Range 0-100) - Inherit this percentage of the Primary color tint from the parent.</p>
+</id>
+
+<id="ByTime4">
+<h2 style="color:Blue">ByTime4</h2>
+<p>ByTime4 50</p>
+<p>ByTime/BeColor is used to change the color of particles over time.  ByTime defines the time in frames.  BeColor defines the RGB value to use.  A Particle System can use up to four ByTime/BeColor definitions. If ByTime is 0, that means stop with the previous Color and ignore this Color and every Color after this. Interpolation between colors is linear. If a ByTime value is greater than the particle's FadeOutBy, the particle will ramp towards the color untill it fades out, but it will never arrive at that final color value. Primary and Secondary tint values are used to specify how much of the primary and secondary tint colors the particle inherits at this point. If the FadeOutTime is longer than any defined Primary or Secondary tint value, the tint value will revert to 0% for both primary and secondary...so make sure that you have a ByTime defined that matches or exceeds the FadeOutTime.</p>
+</id>
+
+<id="BeColor4">
+<h2 style="color:Blue">BeColor4</h2>
+<p>BeColor4 100 200 50</p>
+<p>ByTime/BeColor is used to change the color of particles over time.  ByTime defines the time in frames.  BeColor defines the RGB value to use.  A Particle System can use up to four ByTime/BeColor definitions. If ByTime is 0, that means stop with the previous Color and ignore this Color and every Color after this. Interpolation between colors is linear. If a ByTime value is greater than the particle's FadeOutBy, the particle will ramp towards the color untill it fades out, but it will never arrive at that final color value. Primary and Secondary tint values are used to specify how much of the primary and secondary tint colors the particle inherits at this point. If the FadeOutTime is longer than any defined Primary or Secondary tint value, the tint value will revert to 0% for both primary and secondary...so make sure that you have a ByTime defined that matches or exceeds the FadeOutTime.</p>
+</id>
+
+<id="PrimaryTint4">
+<h2 style="color:Blue">PrimaryTint4</h2>
+<p>PrimaryTint4 0 (Range 0-100) - Inherit this percentage of the Primary color tint from the parent.</p>
+</id>
+
+<id="SecondaryTint4">
+<h2 style="color:Blue">SecondaryTint4</h2>
+<p>SecondaryTint4 0 (Range 0-100) - Inherit this percentage of the Primary color tint from the parent.</p>
+</id>
+
+<id="HueShift">
+<h2 style="color:Blue">HueShift</h2>
+<p>HueShift 0</p>
+<p>Shifts all .part colors under this event (excluding child fx and cevents) in hue by this many degrees. Goes from -180 to 180. Think about it as if it were rotating the color wheel by this many degrees. Should correspond to the hue-shifting in Photoshop.</p>
+</id>
+
+<id="HueShiftJitter">
+<h2 style="color:Blue">HueShiftJitter</h2>
+<p>HueShiftJitter 0</p>
+<p>Adds this many degrees +/- to the HueShift value, for every particle system, everytime the particle system is created.</p>
+</id>
+
+<id="inheritGroupTint">
+<h2 style="color:Blue">inheritGroupTint</h2>
+<p>inheritGroupTint</p>
+<p>Just a flag, doesn't take a value. If this token is present in the bhvr file, all fx geos will attempt to use the tint of the group their fx is a part of. Used for tinting leaves that fall off trees, for example. If there is no group (a non-world-fx) or the group has no tint, it does nothing. The color is multiplied by other colors, so if you wish to darken it relative to the group tint, you can change the startcolor to a darker shade of gray, for example.</p>
+</id>
+
+<id="physics">
+<h2 style="color:Blue">physics</h2>
+<p>physics 1</p>
+<p>A value of 1 toggles physics to "on" for this node</p>
+</id>
+
+<id="physRadius">
+<h2 style="color:Blue">physRadius</h2>
+<p>physRadius 0.0</p>
+<p>Point collision radius offset (for nodes w/o a mesh assigned). The object will behave like a sphere. Nodes with a mesh use the mesh object for collision, and will roll and collide based on that shape.</p>
+<p>Range: 0+ (.3 is good starting point for small particles)</p>
+</id>
+
+<id="physGravity">
+<h2 style="color:Blue">physGravity</h2>
+<p>physGravity 1.0</p>
+<p>This value is used instead of Gravity for physics enabled nodes. A value of 1 here is about equivalent to a Gravity value of 0.04</p>
+<p>Range: 0+ (with a value of 1 representing normal earth gravity)</p>
+</id>
+
+<id="physRestitution">
+<h2 style="color:Blue">physRestitution</h2>
+<p>physRestitution 0.0</p>
+<p>Bounce factor: Value determines amount of energy returned to the node when it collides. Velocity before collision is multiplied by this number to get velocity after collision.</p>
+<p>Range: 0 to 1</p>
+</id>
+
+<id="physSFriction">
+<h2 style="color:Blue">physSFriction</h2>
+<p>physSFriction 0.0</p>
+<p>Static Friction: Amount of resistance to speed when sliding</p>
+<p>Range: 0 to 1</p>
+</id>
+
+<id="physDFriction">
+<h2 style="color:Blue">physDFriction</h2>
+<p>physDFriction 0.0</p>
+<p>Dynamic Friction: Amount of resistance to speed when impacting on a surface</p>
+<p>Range: 0 to 1</p>
+</id>
+
+<id="PhysKillBelowSpeed">
+<h2 style="color:Blue">PhysKillBelowSpeed</h2>
+<p>PhysKillBelowSpeed 0.0</p>
+<p>Takes one floating point number, if the speed of the physically enabled node drops below this, it kills the node. Doesn't exist for non-physics nodes, but if it's needed to I can change it.</p>
+</id>
+
+<id="physDebris">
+<h2 style="color:Blue">physDebris</h2>
+<p>physDebris 1</p>
+<p>If this flag is set to 1, this object will be kept alive after it would normally be removed, and added to the FxDebris System. If it's set to 2, it's the same except that this debris will collide with any other debris (including things set to 1 or 2). Use 2 sparingly, as it adds considerable expense. (Note: Some shape information, such as whether it's debris 1 or 2, is cached for performance reasons. Use "/nxclearcache" to clear this cache if you want to change the debris setting.) Another option is 3: this will equate to 1 in software mode, but 2 in hardware mode, taking advantage of the added physics horsepower.</p>
+<p>Debris Objects will live in the world beyond any scripted Lifespan (lifespan sets a timer to how long before it becomes a debris object).  Debris objects do not support attached particles, or alpha sorting.</p>
+</id>
+
+<id="physScale">
+<h2 style="color:Blue">physScale</h2>
+<p>physScale 1.0 1.0 1.0</p>
+<p>Scales the collision mesh only, not the visual mesh. Used for making sure smaller objects (like paper) don't fall through the ground, by inflating the collision mesh. Is multiplied by all the other scales.</p>
+</id>
+
+<id="physDensity">
+<h2 style="color:Blue">physDensity</h2>
+<p>physDensity 1.0</p>
+<p>Default density for an object. The actor's mass is calulated by calculating the volume of the shape and multiplying by the density.</p>
+</id>
+
+<id="physForceType">
+<h2 style="color:Blue">physForceType</h2>
+<p>Force values define how this event node will affect physics objects.  Forces can push, pull, lift, and spin debris objects.  Forces are also used to trigger FX attached to world objects (such as shaking the leaves off of a tree).</p>
+<p>physForceType None</p>
+<p>The type of force to be applied to all objects within the sphere. Defaults to "None", meaning no force is applied. Options include:</p>
+<p>- None: No force.</p>
+<p>- Out: Everything is pushed away from the fxgeo.</p>
+<p>- In: Everything is pulled toward the fxgeo.</p>
+<p>- CWSwirl: Clockwise swirl around the fxgeo.</p>
+<p>- CCWSwirl: CounterClockwise swirl around the fxgeo.</p>
+<p>- Up: This means the node's up vector, so default is straight up (the y-axis). If you use pyrrotate to rotate the geo, for example, it will follow the up vector of the geo.</p>
+<p>- Forward: Same as up, but uses the z-axis, so forward.</p>
+<p>- Side: Same as up, but uses the x-axis, so to the right.</p>
+<p>- Drag: applies a drag force of 1 to all physics objects heading towards the center within the radius.</p>
+</id>
+
+<id="physForceCentripetal">
+<h2 style="color:Blue">physForceCentripetal</h2>
+<p>physForceCentripetal 2.0</p>
+<p>Only applies to CWSwirl and CCWSwirl. Determines how much this swirl force pulls the object inward (only along the plane of rotation). This is to counteract the natural outward component of the swirling force. If it's set to 0.0, the swirl will create a logarithmic spiral. 2.0 is a default that creates a medium sized circle.</p>
+</id>
+
+<id="physForceRadius">
+<h2 style="color:Blue">physForceRadius</h2>
+<p>physForceRadius 0.0</p>
+<p>Objects within this distance of the fxgeo will have force applied to them. Force falls off as you get closer to the edge of the radius.</p>
+</id>
+
+<id="physForcePower">
+<h2 style="color:Blue">physForcePower</h2>
+<p>physForcePower 0.0</p>
+<p>Amount of force that is applied at the center of the object. Probably not noticable until around 100.  Explosions are generally in the 1000 range.</p>
+</id>
+
+<id="physForcePowerJitter">
+<h2 style="color:Blue">physForcePowerJitter</h2>
+<p>physForcePowerJitter 0.0</p>
+<p>Jitter per object on the force power above.</p>
+</id>
+
+<id="physJointDOFs">
+<h2 style="color:Blue">physJointDOFs</h2>
+<p>Jointed Objects are Physics Objects defined by an anchor point and vales that describe how their movement is limited.</p>
+<p>physJointDOFs 0</p>
+<p>Here you list all of the degree of freedoms allowed by a joint. You can list more than one, with spaces between them. For example, RotateY will allow rotation about the y-axis. Here are a list of DOFs:</p>
+<p>RotateX, RotateY, RotateZ, TranslateX, TranslateY, TranslateZ,</p>
+</id>
+
+<id="physJointAnchor">
+<h2 style="color:Blue">physJointAnchor</h2>
+<p>physJointAnchor 0.0 0.0 0.0</p>
+<p>The position relative to the fx origin that the joint is anchored at. Where the hinge or wheel axis is, essientially.</p>
+</id>
+
+<id="physJointAngLimit">
+<h2 style="color:Blue">physJointAngLimit</h2>
+<p>physJointAngLimit 0.0</p>
+<p>The +/- limit (in degrees) that this angular joint can swing. Doesn't make sense unless you have a Rotate DOF above.</p>
+</id>
+
+<id="physJointLinLimit">
+<h2 style="color:Blue">physJointLinLimit</h2>
+<p>physJointLinLimit 0.0</p>
+<p>The +/- limit (in feet) that this linear joint can slide. Doesn't make sense unless you have a Translate DOF above.</p>
+</id>
+
+<id="physJointAngSpring">
+<h2 style="color:Blue">physJointAngSpring</h2>
+<p>physJointAngSpring 0.0</p>
+<p>The strength of a spring that attempts to return this joint to the starting angle.</p>
+</id>
+
+<id="physJointAngSpringDamp">
+<h2 style="color:Blue">physJointAngSpringDamp</h2>
+<p>physJointAngSpringDamp 0.0</p>
+<p>The amount of damping applied to the spring above, in order to damp out oscillations.</p>
+</id>
+
+<id="physJointLinSpring">
+<h2 style="color:Blue">physJointLinSpring</h2>
+<p>physJointLinSpring 0.0</p>
+<p>The strength of a spring that attempts to return this joint to the staring position.</p>
+</id>
+
+<id="physJointLinSpringDamp">
+<h2 style="color:Blue">physJointLinSpringDamp</h2>
+<p>physJointLinSpringDamp 0.0</p>
+<p>The amount of damping applied to the spring above, in order to damp out oscillations.</p>
+</id>
+
+<id="physJointBreakForce">
+<h2 style="color:Blue">physJointBreakForce</h2>
+<p>physJointBreakForce 0.0</p>
+<p>The amount of linear force required to break this joint.</p>
+</id>
+
+<id="physJointBreakTorque">
+<h2 style="color:Blue">physJointBreakTorque</h2>
+<p>physJointBreakTorque 0.0</p>
+<p>The amount of angular torque required to break this joint.</p>
+</id>
+
+<id="physJointDrag">
+<h2 style="color:Blue">physJointDrag</h2>
+<p>physJointDrag 0.0</p>
+<p>The drag used if the fxgeo is currently jointed to something. Defaults to using the normal drag, if not specified or zero.</p>
+<p>Once the joint breaks, the geo uses the normal drag.</p>
+</id>
+
+<id="physJointCollidesWorld">
+<h2 style="color:Blue">physJointCollidesWorld</h2>
+<p>physJointCollidesWorld</p>
+<p>If this flag is present (you don't need to put anything after it), the object will collide with the world. Defaults to false.</p>
+</id>
+
+<id="Shake">
+<h2 style="color:Red">Shake</h2>
+<p>Shake 0.1</p>
+<p>How much to shake the camera when event with this bhvr is created</p>
+</id>
+
+<id="ShakeFallOff">
+<h2 style="color:Red">ShakeFallOff</h2>
+<p>ShakeFallOff 0.5</p>
+<p>How long shake lasts - The Shake value is multiplied by this number every frame</p>
+</id>
+
+<id="ShakeRadius">
+<h2 style="color:Red">ShakeRadius</h2>
+<p>ShakeRadius 20.0</p>
+<p>Linear falloff from node center, so at 18.0 feet from center, only a mild shake)</p>
+</id>
+
+<id="Blur">
+<h2 style="color:Red">Blur</h2>
+<p>Blur 0.5</p>
+<p>How much blur to have (greater than 1.0 will not blur any more, but will cause the blur to last longer)</p>
+</id>
+
+<id="BlurFalloff">
+<h2 style="color:Red">BlurFalloff</h2>
+<p>BlurFalloff 0.01</p>
+<p>How much to reduce blur each tick</p>
+</id>
+
+<id="BlurRadius">
+<h2 style="color:Red">BlurRadius</h2>
+<p>BlurRadius 50</p>
+<p>Radius of who's affected. Use sparingly, just like camera shake. Note that this only affects users with new graphics cards, and if they disable DoF in the options screen, it will also disable this, so this cannot/should not be used for "disorient" powers, etc. </p>
+</id>
+
+<id="SetLight">
+<h2 style="color:Blue">SetLight</h2>
+<p>SetLight For Fx with SetLight Event that makes parent entity pulse (used for objective objects, and to add primitive blast flash to an entity) to brighten or darken it.</p>
+<p>SetLight is called as an event type in an FX file. Example:</p>
+<p>Event</p>
+<p> Type    SetLight</p>
+<p> Bhvr    :pulse.bhvr</p>
+<p> LifeSpan        20</p>
+<p>End</p>
+<p>The behavior file values used for the "Set Light" feature are (These keys do not currently work from a bhvrOverride command):</p>
+</id>
+
+<id="PulseBrightness">
+<h2 style="color:Blue">PulseBrightness</h2>
+<p>PulseBrightness 3.0</p>
+<p>Ramp up to three times brighter than normal</p>
+<p>SetLight For Fx with SetLight Event that makes parent entity pulse (used for objective objects, and to add primitive blast flash to an entity) to brighten or darken it.</p>
+<p>SetLight is called as an event type in an FX file. Example:</p>
+<p>Event</p>
+<p> Type    SetLight</p>
+<p> Bhvr    :pulse.bhvr</p>
+<p> LifeSpan        20</p>
+<p>End</p>
+<p>The behavior file values used for the "Set Light" feature are (These keys do not currently work from a bhvrOverride command):</p>
+</id>
+
+<id="PulsePeakTime">
+<h2 style="color:Blue">PulsePeakTime</h2>
+<p>PulsePeakTime 15</p>
+<p>After 15 ticks, be fully 3X brightness and start ramping down.</p>
+</id>
+
+<id="PulseClamp">
+<h2 style="color:Blue">PulseClamp</h2>
+<p>PulseClamp 0</p>
+<p>This is a flag override. If 1, that says just be the brightness I told you to be and don't ramp up and down.</p>
+<p>Then from 15 to the end of the Event's life at 20 it will ramp back down to normal brightness</p>
+</id>
+
+<id="Stretch">
+<h2 style="color:Blue">Stretch</h2>
+<p>Stretch 1</p>
+<p>This is for making beams of geometry (particle beams use particle streak) that would shoot from, say, your hand to a moving target. Example:</p>
+<p>Stretch 1 Stretch this piece of geometry to the Event's LookAt Target.</p>
+<p>Stretch 2 As above, plus tile the texture so it doesn't stretch</p>
+</id>
+
+<id="AnimScale">
+<h2 style="color:Blue">AnimScale</h2>
+<p>AnimScale 0.0</p>
+<p>Forces animation play-back at faster or slower rates. Playback speed is multiplied by this value (value of 1 is normal speed)</p>
+</id>
+
+<id="StAnim">
+<h2 style="color:Blue">StAnim</h2>
+<p>StAnim</p>
+<p>uses and animations to scroll a texture on the geometry. Example:</p>
+<p>StAnim  0.05 0.05 aqua, Means play the aqua animation (in the animation folder) at 5% speed, and zoomed tightly</p>
+<p>StAnim 0.600000 1.000000 light_pulse2 FRAMESNAP, Means play the light_pulse2 animation (in the animation folder) at 60%% speed, not zoomed at all, and don't interpolate between frames.</p>
+</id>
+
+<id="Splat">
+<h2 style="color:Blue">Splat</h2>
+<p>Splat</p>
+<p>Splat projects a sprite vertically down onto world surfaces. It dynamically creates a polygon mesh to fit the shape of the terrain. There will be a performance hit based upon the number of splats, their size, and whether they move or scale (requiring the polygon mesh to be rebuilt).</p>
+<p>Splat uses scale values as sprite radius in feet. Splats use the first RGB color value (startColor) and may change colors over their lifespan. Currently Splats are fairly expensive. Tricks to making them work for you rather than against you: Create the splat as small as you can afford. Make sure you are not fading the texture without using all of the splat's size. In other words don't fade the texture out too soon while using a large splat size; as you are forcing the computer to make extra calculations on the larger splat and only viewing a small effect. Just make the splat smaller and be sure to use white.tga to determine the actuall size of the splat you are creating. Onece you create a splat the cost has been spent you may keep it around as long as you would like as long as it doesn't move; as the game requires no additional calculations after it has been initally created.</p>
+<p>"Broken" Adjusting a splats alpha seems to be affecting fade out times as well. When you lower the alpha the splat does not fade out as quick as it used to.</p>
+</id>
+
+<id="SplatFlags">
+<h2 style="color:Blue">SplatFlags</h2>
+<p>SplatFlags ADDITIVE</p>
+<p>Blend Mode, string values: ADDITIVE, DIFFUSE</p>
+<p>Splat projects a sprite vertically down onto world surfaces. It dynamically creates a polygon mesh to fit the shape of the terrain. There will be a performance hit based upon the number of splats, their size, and whether they move or scale (requiring the polygon mesh to be rebuilt).</p>
+<p>Splat uses scale values as sprite radius in feet. Splats use the first RGB color value (startColor) and may change colors over their lifespan. Currently Splats are fairly expensive. Tricks to making them work for you rather than against you: Create the splat as small as you can afford. Make sure you are not fading the texture without using all of the splat's size. In other words don't fade the texture out too soon while using a large splat size; as you are forcing the computer to make extra calculations on the larger splat and only viewing a small effect. Just make the splat smaller and be sure to use white.tga to determine the actuall size of the splat you are creating. Onece you create a splat the cost has been spent you may keep it around as long as you would like as long as it doesn't move; as the game requires no additional calculations after it has been initally created.</p>
+<p>"Broken" Adjusting a splats alpha seems to be affecting fade out times as well. When you lower the alpha the splat does not fade out as quick as it used to.</p>
+</id>
+
+<id="SplatFalloffType">
+<h2 style="color:Blue">SplatFalloffType</h2>
+<p>SplatFalloffType BOTH;</p>
+<p>string values:  UP DOWN NONE BOTH</p>
+</id>
+
+<id="SplatFadeCenter">
+<h2 style="color:Blue">SplatFadeCenter</h2>
+<p>SplatFadeCenter 0.0</p>
+<p>Only for UP and DOWN falloff. Range: 0 to 1.0</p>
+</id>
+
+<id="SplatNormalFade">
+<h2 style="color:Blue">SplatNormalFade</h2>
+<p>SplatNormalFade 0.0</p>
+</id>
+
+<id="SplatSetBack">
+<h2 style="color:Blue">SplatSetBack</h2>
+<p>SplatSetBack 0.0;</p>
+<p>What percent of the splat should be behind the node, and what in front. Range: 0 to 1.0</p>
+</id>
+
+<!--
+
+-->
+        
+</body>
+</html>

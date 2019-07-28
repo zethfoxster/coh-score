@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="pub">
+      <UniqueIdentifier>{3cee0a71-97cc-40ca-8ec5-a4b62c866c47}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="pub\aiBehaviorDebug.h">
+      <Filter>pub</Filter>
+    </ClInclude>
+    <ClInclude Include="pub\aiBehaviorInterface.h">
+      <Filter>pub</Filter>
+    </ClInclude>
+    <ClInclude Include="pub\aiBehaviorPublic.h">
+      <Filter>pub</Filter>
+    </ClInclude>
+    <ClInclude Include="pub\aiExpression.h">
+      <Filter>pub</Filter>
+    </ClInclude>
+    <ClInclude Include="pub\aiLib.h">
+      <Filter>pub</Filter>
+    </ClInclude>
+    <ClInclude Include="pub\aiStruct.h">
+      <Filter>pub</Filter>
+    </ClInclude>
+    <ClInclude Include="aiBehaviorPrivate.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="aiBehaviorDebug.c" />
+    <ClCompile Include="aiBehaviorInterface.c" />
+    <ClCompile Include="aiBehaviorProcess.c" />
+    <ClCompile Include="aiBScript.c" />
+    <ClCompile Include="aiExpression.c" />
+    <ClCompile Include="aiLib.c" />
+    <ClCompile Include="aiMessages.c" />
+  </ItemGroup>
+</Project>

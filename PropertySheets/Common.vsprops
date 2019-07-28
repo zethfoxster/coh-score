@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="shift_jis"?>
+<VisualStudioPropertySheet
+	ProjectType="Visual C++"
+	Version="8.00"
+	Name="Common"
+	OutputDirectory="$(PlatformName)\$(ConfigurationName)"
+	IntermediateDirectory="$(PlatformName)\$(ConfigurationName)"
+	>
+	<Tool
+		Name="VCCLCompilerTool"
+		AdditionalOptions="/we4047 /we4133 /MP"
+		Optimization="0"
+		AdditionalIncludeDirectories=".;pub;../libs/UtilitiesLib;../libs/UtilitiesLib/assert;../libs/UtilitiesLib/components;../libs/UtilitiesLib/language;../libs/UtilitiesLib/network;../libs/UtilitiesLib/utils;../libs/UtilitiesLib/UtilsNew;../libs/UtilitiesLib/UtilsCXX;../libs/UtilitiesLib/version"
+		PreprocessorDefinitions="_CRT_SECURE_NO_DEPRECATE"
+		StringPooling="true"
+		EnableFunctionLevelLinking="true"
+		FloatingPointModel="2"
+		AssemblerListingLocation="$(IntDir)\"
+		ProgramDataBaseFileName="$(IntDir)\$(TargetName).pdb"
+		WarningLevel="4"
+		WarnAsError="true"
+		DebugInformationFormat="4"
+		CompileAs="0"
+		ForcedIncludeFiles="memcheck.h"
+	/>
+	<Tool
+		Name="VCLinkerTool"
+		AdditionalOptions="/SAFESEH:NO"
+		OutputFile="..\bin\$(ConfigurationName)\$(ProjectName).exe"
+		AdditionalLibraryDirectories="../3rdparty/bin"
+		GenerateManifest="false"
+		GenerateDebugInformation="true"
+		GenerateMapFile="true"
+		MapFileName="$(TargetDir)$(TargetName).map"
+		SubSystem="1"
+		LargeAddressAware="2"
+		TargetMachine="1"
+	/>
+	<Tool
+		Name="VCPostBuildEventTool"
+		CommandLine="..\bin\CopyExecutable.bat &quot;$(ConfigurationName)&quot; &quot;$(TargetName)&quot; &quot;$(TargetExt)&quot;"
+	/>
+	<Tool
+		Name="VCResourceCompilerTool"
+		Culture="1033"
+	/>
+</VisualStudioPropertySheet>

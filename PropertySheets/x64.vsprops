@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<VisualStudioPropertySheet
+	ProjectType="Visual C++"
+	Version="8.00"
+	Name="x64"
+	>
+	<Tool
+		Name="VCCLCompilerTool"
+		DebugInformationFormat="3"
+		EnablePREfast="false"
+	/>
+	<Tool
+		Name="VCLibrarianTool"
+		OutputFile="$(OutDir)\$(ProjectName)64.lib"
+	/>
+	<Tool
+		Name="VCLinkerTool"
+		OutputFile="..\bin\$(ConfigurationName)\$(ProjectName)64.exe"
+		AdditionalLibraryDirectories="../3rdparty/bin/x64"
+		TargetMachine="17"
+	/>
+</VisualStudioPropertySheet>

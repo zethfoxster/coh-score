@@ -1,0 +1,185 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{f9da651c-ceeb-423b-bd0a-3e251128602e}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat</Extensions>
+    </Filter>
+    <Filter Include="Source Files\gridcoll">
+      <UniqueIdentifier>{2e8d9a2f-252e-4c91-92d4-43d283eb2c40}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\getvrml">
+      <UniqueIdentifier>{ee1fd01f-6f53-4e0a-a744-72c885576fe2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\external">
+      <UniqueIdentifier>{f13f3200-63b8-4ca0-b8a9-2bf3f864341c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\taucs">
+      <UniqueIdentifier>{207876ea-efc8-4efe-b1e4-55db7e98ec21}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{e8daa1d4-ba4a-44fd-a08b-1c93478263bb}</UniqueIdentifier>
+      <Extensions>ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="NVMeshMender.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="NVMeshMenderWrapper.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\GetTex\texloaddesc.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\gridcoll\grid.c">
+      <Filter>Source Files\gridcoll</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\gridcoll\tritri_isectline.c">
+      <Filter>Source Files\gridcoll</Filter>
+    </ClCompile>
+    <ClCompile Include="clip.c">
+      <Filter>Source Files\getvrml</Filter>
+    </ClCompile>
+    <ClCompile Include="geo.c">
+      <Filter>Source Files\getvrml</Filter>
+    </ClCompile>
+    <ClCompile Include="groupwrite.c">
+      <Filter>Source Files\getvrml</Filter>
+    </ClCompile>
+    <ClCompile Include="main.c">
+      <Filter>Source Files\getvrml</Filter>
+    </ClCompile>
+    <ClCompile Include="manifold.c">
+      <Filter>Source Files\getvrml</Filter>
+    </ClCompile>
+    <ClCompile Include="output.c">
+      <Filter>Source Files\getvrml</Filter>
+    </ClCompile>
+    <ClCompile Include="poly.c">
+      <Filter>Source Files\getvrml</Filter>
+    </ClCompile>
+    <ClCompile Include="texsort.c">
+      <Filter>Source Files\getvrml</Filter>
+    </ClCompile>
+    <ClCompile Include="tree.c">
+      <Filter>Source Files\getvrml</Filter>
+    </ClCompile>
+    <ClCompile Include="tricututils.c">
+      <Filter>Source Files\getvrml</Filter>
+    </ClCompile>
+    <ClCompile Include="uvunwrap.c">
+      <Filter>Source Files\getvrml</Filter>
+    </ClCompile>
+    <ClCompile Include="vrml.c">
+      <Filter>Source Files\getvrml</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\seq\anim.c">
+      <Filter>Source Files\external</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\seq\animtrack.c">
+      <Filter>Source Files\external</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\seq\AutoLOD.c">
+      <Filter>Source Files\external</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\seq\bones.c">
+      <Filter>Source Files\external</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\seq\tricks.c">
+      <Filter>Source Files\external</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="NVMeshMender.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="NVMeshMenderWrapper.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\GetTex\texloaddesc.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\gridcoll\ctri.h">
+      <Filter>Source Files\gridcoll</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\gridcoll\tritri_isectline.h">
+      <Filter>Source Files\gridcoll</Filter>
+    </ClInclude>
+    <ClInclude Include="clip.h">
+      <Filter>Source Files\getvrml</Filter>
+    </ClInclude>
+    <ClInclude Include="combinedpoly.h">
+      <Filter>Source Files\getvrml</Filter>
+    </ClInclude>
+    <ClInclude Include="geo.h">
+      <Filter>Source Files\getvrml</Filter>
+    </ClInclude>
+    <ClInclude Include="manifold.h">
+      <Filter>Source Files\getvrml</Filter>
+    </ClInclude>
+    <ClInclude Include="output.h">
+      <Filter>Source Files\getvrml</Filter>
+    </ClInclude>
+    <ClInclude Include="poly.h">
+      <Filter>Source Files\getvrml</Filter>
+    </ClInclude>
+    <ClInclude Include="prim.h">
+      <Filter>Source Files\getvrml</Filter>
+    </ClInclude>
+    <ClInclude Include="quadric.h">
+      <Filter>Source Files\getvrml</Filter>
+    </ClInclude>
+    <ClInclude Include="quadric_internal.h">
+      <Filter>Source Files\getvrml</Filter>
+    </ClInclude>
+    <ClInclude Include="texsort.h">
+      <Filter>Source Files\getvrml</Filter>
+    </ClInclude>
+    <ClInclude Include="tree.h">
+      <Filter>Source Files\getvrml</Filter>
+    </ClInclude>
+    <ClInclude Include="tricututils.h">
+      <Filter>Source Files\getvrml</Filter>
+    </ClInclude>
+    <ClInclude Include="uvpack.h">
+      <Filter>Source Files\getvrml</Filter>
+    </ClInclude>
+    <ClInclude Include="uvrect.h">
+      <Filter>Source Files\getvrml</Filter>
+    </ClInclude>
+    <ClInclude Include="uvunwrap.h">
+      <Filter>Source Files\getvrml</Filter>
+    </ClInclude>
+    <ClInclude Include="vrml.h">
+      <Filter>Source Files\getvrml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\seq\anim.h">
+      <Filter>Source Files\external</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\seq\animtrack.h">
+      <Filter>Source Files\external</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\seq\AutoLOD.h">
+      <Filter>Source Files\external</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\seq\bones.h">
+      <Filter>Source Files\external</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\seq\tricks.h">
+      <Filter>Source Files\external</Filter>
+    </ClInclude>
+    <ClInclude Include="taucs.h">
+      <Filter>Source Files\taucs</Filter>
+    </ClInclude>
+    <ClInclude Include="taucs_config_build.h">
+      <Filter>Source Files\taucs</Filter>
+    </ClInclude>
+    <ClInclude Include="taucs_config_tests.h">
+      <Filter>Source Files\taucs</Filter>
+    </ClInclude>
+    <ClInclude Include="taucs_private.h">
+      <Filter>Source Files\taucs</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

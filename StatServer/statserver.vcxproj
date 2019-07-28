@@ -1,0 +1,188 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Full Debug|Win32">
+      <Configuration>Full Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Full Debug|x64">
+      <Configuration>Full Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Opt Debug|Win32">
+      <Configuration>Opt Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Opt Debug|x64">
+      <Configuration>Opt Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{BBD9F1CB-7144-4AEB-8BBF-5C7F0A280207}</ProjectGuid>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Full Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Opt Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Full Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Opt Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Full Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\PropertySheets\Common.props" />
+    <Import Project="..\PropertySheets\FullDebug.props" />
+    <Import Project="StatServer.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Opt Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\PropertySheets\Common.props" />
+    <Import Project="..\PropertySheets\OptDebug.props" />
+    <Import Project="StatServer.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\PropertySheets\Common.props" />
+    <Import Project="..\PropertySheets\Debug.props" />
+    <Import Project="StatServer.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Full Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\PropertySheets\Common.props" />
+    <Import Project="..\PropertySheets\x64.props" />
+    <Import Project="..\PropertySheets\FullDebug.props" />
+    <Import Project="StatServer.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Opt Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\PropertySheets\Common.props" />
+    <Import Project="..\PropertySheets\x64.props" />
+    <Import Project="..\PropertySheets\OptDebug.props" />
+    <Import Project="StatServer.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\PropertySheets\Common.props" />
+    <Import Project="..\PropertySheets\x64.props" />
+    <Import Project="..\PropertySheets\Debug.props" />
+    <Import Project="StatServer.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\dbserver\container_diff.c" />
+    <ClCompile Include="..\common\container\container_store.c" />
+    <ClCompile Include="..\dbserver\container_tplt_utils.c" />
+    <ClCompile Include="..\common\container\container_util.c" />
+    <ClCompile Include="..\mapserver\dbcomm\dbcomm.c" />
+    <ClCompile Include="..\mapserver\dbcomm\dbcontainer.c" />
+    <ClCompile Include="..\common\container\dbcontainerpack.c" />
+    <ClCompile Include="..\MapServer\dbcomm\logcomm.c" />
+    <ClCompile Include="..\dbserver\servercfg.c" />
+    <ClCompile Include="..\Common\player\badges.c" />
+    <ClCompile Include="..\Common\entity\attrib_names.c" />
+    <ClCompile Include="..\Common\entity\LoadDefCommon.c" />
+    <ClCompile Include="..\Common\entity\RewardToken.c" />
+    <ClCompile Include="..\Common\entity\SgrpBasePermissions.c" />
+    <ClCompile Include="..\Common\entity\Supergroup.c" />
+    <ClCompile Include="..\Common\entity\supergroup_eval.c" />
+    <ClCompile Include="..\Common\entity\teamup.c" />
+    <ClCompile Include="..\Common\bases\BaseEntry.c" />
+    <ClCompile Include="..\Common\bases\baseupkeep.c" />
+    <ClCompile Include="..\Common\gameData\badgestats_db.c" />
+    <ClCompile Include="..\Common\gameData\miningaccumulator.c" />
+    <ClCompile Include="..\Common\gameData\sgrpstatsstruct.c" />
+    <ClCompile Include="..\Common\gameData\statgroupstruct.c" />
+    <ClCompile Include="..\Common\cmdparse\AppServerCmd.c" />
+    <ClCompile Include="..\Common\cmdparse\cmdstatserver.c" />
+    <ClCompile Include="..\MapServer\entity\SgrpBadges.c" />
+    <ClCompile Include="..\MapServer\entity\SgrpStats.c" />
+    <ClCompile Include="..\MapServer\player\badges_load.c" />
+    <ClCompile Include="..\MapServer\container\containerSupergroup.c" />
+    <ClCompile Include="..\MapServer\storyarc\storytaskinfo.c" />
+    <ClCompile Include="Entity\stat_SgrpBadges.c" />
+    <ClCompile Include="statcmd.c" />
+    <ClCompile Include="statdb.c" />
+    <ClCompile Include="statgroups.c" />
+    <ClCompile Include="statserver.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\dbserver\container_diff.h" />
+    <ClInclude Include="..\common\container\container_store.h" />
+    <ClInclude Include="..\dbserver\container_tplt_utils.h" />
+    <ClInclude Include="..\common\container\container_util.h" />
+    <ClInclude Include="..\mapserver\dbcomm\dbcomm.h" />
+    <ClInclude Include="..\mapserver\dbcomm\dbcontainer.h" />
+    <ClInclude Include="..\common\container\dbcontainerpack.h" />
+    <ClInclude Include="..\MapServer\dbcomm\logcomm.h" />
+    <ClInclude Include="..\dbserver\servercfg.h" />
+    <ClInclude Include="..\Common\player\badges.h" />
+    <ClInclude Include="..\Common\entity\attrib_names.h" />
+    <ClInclude Include="..\Common\entity\load_def.h" />
+    <ClInclude Include="..\Common\entity\LoadDefCommon.h" />
+    <ClInclude Include="..\Common\entity\RewardToken.h" />
+    <ClInclude Include="..\Common\entity\SgrpBasePermissions.h" />
+    <ClInclude Include="..\Common\entity\Supergroup.h" />
+    <ClInclude Include="..\Common\entity\supergroup_eval.h" />
+    <ClInclude Include="..\Common\entity\teamup.h" />
+    <ClInclude Include="..\Common\bases\BaseEntry.h" />
+    <ClInclude Include="..\Common\bases\baseupkeep.h" />
+    <ClInclude Include="..\Common\gameData\badgestats_db.h" />
+    <ClInclude Include="..\Common\gameData\miningaccumulator.h" />
+    <ClInclude Include="..\Common\gameData\sgrpstatsstruct.h" />
+    <ClInclude Include="..\Common\gameData\statgroupstruct.h" />
+    <ClInclude Include="..\Common\cmdparse\AppServerCmd.h" />
+    <ClInclude Include="..\Common\cmdparse\cmdstatserver.h" />
+    <ClInclude Include="..\MapServer\entity\SgrpBadges.h" />
+    <ClInclude Include="..\MapServer\entity\SgrpStats.h" />
+    <ClInclude Include="..\MapServer\player\BadgeStats.h" />
+    <ClInclude Include="..\MapServer\storyarc\storytaskinfo.h" />
+    <ClInclude Include="Entity\stat_SgrpBadges.h" />
+    <ClInclude Include="statcmd.h" />
+    <ClInclude Include="statdb.h" />
+    <ClInclude Include="statgroups.h" />
+    <ClInclude Include="statserver.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\libs\UtilitiesLib\UtilitiesLib.vcxproj">
+      <Project>{a6741f6e-5476-4f9f-9d65-62b54aaf1d08}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

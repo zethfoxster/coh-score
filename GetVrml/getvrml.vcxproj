@@ -1,0 +1,155 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Full Debug|Win32">
+      <Configuration>Full Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{1F47D2CA-05A3-46F1-AD58-4756C1E928E6}</ProjectGuid>
+    <RootNamespace>getvrml</RootNamespace>
+    <SccProvider>MSSCCI:Microsoft Visual SourceSafe</SccProvider>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Full Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Full Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\PropertySheets\Common.props" />
+    <Import Project="..\PropertySheets\FullDebug.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\PropertySheets\Common.props" />
+    <Import Project="..\PropertySheets\Debug.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <PreBuildEvent>
+      <Command>..\utilities\bin\structparser2010 X $(ProjectDir) X $(ProjectFileName) X $(Platform) X $(Configuration) X $(VCInstallDir) X $(SolutionPath)</Command>
+    </PreBuildEvent>
+    <ClCompile>
+      <AdditionalIncludeDirectories>../libs/UtilitiesLib;..\common;..\common\utils;../tricube;../glh;../common/gridcoll;../libs/UtilitiesLib/utils;../libs/UtilitiesLib/components;../common/seq;../getvrml;../common/group;../3rdparty/zlibsrc;../game/render;../gettex;../libs/UtilitiesLib/assert;../common/cmdParse;../Common/entity;../Game/render/thread;../libs/UtilitiesLib/network;../Game/graphics;..\3rdparty\DirectX\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>TRACKED_MEMPOOL;INCLUDE_MEMCHECK;WIN32;_DEBUG;_CONSOLE;OFFLINE;GETVRML;_CRTDBG_MAP_ALLOC=1;_CRT_SECURE_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BrowseInformation>true</BrowseInformation>
+      <WarningLevel>Level3</WarningLevel>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>libtaucs.lib;blas_win32.lib;lapack_win32.lib;libatlas.lib;libcblas.lib;libf77blas.lib;liblapack.lib;libmetis.lib;vcf2c.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>libtaucs;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreSpecificDefaultLibraries>LIBCMT;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <FixedBaseAddress>false</FixedBaseAddress>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Full Debug|Win32'">
+    <PreBuildEvent>
+      <Command>..\utilities\bin\structparser2010 X $(ProjectDir) X $(ProjectFileName) X $(Platform) X $(Configuration) X $(VCInstallDir) X $(SolutionPath)</Command>
+    </PreBuildEvent>
+    <ClCompile>
+      <AdditionalIncludeDirectories>../libs/UtilitiesLib;..\common;..\common\utils;../tricube;../glh;../common/gridcoll;../libs/UtilitiesLib/utils;../libs/UtilitiesLib/components;../common/seq;../getvrml;../common/group;../3rdparty/zlibsrc;../game/render;../gettex;../libs/UtilitiesLib/assert;../common/cmdParse;../Common/entity;../Game/render/thread;../libs/UtilitiesLib/network;../Game/graphics;..\3rdparty\DirectX\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>TRACKED_MEMPOOL;INCLUDE_MEMCHECK;WIN32;_DEBUG;_CONSOLE;OFFLINE;GETVRML;_CRTDBG_MAP_ALLOC=1;_CRT_SECURE_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BrowseInformation>true</BrowseInformation>
+      <WarningLevel>Level3</WarningLevel>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>libtaucs.lib;blas_win32.lib;lapack_win32.lib;libatlas.lib;libcblas.lib;libf77blas.lib;liblapack.lib;libmetis.lib;vcf2c.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>libtaucs;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreSpecificDefaultLibraries>LIBCMT;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <FixedBaseAddress>false</FixedBaseAddress>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="NVMeshMender.cpp" />
+    <ClCompile Include="NVMeshMenderWrapper.cpp" />
+    <ClCompile Include="..\GetTex\texloaddesc.c" />
+    <ClCompile Include="..\Common\gridcoll\grid.c" />
+    <ClCompile Include="..\Common\gridcoll\tritri_isectline.c" />
+    <ClCompile Include="clip.c" />
+    <ClCompile Include="geo.c" />
+    <ClCompile Include="groupwrite.c" />
+    <ClCompile Include="main.c" />
+    <ClCompile Include="manifold.c" />
+    <ClCompile Include="output.c" />
+    <ClCompile Include="poly.c" />
+    <ClCompile Include="texsort.c" />
+    <ClCompile Include="tree.c" />
+    <ClCompile Include="tricututils.c">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">MaxSpeed</Optimization>
+      <InlineFunctionExpansion Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">AnySuitable</InlineFunctionExpansion>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Speed</FavorSizeOrSpeed>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Default</BasicRuntimeChecks>
+      <DebugInformationFormat Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <ClCompile Include="uvunwrap.c">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">MaxSpeed</Optimization>
+      <InlineFunctionExpansion Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">AnySuitable</InlineFunctionExpansion>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Speed</FavorSizeOrSpeed>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Default</BasicRuntimeChecks>
+      <DebugInformationFormat Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <ClCompile Include="vrml.c" />
+    <ClCompile Include="..\Common\seq\anim.c" />
+    <ClCompile Include="..\Common\seq\animtrack.c" />
+    <ClCompile Include="..\Common\seq\AutoLOD.c" />
+    <ClCompile Include="..\Common\seq\bones.c" />
+    <ClCompile Include="..\Common\seq\tricks.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="NVMeshMender.h" />
+    <ClInclude Include="NVMeshMenderWrapper.h" />
+    <ClInclude Include="..\GetTex\texloaddesc.h" />
+    <ClInclude Include="..\Common\gridcoll\ctri.h" />
+    <ClInclude Include="..\Common\gridcoll\tritri_isectline.h" />
+    <ClInclude Include="clip.h" />
+    <ClInclude Include="combinedpoly.h" />
+    <ClInclude Include="geo.h" />
+    <ClInclude Include="manifold.h" />
+    <ClInclude Include="output.h" />
+    <ClInclude Include="poly.h" />
+    <ClInclude Include="prim.h" />
+    <ClInclude Include="quadric.h" />
+    <ClInclude Include="quadric_internal.h" />
+    <ClInclude Include="texsort.h" />
+    <ClInclude Include="tree.h" />
+    <ClInclude Include="tricututils.h" />
+    <ClInclude Include="uvpack.h" />
+    <ClInclude Include="uvrect.h" />
+    <ClInclude Include="uvunwrap.h" />
+    <ClInclude Include="vrml.h" />
+    <ClInclude Include="..\Common\seq\anim.h" />
+    <ClInclude Include="..\Common\seq\animtrack.h" />
+    <ClInclude Include="..\Common\seq\AutoLOD.h" />
+    <ClInclude Include="..\Common\seq\bones.h" />
+    <ClInclude Include="..\Common\seq\tricks.h" />
+    <ClInclude Include="taucs.h" />
+    <ClInclude Include="taucs_config_build.h" />
+    <ClInclude Include="taucs_config_tests.h" />
+    <ClInclude Include="taucs_private.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\libs\UtilitiesLib\UtilitiesLib.vcxproj">
+      <Project>{a6741f6e-5476-4f9f-9d65-62b54aaf1d08}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

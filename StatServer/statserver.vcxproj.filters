@@ -1,0 +1,242 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="dbcomm">
+      <UniqueIdentifier>{c686eaf3-de06-4ad3-aa78-b9a9f3aabd0d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="dbcomm\misc">
+      <UniqueIdentifier>{423de118-4b9e-4e5f-8e1c-08bd4dbd4439}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="common">
+      <UniqueIdentifier>{9501d2ad-477c-494c-b0fd-dc7caa4c425d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="common\player">
+      <UniqueIdentifier>{a07d31c3-9b6d-4024-a9c0-675c23a9102f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="common\entity">
+      <UniqueIdentifier>{ddf90329-17db-48e7-a01d-819b979673c9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="common\bases">
+      <UniqueIdentifier>{a5e45a6a-d29e-4054-b0bc-8504d4ec0ad6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="common\gameData">
+      <UniqueIdentifier>{4ca71186-1423-4b55-877a-2dedbb3d9e09}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="common\cmdparse">
+      <UniqueIdentifier>{df4db4e9-c62a-4d05-983e-b9ebb36d1397}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Mapserver">
+      <UniqueIdentifier>{284a47ab-4bed-4cac-a7f5-0e9bd2d1010d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Mapserver\entity">
+      <UniqueIdentifier>{28eba56a-a5b5-4c1e-ac8d-c64b2c1b9741}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Mapserver\player">
+      <UniqueIdentifier>{d31c95b6-671d-47c7-836f-85a38baf5279}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Mapserver\container">
+      <UniqueIdentifier>{c2c31ec1-e4e7-40d5-89a1-6b09336bfab2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Mapserver\storyarc">
+      <UniqueIdentifier>{121d3ffb-cd0d-4a60-9469-386dbec74ab0}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\dbserver\container_diff.c">
+      <Filter>dbcomm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\container\container_store.c">
+      <Filter>dbcomm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\dbserver\container_tplt_utils.c">
+      <Filter>dbcomm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\container\container_util.c">
+      <Filter>dbcomm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mapserver\dbcomm\dbcomm.c">
+      <Filter>dbcomm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mapserver\dbcomm\dbcontainer.c">
+      <Filter>dbcomm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\container\dbcontainerpack.c">
+      <Filter>dbcomm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\MapServer\dbcomm\logcomm.c">
+      <Filter>dbcomm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\dbserver\servercfg.c">
+      <Filter>dbcomm\misc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\player\badges.c">
+      <Filter>common\player</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\entity\attrib_names.c">
+      <Filter>common\entity</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\entity\LoadDefCommon.c">
+      <Filter>common\entity</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\entity\RewardToken.c">
+      <Filter>common\entity</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\entity\SgrpBasePermissions.c">
+      <Filter>common\entity</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\entity\Supergroup.c">
+      <Filter>common\entity</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\entity\supergroup_eval.c">
+      <Filter>common\entity</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\entity\teamup.c">
+      <Filter>common\entity</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\bases\BaseEntry.c">
+      <Filter>common\bases</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\bases\baseupkeep.c">
+      <Filter>common\bases</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\gameData\badgestats_db.c">
+      <Filter>common\gameData</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\gameData\miningaccumulator.c">
+      <Filter>common\gameData</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\gameData\sgrpstatsstruct.c">
+      <Filter>common\gameData</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\gameData\statgroupstruct.c">
+      <Filter>common\gameData</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\cmdparse\AppServerCmd.c">
+      <Filter>common\cmdparse</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\cmdparse\cmdstatserver.c">
+      <Filter>common\cmdparse</Filter>
+    </ClCompile>
+    <ClCompile Include="..\MapServer\entity\SgrpBadges.c">
+      <Filter>Mapserver\entity</Filter>
+    </ClCompile>
+    <ClCompile Include="..\MapServer\entity\SgrpStats.c">
+      <Filter>Mapserver\entity</Filter>
+    </ClCompile>
+    <ClCompile Include="..\MapServer\player\badges_load.c">
+      <Filter>Mapserver\player</Filter>
+    </ClCompile>
+    <ClCompile Include="..\MapServer\container\containerSupergroup.c">
+      <Filter>Mapserver\container</Filter>
+    </ClCompile>
+    <ClCompile Include="..\MapServer\storyarc\storytaskinfo.c">
+      <Filter>Mapserver\storyarc</Filter>
+    </ClCompile>
+    <ClCompile Include="Entity\stat_SgrpBadges.c">
+      <Filter>common\entity</Filter>
+    </ClCompile>
+    <ClCompile Include="statcmd.c" />
+    <ClCompile Include="statdb.c" />
+    <ClCompile Include="statgroups.c" />
+    <ClCompile Include="statserver.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\dbserver\container_diff.h">
+      <Filter>dbcomm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\container\container_store.h">
+      <Filter>dbcomm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dbserver\container_tplt_utils.h">
+      <Filter>dbcomm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\container\container_util.h">
+      <Filter>dbcomm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\mapserver\dbcomm\dbcomm.h">
+      <Filter>dbcomm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\mapserver\dbcomm\dbcontainer.h">
+      <Filter>dbcomm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\container\dbcontainerpack.h">
+      <Filter>dbcomm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MapServer\dbcomm\logcomm.h">
+      <Filter>dbcomm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dbserver\servercfg.h">
+      <Filter>dbcomm\misc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\player\badges.h">
+      <Filter>common\player</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\entity\attrib_names.h">
+      <Filter>common\entity</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\entity\load_def.h">
+      <Filter>common\entity</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\entity\LoadDefCommon.h">
+      <Filter>common\entity</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\entity\RewardToken.h">
+      <Filter>common\entity</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\entity\SgrpBasePermissions.h">
+      <Filter>common\entity</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\entity\Supergroup.h">
+      <Filter>common\entity</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\entity\supergroup_eval.h">
+      <Filter>common\entity</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\entity\teamup.h">
+      <Filter>common\entity</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\bases\BaseEntry.h">
+      <Filter>common\bases</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\bases\baseupkeep.h">
+      <Filter>common\bases</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\gameData\badgestats_db.h">
+      <Filter>common\gameData</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\gameData\miningaccumulator.h">
+      <Filter>common\gameData</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\gameData\sgrpstatsstruct.h">
+      <Filter>common\gameData</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\gameData\statgroupstruct.h">
+      <Filter>common\gameData</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\cmdparse\AppServerCmd.h">
+      <Filter>common\cmdparse</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\cmdparse\cmdstatserver.h">
+      <Filter>common\cmdparse</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MapServer\entity\SgrpBadges.h">
+      <Filter>Mapserver\entity</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MapServer\entity\SgrpStats.h">
+      <Filter>Mapserver\entity</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MapServer\player\BadgeStats.h">
+      <Filter>Mapserver\player</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MapServer\storyarc\storytaskinfo.h">
+      <Filter>Mapserver\storyarc</Filter>
+    </ClInclude>
+    <ClInclude Include="Entity\stat_SgrpBadges.h">
+      <Filter>common\entity</Filter>
+    </ClInclude>
+    <ClInclude Include="statcmd.h" />
+    <ClInclude Include="statdb.h" />
+    <ClInclude Include="statgroups.h" />
+    <ClInclude Include="statserver.h" />
+  </ItemGroup>
+</Project>

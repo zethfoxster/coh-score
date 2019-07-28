@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<VisualStudioPropertySheet
+	ProjectType="Visual C++"
+	Version="8.00"
+	Name="LogParser3"
+	>
+	<Tool
+		Name="VCCLCompilerTool"
+		AdditionalOptions="/wd 4389 /wd 4701"
+		AdditionalIncludeDirectories="..\ServerLib; \common\version;..\common\utils;..\common"
+		PreprocessorDefinitions="LOGPARSER3;WIN32;_CONSOLE;_CRT_SECURE_NO_WARNINGS"
+	/>
+</VisualStudioPropertySheet>

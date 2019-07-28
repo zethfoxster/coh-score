@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<VisualStudioPropertySheet
+	ProjectType="Visual C++"
+	Version="8.00"
+	Name="StatServer"
+	>
+	<Tool
+		Name="VCCLCompilerTool"
+		AdditionalOptions="/wd 4267"
+		AdditionalIncludeDirectories="..\StatServer;..\MapServer;..\NovodeXWrapper;..\mapserver\language;..\Game\win;..\Common\junk;../libs/UtilitiesLib\assert;../common/entity;../mapserver/beacon;../mapserver/ai;../mapserver/svr;../mapserver/player;../mapserver/entity;../Common/seq;../mapserver/combat;../mapserver/container;../mapserver/generator;../libs/UtilitiesLib/;../libs/UtilitiesLib/components;../libs/UtilitiesLib/network;../libs/UtilitiesLib/utils;../libs/UtilitiesLib/version;../libs/UtilitiesLib/language;../mapserver/group;../mapserver/cmdparse;../Common/cmdparse;../Common/entity;../Common/gameComm;../mapserver/gameComm;../Game/menu;../Game/player;../common/player;../common/auction;../common;../common/language;../common/utils;.;../game;../lf;../3rdparty/zlibsrc;../game/render;../glh;../3rdparty/cryptopp;../3rdparty/VTune;../dbserver;../common/gridcoll;../common/group;../common/cmdparse;../common/seq;../game/graphics;../game/clientcomm;../mapserver/dbcomm;../mapserver/storyarc;../common/version;../common/storyarc;../common/filter;../mapserver/filter;../mapserver/script;../Common/skills;../mapserver/gamesys;../common/gameData;../game/render/thread;../mapserver/script/zoneevents;../common/bases;../mapserver/bases;entity"
+		PreprocessorDefinitions="STATSERVER;AUX_SERVER_DEFINE;CONTAINER_SERVER;_CRT_SECURE_NO_DEPRECATE;WIN32;_CONSOLE"
+		WarningLevel="3"
+	/>
+</VisualStudioPropertySheet>

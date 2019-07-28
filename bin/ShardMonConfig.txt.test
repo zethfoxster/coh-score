@@ -1,0 +1,30 @@
+
+Shard "localhost"
+{
+	IP localhost
+}
+
+Shard "NC Shard 01"
+{
+	IP ncncshard01
+}
+
+Shard "NC Shard 02"
+{
+	IP ncncshard02
+}
+
+Shard "NC Shard 03"
+{
+	IP ncncshard03
+}
+
+Shard "NC Shard 04"
+{
+	IP ncncshard04
+}
+
+Shard "NC Shard 05"
+{
+	IP ncncshard05
+}

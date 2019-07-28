@@ -1,0 +1,17 @@
+import os
+
+Import('env', 'MultiGlob', 'NoHeaders', 'StructParse')
+
+ignores = set(['piglibtest.c'])
+srcs = MultiGlob(Split('.'), Split('*.c *.cpp *.h'), ignores)
+
+cenv = env.Clone()
+cenv.Append(LIBS = Split('wsock32 advapi32 user32 gdi32 shell32'))
+cenv.Append(CPPPATH = [env.Dir('#coh/3rdparty/zlibsrc')])
+
+srcs += StructParse('pigtest', 'pig', '.', srcs, cenv)
+
+exe = cenv.Program('../../pig', NoHeaders(srcs) + env['LIBUTILITIES'])
+Alias('pig', exe)
+Alias('install', env.Install('${BUILDFARM_BIN}', [exe, exe[0].target_from_source('','.pdb')]))
+

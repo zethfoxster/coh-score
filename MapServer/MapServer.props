@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>.\script\ScriptUI;..\NovodeXWrapper;.\language;..\Game\win;..\Common\junk;..\Common\turnstileserver;../libs\UtilitiesLib\version;../libs\UtilitiesLib\language;../libs/UtilitiesLib\assert;../common/entity;beacon;ai;svr;player;entity;../Common/seq;combat;container;generator;../libs/UtilitiesLib/;../libs/UtilitiesLib/components;../libs/UtilitiesLib/network;../libs/UtilitiesLib/utils;group;cmdparse;../Common/cmdparse;../Common/entity;../Common/gameComm;gameComm;../Game/menu;../Game/player;../common/player;../common/auction;../common;../common/language;../common/utils;.;../game;../lf;../3rdparty/zlibsrc;../game/render;../glh;../3rdparty/cryptopp;../3rdparty/VTune;../dbserver;../common/gridcoll;../common/group;../common/cmdparse;../common/seq;../game/graphics;../game/clientcomm;dbcomm;storyarc;../common/version;../common/storyarc;../common/filter;./filter;script;../Common/skills;gamesys;../common/gameData;../game/render/thread;./script/zoneevents;../common/bases;bases;../3rdparty/PhysX/SDKs/Foundation/include;../3rdparty/PhysX/SDKs/Physics/include;../3rdparty/PhysX/SDKs/PhysXLoader/include;../3rdparty/PhysX/SDKs/Cooking/include;../libs/AILib/pub;../common/account;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>SERVER;WIN32;_CONSOLE;USEZLIB;_CRT_SECURE_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <WarningLevel>Level3</WarningLevel>
+    </ClCompile>
+    <Link>
+      <FixedBaseAddress>false</FixedBaseAddress>
+    </Link>
+    <PreBuildEvent>
+      <Command>..\utilities\bin\structparser2010 X %(RootDir)%(Directory) X %(Filename).vcxproj X $(Platform) X $(Configuration) X $(VCInstallDir) X $(SolutionPath)</Command>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+</Project>

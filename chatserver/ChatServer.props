@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalOptions>/wd 4267 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalIncludeDirectories>..\Common\persist;..\ChatAdmin;..\launcher;..\ServerMonitor;..\common\filter;..\common\language;..\common\version;../libs/UtilitiesLib;../libs/UtilitiesLib\assert;..\common\utils;../libs/UtilitiesLib\network;../libs/UtilitiesLib\utils;../libs/UtilitiesLib\components;../libs/UtilitiesLib\version;../libs/UtilitiesLib\language;../common;..\common;..\mapserver\filter;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>CHATSERVER;SECURE_STRINGS;WIN32;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <PreBuildEvent>
+      <Command>..\utilities\bin\structparser2010 X %(RootDir)%(Directory) X %(Filename).vcxproj X $(Platform) X $(Configuration) X $(VCInstallDir) X $(SolutionPath)</Command>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+</Project>

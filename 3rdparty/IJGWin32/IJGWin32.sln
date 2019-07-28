@@ -1,0 +1,25 @@
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "IJGWin32", "IJGWin32.vcproj", "{1B081719-1565-4F99-840B-262ECB3C502F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Debug|Xbox 360 = Debug|Xbox 360
+		Release|Win32 = Release|Win32
+		Release|Xbox 360 = Release|Xbox 360
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1B081719-1565-4F99-840B-262ECB3C502F}.Debug|Win32.ActiveCfg = Debug|Win32
+		{1B081719-1565-4F99-840B-262ECB3C502F}.Debug|Win32.Build.0 = Debug|Win32
+		{1B081719-1565-4F99-840B-262ECB3C502F}.Debug|Xbox 360.ActiveCfg = Debug|Xbox 360
+		{1B081719-1565-4F99-840B-262ECB3C502F}.Debug|Xbox 360.Build.0 = Debug|Xbox 360
+		{1B081719-1565-4F99-840B-262ECB3C502F}.Release|Win32.ActiveCfg = Release|Win32
+		{1B081719-1565-4F99-840B-262ECB3C502F}.Release|Win32.Build.0 = Release|Win32
+		{1B081719-1565-4F99-840B-262ECB3C502F}.Release|Xbox 360.ActiveCfg = Release|Xbox 360
+		{1B081719-1565-4F99-840B-262ECB3C502F}.Release|Xbox 360.Build.0 = Release|Xbox 360
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

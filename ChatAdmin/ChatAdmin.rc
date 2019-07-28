@@ -1,0 +1,328 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_ICON1               ICON                    "icon1.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_DLG_MAIN DIALOGEX 0, 0, 278, 121
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_MINIMIZEBOX | WS_MAXIMIZEBOX | 
+    WS_CLIPCHILDREN | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+EXSTYLE WS_EX_CONTROLPARENT | WS_EX_APPWINDOW
+CAPTION "ChatAdmin"
+MENU IDR_MENU1
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_EDIT_FEEDBACK,7,56,264,58,ES_MULTILINE | 
+                    ES_AUTOHSCROLL | ES_READONLY | WS_VSCROLL
+END
+
+IDD_DLG_CHANNELLIST DIALOGEX 0, 0, 400, 274
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_VISIBLE | WS_CLIPCHILDREN | 
+    WS_SYSMENU
+EXSTYLE WS_EX_CONTROLPARENT
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_LST_ALLCHANNELS,"SysListView32",LVS_REPORT | 
+                    LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_ALIGNLEFT | 
+                    LVS_OWNERDATA | WS_BORDER | WS_TABSTOP,7,7,123,198
+    PUSHBUTTON      "Rename",IDC_BUTTON1,143,175,56,13,NOT WS_VISIBLE | 
+                    WS_DISABLED
+    PUSHBUTTON      "Create Channel",IDB_CHANNELLIST_CREATE,143,65,56,13
+    PUSHBUTTON      "Kill Channel",IDB_CHANNELLIST_KILL,143,119,56,13
+    PUSHBUTTON      "Join Channel",IDB_CHANNELLIST_JOIN,143,92,56,13
+    EDITTEXT        IDC_EDIT_CHANNELLIST_FILTER,155,24,96,14,ES_AUTOHSCROLL
+    GROUPBOX        "Filter",IDC_GROUP_CHANNELLIST_FILTER,139,7,130,48,0,
+                    WS_EX_TRANSPARENT
+    LTEXT           "Matches:",IDC_STATIC_CHANNELLIST_MATCH_CAPTION,143,41,
+                    55,8,0,WS_EX_RIGHT
+    LTEXT           "Static",IDC_STATIC_CHANNELLIST_MATCH_COUNT,203,41,41,8
+END
+
+IDD_DLG_USERLIST DIALOGEX 0, 0, 389, 253
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_VISIBLE | WS_CLIPCHILDREN
+EXSTYLE WS_EX_CONTROLPARENT
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_EDIT_USERLIST_FILTER,210,24,96,14,ES_AUTOHSCROLL
+    CONTROL         "",IDC_LST_ALLUSERS,"SysListView32",LVS_REPORT | 
+                    LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_ALIGNLEFT | 
+                    LVS_OWNERDATA | WS_BORDER | WS_TABSTOP,7,7,180,221
+    PUSHBUTTON      "Rename",IDB_USERLIST_RENAME,194,169,56,13
+    PUSHBUTTON      "Private Chat",IDB_USERLIST_PRIVATECHAT,194,206,56,13
+    EDITTEXT        IDC_EDIT_USERLIST_ADD,326,222,59,13,ES_AUTOHSCROLL | NOT 
+                    WS_VISIBLE | WS_DISABLED
+    PUSHBUTTON      "Add",IDC_BUTTON_USERLIST_ADD,306,238,29,8,NOT 
+                    WS_VISIBLE | WS_DISABLED
+    PUSHBUTTON      "Remove",IDC_BUTTON_USERLIST_REMOVE,353,238,29,8,NOT 
+                    WS_VISIBLE | WS_DISABLED
+    PUSHBUTTON      "Refresh",IDC_BUTTON_USERLIST_INFO,194,150,56,13
+    PUSHBUTTON      "Chat Ban",IDB_USERLIST_CHATBAN,194,187,56,13
+    GROUPBOX        "Filter",IDC_GROUP_USERLIST_FILTER,194,7,185,48,0,
+                    WS_EX_TRANSPARENT
+    CONTROL         "Online",IDC_RADIO_ONLINE,"Button",BS_AUTORADIOBUTTON,
+                    317,27,56,8
+    CONTROL         "Offline",IDC_RADIO_OFFLINE,"Button",BS_AUTORADIOBUTTON,
+                    317,39,56,11
+    CONTROL         "All",IDC_RADIO_ALL,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,317,14,56,9
+    CONTROL         "",IDC_LST_USER_STATUS,"SysListView32",LVS_REPORT | 
+                    LVS_ALIGNLEFT | LVS_NOCOLUMNHEADER | WS_BORDER | 
+                    WS_TABSTOP,194,57,135,85
+    LTEXT           "Matches:",IDC_STATIC_USERLIST_MATCH_CAPTION,198,41,55,8,
+                    NOT WS_GROUP,WS_EX_RIGHT
+    LTEXT           "Static",IDC_STATIC_USERLIST_MATCH_COUNT,258,41,41,8,NOT 
+                    WS_GROUP
+END
+
+IDD_DLG_CHANNELMONITOR DIALOGEX 0, 0, 440, 246
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_VISIBLE | WS_CLIPCHILDREN | 
+    WS_SYSMENU
+EXSTYLE WS_EX_CONTROLPARENT
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_LST_CHANMON_MEMBERS,"SysListView32",LVS_REPORT | 
+                    LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_ALIGNLEFT | 
+                    LVS_OWNERDATA | WS_BORDER | WS_TABSTOP,7,41,115,139
+    EDITTEXT        IDC_EDIT_CHANMON_MESSAGES,132,7,301,196,ES_MULTILINE | 
+                    ES_AUTOHSCROLL | ES_READONLY | WS_VSCROLL
+    PUSHBUTTON      "Kill Channel",IDB_CHANMON_KILL,211,226,48,13
+    PUSHBUTTON      "Rename",IDB_CHANMON_RENAME,7,190,53,13
+    PUSHBUTTON      "Silence",IDB_CHANMON_SILENCE,69,190,53,13
+    PUSHBUTTON      "Private Chat",IDB_CHANMON_PRIVATECHAT,69,222,53,13
+    EDITTEXT        IDC_EDIT_CHANMON_SEND,132,206,260,12,ES_MULTILINE | 
+                    ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "Send",IDB_CHANMON_SEND,399,206,34,12
+    PUSHBUTTON      "Kick",IDB_CHANMON_KICK,7,206,53,13
+    PUSHBUTTON      "Make Operator",IDB_CHANMON_OPERATOR,7,222,53,13
+    PUSHBUTTON      "Invite",IDB_CHANMON_INVITE,149,226,48,13
+    EDITTEXT        IDC_EDIT_MEMBERLIST_FILTER,28,17,66,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "Silence All",IDB_CHANMON_SILENCEALL,273,226,48,13
+    PUSHBUTTON      "Leave",IDB_CHANMON_LEAVE,335,226,48,13
+    GROUPBOX        "Filter",IDC_GROUP_CHANMON_FILTER,7,7,113,29,0,
+                    WS_EX_TRANSPARENT
+END
+
+IDD_PROMPT_STRING DIALOGEX 0, 0, 287, 71
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_VISIBLE | 
+    WS_CAPTION
+CAPTION "Prompt"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,83,50,50,14
+    DEFPUSHBUTTON   "Cancel",IDCANCEL,152,50,50,14
+    LTEXT           "Static",IDC_STATIC_PROMPT,7,25,146,8,0,WS_EX_RIGHT
+    EDITTEXT        IDC_EDIT_PROMPT_STRING,158,22,91,13,ES_AUTOHSCROLL
+END
+
+IDD_PROMPT_TIME DIALOGEX 0, 0, 221, 89
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_VISIBLE | 
+    WS_CAPTION
+CAPTION "Prompt"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_EDIT_DAYS,12,27,29,13,ES_AUTOHSCROLL | ES_NUMBER | 
+                    WS_GROUP
+    EDITTEXT        IDC_EDIT_HOURS,78,27,29,13,ES_AUTOHSCROLL | ES_NUMBER
+    EDITTEXT        IDC_EDIT_MINUTES,140,27,29,13,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "minutes",IDC_STATIC_MINUTES,174,30,32,8
+    LTEXT           "Static",IDC_STATIC_EXPIRE,7,49,135,9
+    DEFPUSHBUTTON   "OK",IDOK,51,68,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,120,68,50,14
+    LTEXT           "Static",IDC_STATIC_PROMPT,7,9,129,8
+    LTEXT           "days",IDC_STATIC,46,30,27,8
+    LTEXT           "hours",IDC_STATIC,112,30,26,8
+END
+
+IDD_LOGIN DIALOGEX 0, 0, 186, 143
+STYLE DS_SETFONT | DS_MODALFRAME | DS_SETFOREGROUND | DS_FIXEDSYS | WS_POPUP | 
+    WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_STATICEDGE
+CAPTION "ChatAdmin Login"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    COMBOBOX        IDC_COMBO_LOGIN_HANDLE,73,46,76,45,CBS_DROPDOWN | 
+                    CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Handle:",IDC_LOGIN_HANDLE,7,47,60,12,0,WS_EX_RIGHT
+    LTEXT           "Password:",IDC_LOGIN_PASSWORD,7,74,60,13,0,WS_EX_RIGHT
+    EDITTEXT        IDC_EDIT_LOGIN_PASSWORD,73,74,76,12,ES_PASSWORD | 
+                    ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "Login",IDC_LOGIN_OK,25,122,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,111,122,50,14
+    COMBOBOX        IDC_COMBO_LOGIN_SERVER,73,18,76,45,CBS_DROPDOWN | 
+                    CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "ChatServer:",IDC_LOGIN_SERVER,7,20,60,12,0,WS_EX_RIGHT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_DLG_MAIN, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 271
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 114
+    END
+
+    IDD_DLG_CHANNELLIST, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 393
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 267
+    END
+
+    IDD_DLG_USERLIST, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 382
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 246
+    END
+
+    IDD_DLG_CHANNELMONITOR, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 433
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 239
+    END
+
+    IDD_PROMPT_STRING, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 280
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 64
+    END
+
+    IDD_PROMPT_TIME, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 214
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 82
+    END
+
+    IDD_LOGIN, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 178
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 136
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MENU1 MENU 
+BEGIN
+    POPUP "Connect"
+    BEGIN
+        MENUITEM "Login",                       IDM_CONNECT
+        MENUITEM "Exit",                        IDM_EXIT
+    END
+    POPUP "Status"
+    BEGIN
+        MENUITEM "Invisible",                   IDM_STATUS_INVISIBLE
+    END
+    POPUP "Global"
+    BEGIN
+        MENUITEM "Send Message",                IDM_SENDALL
+        MENUITEM SEPARATOR
+        MENUITEM "Silence All",                 IDM_SILENCEALL
+        MENUITEM "Unsilence All",               IDM_UNSILENCEALL
+        MENUITEM SEPARATOR
+        MENUITEM "Shutdown Chatserver",         IDM_SHUTDOWN
+    END
+    POPUP "Options"
+    BEGIN
+        MENUITEM "Console Timestamps",          IDM_OPTIONS_CONSOLE_TIMESTAMPS
+
+        MENUITEM "Chat Timestamps",             IDM_OPTIONS_CHAT_TIMESTAMPS
+    END
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

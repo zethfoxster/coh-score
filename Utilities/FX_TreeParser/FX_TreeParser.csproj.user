@@ -1,0 +1,8 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <StartArguments>C:\game\data\fx\Explosions\Large\Expolsion_large.fx</StartArguments>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <StartArguments>C:\gamefix\data\fx\IncarnatePowers\Judgment\CHILD_Judgment_Cryonic.fx</StartArguments>
+  </PropertyGroup>
+</Project>

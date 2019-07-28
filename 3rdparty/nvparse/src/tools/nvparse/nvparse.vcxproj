@@ -1,0 +1,701 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug Multithreaded DLL|Win32">
+      <Configuration>Debug Multithreaded DLL</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug Multithreaded|Win32">
+      <Configuration>Debug Multithreaded</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Full Debug|Win32">
+      <Configuration>Full Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Hybrid|Win32">
+      <Configuration>Hybrid</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release Multithreaded DLL|Win32">
+      <Configuration>Release Multithreaded DLL</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release Multithreaded|Win32">
+      <Configuration>Release Multithreaded</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{531FE6FB-66BC-45CE-9E5B-46030A2C802E}</ProjectGuid>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release Multithreaded|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded DLL|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release Multithreaded DLL|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Full Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Hybrid|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release Multithreaded|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC70.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded DLL|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC70.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC70.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release Multithreaded DLL|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC70.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC70.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC70.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Full Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC70.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Hybrid|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC70.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Hybrid|Win32'">.\nvparse___Win32_Hybrid\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Hybrid|Win32'">.\nvparse___Win32_Hybrid\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\Debug\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Full Debug|Win32'">.\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\Debug\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Full Debug|Win32'">.\Debug\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\Release\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release Multithreaded DLL|Win32'">.\release_mtdll_vc7\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release Multithreaded DLL|Win32'">.\release_mtdll_vc7\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded|Win32'">.\nvparse___Win32_Debug_Multithreaded\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded|Win32'">.\nvparse___Win32_Debug_Multithreaded\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded DLL|Win32'">.\debug_mtdll_vc7\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded DLL|Win32'">.\debug_mtdll_vc7\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release Multithreaded|Win32'">.\nvparse___Win32_Release_Multithreaded\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release Multithreaded|Win32'">.\nvparse___Win32_Release_Multithreaded\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Hybrid|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>.;..\..\..\include\shared;..\..\..\..\glew\glew-1.5.7\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <PrecompiledHeaderOutputFile>.\nvparse___Win32_Hybrid/nvparse.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\nvparse___Win32_Hybrid/</AssemblerListingLocation>
+      <ObjectFileName>.\nvparse___Win32_Hybrid/</ObjectFileName>
+      <ProgramDataBaseFileName>.\nvparse___Win32_Hybrid/</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <CompileAs>Default</CompileAs>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+    <Lib>
+      <OutputFile>debug\nvparse_hybrid_vc7.lib</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </Lib>
+    <PostBuildEvent>
+      <Command>
+      </Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>.;..\..\..\include\shared;..\..\..\..\glew\glew-1.5.7\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_HAS_ITERATOR_DEBUGGING=0;WIN32;_DEBUG;_WINDOWS;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <PrecompiledHeaderOutputFile>.\Debug/nvparse.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\Debug/</AssemblerListingLocation>
+      <ObjectFileName>.\Debug/</ObjectFileName>
+      <ProgramDataBaseFileName>.\Debug/</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <CompileAs>Default</CompileAs>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+    <Lib>
+      <OutputFile>.\Debug\nvparse_vc7.lib</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </Lib>
+    <PostBuildEvent>
+      <Command>
+      </Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Full Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>.;..\..\..\include\shared;..\..\..\..\glew\glew-1.5.7\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <PrecompiledHeaderOutputFile>.\Debug/nvparse.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\Debug/</AssemblerListingLocation>
+      <ObjectFileName>.\Debug/</ObjectFileName>
+      <ProgramDataBaseFileName>.\Debug/</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <CompileAs>Default</CompileAs>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+    <Lib>
+      <OutputFile>.\Debug\nvparse_vc7.lib</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </Lib>
+    <PostBuildEvent>
+      <Command>
+      </Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <CustomBuildStep>
+      <Command>
+      </Command>
+      <Outputs>%(Outputs)</Outputs>
+    </CustomBuildStep>
+    <ClCompile>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <AdditionalIncludeDirectories>.;..\..\..\include\shared;..\..\..\..\glew\glew-1.5.7\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <PrecompiledHeaderOutputFile>.\Release/nvparse.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\Release/</AssemblerListingLocation>
+      <ObjectFileName>.\Release/</ObjectFileName>
+      <ProgramDataBaseFileName>.\Release/</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <CompileAs>Default</CompileAs>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+    <Lib>
+      <OutputFile>.\Release\nvparse_vc7.lib</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </Lib>
+    <PostBuildEvent>
+      <Command>
+      </Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release Multithreaded DLL|Win32'">
+    <ClCompile>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <AdditionalIncludeDirectories>.;..\..\..\include\shared;..\..\..\..\glew\glew-1.5.7\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <PrecompiledHeaderOutputFile>.\release_mtdll_vc7/nvparse.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\release_mtdll_vc7/</AssemblerListingLocation>
+      <ObjectFileName>.\release_mtdll_vc7/</ObjectFileName>
+      <ProgramDataBaseFileName>.\release_mtdll_vc7/</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <CompileAs>Default</CompileAs>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+    <Lib>
+      <OutputFile>Release\nvparse_mtdll_vc7.lib</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </Lib>
+    <PostBuildEvent>
+      <Message>Performing Post-build copying on $(ProjectPath)</Message>
+      <Command>
+      </Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>.;..\..\..\include\shared;..\..\..\..\glew\glew-1.5.7\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <PrecompiledHeaderOutputFile>.\nvparse___Win32_Debug_Multithreaded/nvparse.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\nvparse___Win32_Debug_Multithreaded/</AssemblerListingLocation>
+      <ObjectFileName>.\nvparse___Win32_Debug_Multithreaded/</ObjectFileName>
+      <ProgramDataBaseFileName>.\nvparse___Win32_Debug_Multithreaded/</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <CompileAs>Default</CompileAs>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+    <Lib>
+      <OutputFile>Debug\nvparse_mt_vc7.lib</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </Lib>
+    <PostBuildEvent>
+      <Command>
+      </Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded DLL|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>.;..\..\..\include\shared;..\..\..\..\glew\glew-1.5.7\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <PrecompiledHeaderOutputFile>.\debug_mtdll_vc7/nvparse.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\debug_mtdll_vc7/</AssemblerListingLocation>
+      <ObjectFileName>.\debug_mtdll_vc7/</ObjectFileName>
+      <ProgramDataBaseFileName>.\debug_mtdll_vc7/</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <CompileAs>Default</CompileAs>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+    <Lib>
+      <OutputFile>Debug\nvparse_mtdll_vc7.lib</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </Lib>
+    <PostBuildEvent>
+      <Command>
+      </Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release Multithreaded|Win32'">
+    <ClCompile>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <AdditionalIncludeDirectories>.;..\..\..\include\shared;..\..\..\..\glew\glew-1.5.7\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <PrecompiledHeaderOutputFile>.\nvparse___Win32_Release_Multithreaded/nvparse.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\nvparse___Win32_Release_Multithreaded/</AssemblerListingLocation>
+      <ObjectFileName>.\nvparse___Win32_Release_Multithreaded/</ObjectFileName>
+      <ProgramDataBaseFileName>.\nvparse___Win32_Release_Multithreaded/</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <CompileAs>Default</CompileAs>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+    <Lib>
+      <OutputFile>Release\nvparse_mt_vc7.lib</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </Lib>
+    <PostBuildEvent>
+      <Message>Performing Post-build copying on $(ProjectPath)</Message>
+      <Command>
+      </Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="_ps1.0_lexer.cpp" />
+    <ClCompile Include="_ps1.0_parser.cpp" />
+    <ClCompile Include="_rc1.0_lexer.cpp" />
+    <ClCompile Include="_rc1.0_parser.cpp" />
+    <ClCompile Include="_ts1.0_lexer.cpp" />
+    <ClCompile Include="_ts1.0_parser.cpp" />
+    <ClCompile Include="_vs1.0_lexer.cpp" />
+    <ClCompile Include="_vs1.0_parser.cpp" />
+    <ClCompile Include="nvparse.cpp" />
+    <ClCompile Include="nvparse_errors.cpp" />
+    <ClCompile Include="ps1.0_program.cpp" />
+    <ClCompile Include="rc1.0_combiners.cpp" />
+    <ClCompile Include="rc1.0_final.cpp" />
+    <ClCompile Include="rc1.0_general.cpp" />
+    <ClCompile Include="ts1.0_inst.cpp" />
+    <ClCompile Include="ts1.0_inst_list.cpp" />
+    <ClCompile Include="vcp1.0_impl.cpp" />
+    <ClCompile Include="vp1.0_impl.cpp" />
+    <ClCompile Include="vs1.0_inst.cpp" />
+    <ClCompile Include="vs1.0_inst_list.cpp" />
+    <ClCompile Include="vsp1.0_impl.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="_ps1.0_parser.h" />
+    <ClInclude Include="_rc1.0_parser.h" />
+    <ClInclude Include="_ts1.0_parser.h" />
+    <ClInclude Include="_vs1.0_parser.h" />
+    <ClInclude Include="nvparse_errors.h" />
+    <ClInclude Include="nvparse_externs.h" />
+    <ClInclude Include="ps1.0_program.h" />
+    <ClInclude Include="rc1.0_combiners.h" />
+    <ClInclude Include="rc1.0_final.h" />
+    <ClInclude Include="rc1.0_general.h" />
+    <ClInclude Include="rc1.0_register.h" />
+    <ClInclude Include="ts1.0_inst.h" />
+    <ClInclude Include="ts1.0_inst_list.h" />
+    <ClInclude Include="vs1.0_inst.h" />
+    <ClInclude Include="vs1.0_inst_list.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="ps1.0_grammar.y">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded DLL|Win32'">bison -d -o _ps1.0_parser -p ps10_ ps1.0_grammar.y
+del _ps1.0_parser.cpp
+ren _ps1.0_parser _ps1.0_parser.cpp
+</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded DLL|Win32'">_ps1.0_parser.cpp;_ps1.0_parser.h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded|Win32'">bison -d -o _ps1.0_parser -p ps10_ ps1.0_grammar.y
+del _ps1.0_parser.cpp
+ren _ps1.0_parser _ps1.0_parser.cpp
+</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded|Win32'">_ps1.0_parser.cpp;_ps1.0_parser.h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">bison -d -o _ps1.0_parser -p ps10_ ps1.0_grammar.y
+del _ps1.0_parser.cpp
+ren _ps1.0_parser _ps1.0_parser.cpp
+</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Full Debug|Win32'">bison -d -o _ps1.0_parser -p ps10_ ps1.0_grammar.y
+del _ps1.0_parser.cpp
+ren _ps1.0_parser _ps1.0_parser.cpp
+</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">_ps1.0_parser.cpp;_ps1.0_parser.h;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Full Debug|Win32'">_ps1.0_parser.cpp;_ps1.0_parser.h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Hybrid|Win32'">bison -d -o _ps1.0_parser -p ps10_ ps1.0_grammar.y
+del _ps1.0_parser.cpp
+ren _ps1.0_parser _ps1.0_parser.cpp
+</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Hybrid|Win32'">_ps1.0_parser.cpp;_ps1.0_parser.h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release Multithreaded DLL|Win32'">bison -d -o _ps1.0_parser -p ps10_ ps1.0_grammar.y
+del _ps1.0_parser.cpp
+ren _ps1.0_parser _ps1.0_parser.cpp
+</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release Multithreaded DLL|Win32'">_ps1.0_parser.cpp;_ps1.0_parser.h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release Multithreaded|Win32'">bison -d -o _ps1.0_parser -p ps10_ ps1.0_grammar.y
+del _ps1.0_parser.cpp
+ren _ps1.0_parser _ps1.0_parser.cpp
+</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release Multithreaded|Win32'">_ps1.0_parser.cpp;_ps1.0_parser.h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">bison -d -o _ps1.0_parser -p ps10_ ps1.0_grammar.y
+del _ps1.0_parser.cpp
+ren _ps1.0_parser _ps1.0_parser.cpp
+</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">_ps1.0_parser.cpp;_ps1.0_parser.h;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="ps1.0_tokens.l">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded DLL|Win32'">flex -Pps10_ -o_ps1.0_lexer.cpp ps1.0_tokens.l
+</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded DLL|Win32'">_ps1.0_lexer.cpp;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded|Win32'">flex -Pps10_ -o_ps1.0_lexer.cpp ps1.0_tokens.l
+</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded|Win32'">_ps1.0_lexer.cpp;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">flex -Pps10_ -o_ps1.0_lexer.cpp ps1.0_tokens.l
+</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Full Debug|Win32'">flex -Pps10_ -o_ps1.0_lexer.cpp ps1.0_tokens.l
+</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">_ps1.0_lexer.cpp;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Full Debug|Win32'">_ps1.0_lexer.cpp;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Hybrid|Win32'">flex -Pps10_ -o_ps1.0_lexer.cpp ps1.0_tokens.l
+</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Hybrid|Win32'">_ps1.0_lexer.cpp;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release Multithreaded DLL|Win32'">flex -Pps10_ -o_ps1.0_lexer.cpp ps1.0_tokens.l
+</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release Multithreaded DLL|Win32'">_ps1.0_lexer.cpp;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release Multithreaded|Win32'">flex -Pps10_ -o_ps1.0_lexer.cpp ps1.0_tokens.l
+</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release Multithreaded|Win32'">_ps1.0_lexer.cpp;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">flex -Pps10_ -o_ps1.0_lexer.cpp ps1.0_tokens.l
+</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">_ps1.0_lexer.cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="rc1.0_grammar.y">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded DLL|Win32'">bison -d -o _rc1.0_parser -p rc10_ rc1.0_grammar.y
+del _rc1.0_parser.cpp
+ren _rc1.0_parser _rc1.0_parser.cpp
+</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded DLL|Win32'">_rc1.0_parser.cpp;_rc1.0_parser.h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded|Win32'">bison -d -o _rc1.0_parser -p rc10_ rc1.0_grammar.y
+del _rc1.0_parser.cpp
+ren _rc1.0_parser _rc1.0_parser.cpp
+</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded|Win32'">_rc1.0_parser.cpp;_rc1.0_parser.h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">bison -d -o _rc1.0_parser -p rc10_ rc1.0_grammar.y
+del _rc1.0_parser.cpp
+ren _rc1.0_parser _rc1.0_parser.cpp
+</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Full Debug|Win32'">bison -d -o _rc1.0_parser -p rc10_ rc1.0_grammar.y
+del _rc1.0_parser.cpp
+ren _rc1.0_parser _rc1.0_parser.cpp
+</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">_rc1.0_parser.cpp;_rc1.0_parser.h;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Full Debug|Win32'">_rc1.0_parser.cpp;_rc1.0_parser.h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Hybrid|Win32'">bison -d -o _rc1.0_parser -p rc10_ rc1.0_grammar.y
+del _rc1.0_parser.cpp
+ren _rc1.0_parser _rc1.0_parser.cpp
+</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Hybrid|Win32'">_rc1.0_parser.cpp;_rc1.0_parser.h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release Multithreaded DLL|Win32'">bison -d -o _rc1.0_parser -p rc10_ rc1.0_grammar.y
+del _rc1.0_parser.cpp
+ren _rc1.0_parser _rc1.0_parser.cpp
+</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release Multithreaded DLL|Win32'">_rc1.0_parser.cpp;_rc1.0_parser.h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release Multithreaded|Win32'">bison -d -o _rc1.0_parser -p rc10_ rc1.0_grammar.y
+del _rc1.0_parser.cpp
+ren _rc1.0_parser _rc1.0_parser.cpp
+</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release Multithreaded|Win32'">_rc1.0_parser.cpp;_rc1.0_parser.h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">bison -d -o _rc1.0_parser -p rc10_ rc1.0_grammar.y
+del _rc1.0_parser.cpp
+ren _rc1.0_parser _rc1.0_parser.cpp
+</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">_rc1.0_parser.cpp;_rc1.0_parser.h;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="rc1.0_tokens.l">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded DLL|Win32'">flex -Prc10_ -o_rc1.0_lexer.cpp rc1.0_tokens.l
+</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded DLL|Win32'">_rc1.0_lexer.cpp;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded|Win32'">flex -Prc10_ -o_rc1.0_lexer.cpp rc1.0_tokens.l
+</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded|Win32'">_rc1.0_lexer.cpp;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">flex -Prc10_ -o_rc1.0_lexer.cpp rc1.0_tokens.l
+</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Full Debug|Win32'">flex -Prc10_ -o_rc1.0_lexer.cpp rc1.0_tokens.l
+</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">_rc1.0_lexer.cpp;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Full Debug|Win32'">_rc1.0_lexer.cpp;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Hybrid|Win32'">flex -Prc10_ -o_rc1.0_lexer.cpp rc1.0_tokens.l
+</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Hybrid|Win32'">_rc1.0_lexer.cpp;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release Multithreaded DLL|Win32'">flex -Prc10_ -o_rc1.0_lexer.cpp rc1.0_tokens.l
+</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release Multithreaded DLL|Win32'">_rc1.0_lexer.cpp;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release Multithreaded|Win32'">flex -Prc10_ -o_rc1.0_lexer.cpp rc1.0_tokens.l
+</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release Multithreaded|Win32'">_rc1.0_lexer.cpp;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">flex -Prc10_ -o_rc1.0_lexer.cpp rc1.0_tokens.l
+</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">_rc1.0_lexer.cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="ts1.0_grammar.y">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded DLL|Win32'">bison -d -o _ts1.0_parser -p ts10_ ts1.0_grammar.y
+del _ts1.0_parser.cpp
+ren  _ts1.0_parser _ts1.0_parser.cpp
+</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded DLL|Win32'">_ts1.0_parser.cpp;_ts1.0_parser.h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded|Win32'">bison -d -o _ts1.0_parser -p ts10_ ts1.0_grammar.y
+del _ts1.0_parser.cpp
+ren  _ts1.0_parser _ts1.0_parser.cpp
+</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded|Win32'">_ts1.0_parser.cpp;_ts1.0_parser.h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">bison -d -o _ts1.0_parser -p ts10_ ts1.0_grammar.y
+del _ts1.0_parser.cpp
+ren  _ts1.0_parser _ts1.0_parser.cpp
+</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Full Debug|Win32'">bison -d -o _ts1.0_parser -p ts10_ ts1.0_grammar.y
+del _ts1.0_parser.cpp
+ren  _ts1.0_parser _ts1.0_parser.cpp
+</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">_ts1.0_parser.cpp;_ts1.0_parser.h;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Full Debug|Win32'">_ts1.0_parser.cpp;_ts1.0_parser.h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Hybrid|Win32'">bison -d -o _ts1.0_parser -p ts10_ ts1.0_grammar.y
+del _ts1.0_parser.cpp
+ren  _ts1.0_parser _ts1.0_parser.cpp
+</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Hybrid|Win32'">_ts1.0_parser.cpp;_ts1.0_parser.h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release Multithreaded DLL|Win32'">bison -d -o _ts1.0_parser -p ts10_ ts1.0_grammar.y
+del _ts1.0_parser.cpp
+ren  _ts1.0_parser _ts1.0_parser.cpp
+</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release Multithreaded DLL|Win32'">_ts1.0_parser.cpp;_ts1.0_parser.h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release Multithreaded|Win32'">bison -d -o _ts1.0_parser -p ts10_ ts1.0_grammar.y
+del _ts1.0_parser.cpp
+ren  _ts1.0_parser _ts1.0_parser.cpp
+</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release Multithreaded|Win32'">_ts1.0_parser.cpp;_ts1.0_parser.h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">bison -d -o _ts1.0_parser -p ts10_ ts1.0_grammar.y
+del _ts1.0_parser.cpp
+ren  _ts1.0_parser _ts1.0_parser.cpp
+</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">_ts1.0_parser.cpp;_ts1.0_parser.h;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="ts1.0_tokens.l">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded DLL|Win32'">flex -Pts10_ -o_ts1.0_lexer.cpp ts1.0_tokens.l
+</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded DLL|Win32'">_ts1.0_lexer.cpp;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded|Win32'">flex -Pts10_ -o_ts1.0_lexer.cpp ts1.0_tokens.l
+</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded|Win32'">_ts1.0_lexer.cpp;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">flex -Pts10_ -o_ts1.0_lexer.cpp ts1.0_tokens.l
+</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Full Debug|Win32'">flex -Pts10_ -o_ts1.0_lexer.cpp ts1.0_tokens.l
+</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">_ts1.0_lexer.cpp;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Full Debug|Win32'">_ts1.0_lexer.cpp;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Hybrid|Win32'">flex -Pts10_ -o_ts1.0_lexer.cpp ts1.0_tokens.l
+</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Hybrid|Win32'">_ts1.0_lexer.cpp;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release Multithreaded DLL|Win32'">flex -Pts10_ -o_ts1.0_lexer.cpp ts1.0_tokens.l
+</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release Multithreaded DLL|Win32'">_ts1.0_lexer.cpp;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release Multithreaded|Win32'">flex -Pts10_ -o_ts1.0_lexer.cpp ts1.0_tokens.l
+</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release Multithreaded|Win32'">_ts1.0_lexer.cpp;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">flex -Pts10_ -o_ts1.0_lexer.cpp ts1.0_tokens.l
+</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">_ts1.0_lexer.cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="vs1.0_grammar.y">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded DLL|Win32'">bison -d -o _vs1.0_parser -p vs10_ vs1.0_grammar.y
+del _vs1.0_parser.cpp
+ren  _vs1.0_parser _vs1.0_parser.cpp
+</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded DLL|Win32'">_vs1.0_parser.cpp;_vs1.0_parser.h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded|Win32'">bison -d -o _vs1.0_parser -p vs10_ vs1.0_grammar.y
+del _vs1.0_parser.cpp
+ren  _vs1.0_parser _vs1.0_parser.cpp
+</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded|Win32'">_vs1.0_parser.cpp;_vs1.0_parser.h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">bison -d -o _vs1.0_parser -p vs10_ vs1.0_grammar.y
+del _vs1.0_parser.cpp
+ren  _vs1.0_parser _vs1.0_parser.cpp
+</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Full Debug|Win32'">bison -d -o _vs1.0_parser -p vs10_ vs1.0_grammar.y
+del _vs1.0_parser.cpp
+ren  _vs1.0_parser _vs1.0_parser.cpp
+</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">_vs1.0_parser.cpp;_vs1.0_parser.h;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Full Debug|Win32'">_vs1.0_parser.cpp;_vs1.0_parser.h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Hybrid|Win32'">bison -d -o _vs1.0_parser -p vs10_ vs1.0_grammar.y
+del _vs1.0_parser.cpp
+ren  _vs1.0_parser _vs1.0_parser.cpp
+</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Hybrid|Win32'">_vs1.0_parser.cpp;_vs1.0_parser.h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release Multithreaded DLL|Win32'">bison -d -o _vs1.0_parser -p vs10_ vs1.0_grammar.y
+del _vs1.0_parser.cpp
+ren  _vs1.0_parser _vs1.0_parser.cpp
+</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release Multithreaded DLL|Win32'">_vs1.0_parser.cpp;_vs1.0_parser.h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release Multithreaded|Win32'">bison -d -o _vs1.0_parser -p vs10_ vs1.0_grammar.y
+del _vs1.0_parser.cpp
+ren  _vs1.0_parser _vs1.0_parser.cpp
+</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release Multithreaded|Win32'">_vs1.0_parser.cpp;_vs1.0_parser.h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">bison -d -o _vs1.0_parser -p vs10_ vs1.0_grammar.y
+del _vs1.0_parser.cpp
+ren  _vs1.0_parser _vs1.0_parser.cpp
+</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">_vs1.0_parser.cpp;_vs1.0_parser.h;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="vs1.0_tokens.l">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded DLL|Win32'">flex -Pvs10_ -o_vs1.0_lexer.cpp vs1.0_tokens.l
+</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded DLL|Win32'">_vs1.0_lexer.cpp;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded|Win32'">flex -Pvs10_ -o_vs1.0_lexer.cpp vs1.0_tokens.l
+</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded|Win32'">_vs1.0_lexer.cpp;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">flex -Pvs10_ -o_vs1.0_lexer.cpp vs1.0_tokens.l
+</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Full Debug|Win32'">flex -Pvs10_ -o_vs1.0_lexer.cpp vs1.0_tokens.l
+</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">_vs1.0_lexer.cpp;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Full Debug|Win32'">_vs1.0_lexer.cpp;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Hybrid|Win32'">flex -Pvs10_ -o_vs1.0_lexer.cpp vs1.0_tokens.l
+</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Hybrid|Win32'">_vs1.0_lexer.cpp;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release Multithreaded DLL|Win32'">flex -Pvs10_ -o_vs1.0_lexer.cpp vs1.0_tokens.l
+</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release Multithreaded DLL|Win32'">_vs1.0_lexer.cpp;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release Multithreaded|Win32'">flex -Pvs10_ -o_vs1.0_lexer.cpp vs1.0_tokens.l
+</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release Multithreaded|Win32'">_vs1.0_lexer.cpp;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">flex -Pvs10_ -o_vs1.0_lexer.cpp vs1.0_tokens.l
+</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">_vs1.0_lexer.cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

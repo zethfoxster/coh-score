@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<assembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0">
+    <noInheritable></noInheritable>
+    <assemblyIdentity type="win32" name="Microsoft.VC80.DebugCRT" version="8.0.50727.5592" processorArchitecture="x86"></assemblyIdentity>
+    <file name="msvcr80d.dll" hash="6c8cbd5f5e730229575bc92457f2ebc4578973a1" hashalg="SHA1"></file>
+    <file name="msvcp80d.dll" hash="bec5e3780b895232b624f6b6b02a6f31cc6a5e97" hashalg="SHA1"></file>
+    <file name="msvcm80d.dll" hash="6af1014bcf907cf2f06a9b66b1fd80b6bb4dd01f" hashalg="SHA1"></file>
+</assembly>

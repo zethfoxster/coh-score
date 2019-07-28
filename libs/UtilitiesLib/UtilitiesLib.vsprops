@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<VisualStudioPropertySheet
+	ProjectType="Visual C++"
+	Version="8.00"
+	Name="UtilitiesLib"
+	>
+	<Tool
+		Name="VCCLCompilerTool"
+		AdditionalOptions="/wd 4267 /wd 4306"
+		AdditionalIncludeDirectories="./utils;./assert;./components;./language;./network;./version;../crashrpt/src/;./components/TriCube;./UtilsNew/google_sparsehash/src/;."
+		PreprocessorDefinitions="UTILITIESLIB;WIN32;_LIB;USEZLIB"
+	/>
+	<Tool
+		Name="VCLibrarianTool"
+		AdditionalLibraryDirectories="Version.lib"
+	/>
+	<Tool
+		Name="VCPreBuildEventTool"
+		CommandLine="..\..\utilities\bin\structparser X $(InputDir) X $(InputFileName) X $(PlatformName) X $(ConfigurationName) X $(VCInstallDir) X $(SolutionPath)"
+	/>
+</VisualStudioPropertySheet>

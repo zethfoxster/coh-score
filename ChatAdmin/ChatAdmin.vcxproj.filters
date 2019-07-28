@@ -1,0 +1,125 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Util">
+      <UniqueIdentifier>{967b3828-0d14-4b5a-bc28-696c49063be8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Extern">
+      <UniqueIdentifier>{bd669d85-44af-44f1-bfdc-ca87cf01c2a2}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="ChannelList.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ChannelMonitor.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ChatAdmin.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ChatAdminNet.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ChatAdminUtils.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Login.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="UserList.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="UserMonitor.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CustomDialogs.c">
+      <Filter>Util</Filter>
+    </ClCompile>
+    <ClCompile Include="LangAdminUtil.c">
+      <Filter>Util</Filter>
+    </ClCompile>
+    <ClCompile Include="MessageView.c">
+      <Filter>Util</Filter>
+    </ClCompile>
+    <ClCompile Include="VirtualListView.c">
+      <Filter>Util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libs\UtilitiesLib\language\AppLocale.c">
+      <Filter>Extern</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libs\UtilitiesLib\version\AppRegCache.c">
+      <Filter>Extern</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libs\UtilitiesLib\language\MessageStore.c">
+      <Filter>Extern</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ChannelList.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ChannelMonitor.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ChatAdmin.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ChatAdminNet.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ChatAdminUtils.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ChatComm.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Login.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="UserList.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="UserMonitor.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CustomDialogs.h">
+      <Filter>Util</Filter>
+    </ClInclude>
+    <ClInclude Include="LangAdminUtil.h">
+      <Filter>Util</Filter>
+    </ClInclude>
+    <ClInclude Include="MessageView.h">
+      <Filter>Util</Filter>
+    </ClInclude>
+    <ClInclude Include="VirtualListView.h">
+      <Filter>Util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\chatdb.h">
+      <Filter>Extern</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\comm_backend.h">
+      <Filter>Extern</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libs\UtilitiesLib\language\MessageStore.h">
+      <Filter>Extern</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\game\data\texts\English\menuMessages.ms">
+      <Filter>Extern</Filter>
+    </None>
+    <None Include="..\..\game\data\texts\menuMessages.types">
+      <Filter>Extern</Filter>
+    </None>
+    <None Include="icon1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="ChatAdmin.rc" />
+  </ItemGroup>
+</Project>

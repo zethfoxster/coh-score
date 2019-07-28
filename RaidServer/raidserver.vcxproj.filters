@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="dbcomm">
+      <UniqueIdentifier>{dfa91284-2199-490c-827b-f58af1c61aa8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="misc">
+      <UniqueIdentifier>{eaa806cc-35a3-4195-819d-3687b9737720}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="mapserver">
+      <UniqueIdentifier>{a8c7f226-9751-4369-825d-bf1088b42f14}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="mapserver\storyarc">
+      <UniqueIdentifier>{1e6c53d4-ba1e-45a8-8581-9e17d4306507}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\dbserver\container_diff.c">
+      <Filter>dbcomm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\container\container_server.c">
+      <Filter>dbcomm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\container\container_store.c">
+      <Filter>dbcomm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\dbserver\container_tplt_utils.c">
+      <Filter>dbcomm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\container\container_util.c">
+      <Filter>dbcomm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mapserver\dbcomm\dbcomm.c">
+      <Filter>dbcomm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mapserver\dbcomm\dbcontainer.c">
+      <Filter>dbcomm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\container\dbcontainerpack.c">
+      <Filter>dbcomm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mapserver\dbcomm\dbnamecache.c">
+      <Filter>dbcomm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\container\dbstub.c">
+      <Filter>dbcomm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\MapServer\dbcomm\logcomm.c">
+      <Filter>dbcomm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\cmdparse\AppServerCmd.c">
+      <Filter>misc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\cmdparse\cmdstatserver.c">
+      <Filter>misc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\MapServer\container\containerSupergroup.c">
+      <Filter>misc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\entity\RewardToken.c">
+      <Filter>misc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\dbserver\servercfg.c">
+      <Filter>misc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\entity\Supergroup.c">
+      <Filter>misc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\entity\teamup.c">
+      <Filter>misc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\MapServer\storyarc\storytaskinfo.c">
+      <Filter>mapserver\storyarc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\gameData\iopdata.c" />
+    <ClCompile Include="iopserver.c" />
+    <ClCompile Include="raidinfo.c" />
+    <ClCompile Include="raidserver.c" />
+    <ClCompile Include="..\common\gameData\raidstruct.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\dbserver\container_diff.h">
+      <Filter>dbcomm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\container\container_server.h">
+      <Filter>dbcomm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\container\container_store.h">
+      <Filter>dbcomm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dbserver\container_tplt_utils.h">
+      <Filter>dbcomm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\container\container_util.h">
+      <Filter>dbcomm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\mapserver\dbcomm\dbcomm.h">
+      <Filter>dbcomm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\mapserver\dbcomm\dbcontainer.h">
+      <Filter>dbcomm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\container\dbcontainerpack.h">
+      <Filter>dbcomm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\mapserver\dbcomm\dbnamecache.h">
+      <Filter>dbcomm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MapServer\dbcomm\logcomm.h">
+      <Filter>dbcomm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\cmdparse\AppServerCmd.h">
+      <Filter>misc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\cmdparse\cmdstatserver.h">
+      <Filter>misc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MapServer\container\containerSupergroup.h">
+      <Filter>misc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dbserver\servercfg.h">
+      <Filter>misc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MapServer\storyarc\storytaskinfo.h">
+      <Filter>mapserver\storyarc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\gameData\iopdata.h" />
+    <ClInclude Include="iopserver.h" />
+    <ClInclude Include="raidinfo.h" />
+    <ClInclude Include="raidserver.h" />
+    <ClInclude Include="..\common\gameData\raidstruct.h" />
+  </ItemGroup>
+</Project>

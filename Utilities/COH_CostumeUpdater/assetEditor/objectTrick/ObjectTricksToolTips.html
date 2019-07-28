@@ -1,0 +1,686 @@
+<html><head></head>
+<body>
+<id="Sample">
+<h1 style="color:255 0 0">Trick Files and Flags - City of Heroes - Confluence</h1>
+<h2 style="color:Blue">Trick Files and Flags - City of Heroes - Confluence</h2>
+<h3 style="color: #FF0000">Trick Files and Flags - City of Heroes - Confluence</h3>
+<p>Trick Files and Flags - City of Heroes - Confluence\r\n</p>
+</id>   
+
+<id="CameraFace">
+<h2 style="color:Green">CameraFace</h2>
+<p>Always looks straight at the camera. For items such as lights and light glows,no matter what direction you look at the light at it will always appear to be facing you. This trick should be applied to items such as halo's, lights, and any other item that you would like to have appear facing you.</p>
+</id>
+
+<id="NightLight">
+<h2 style="color:green">NightLight</h2>
+Fades alpha down to zero during day. See LampLightTime in scene file. This trick should be applied when you would like glows Etc.. to appear at night and not during the day.</p>
+</id>
+
+<id="NoColl">
+<h2 style="color:green">NoColl</h2>
+no collisions. This trick should be applied to items that you would like to appear but not have any collision.</p>
+</id>
+
+<id="EditorVisible">
+<h2 style="color:green">EditorVisible</h2>
+Object is only visible in the in-game editor, Does not appear in the game. With this trick flag the item is still collidable, even though it is not visible in game.</p>
+</id>
+
+<id="BaseEditVisible">
+<h2 style="color:green">BaseEditVisible</h2>
+Object is only visible in the base editor, does not appear in the game. With this trick flag the item is still collidable, even though it is not visible in game. Should be used for base objects that should only be visible when players are editing a base.</p>
+</id>
+
+<id="DoubleSided">
+<h2 style="color:red">DoubleSided</h2>
+Always draw both sides. This trick should be used for FX geometry only. This is a single faced poly that is being forced to draw both sides. This flag should not be used on any world objects because normals can't be set independantly on each side. This flag doubles the fill rate when used on world objects.</p>
+</id>
+
+<id="NoZTest">
+<h2 style="color:green">NoZTest</h2>
+Dont do zbuffer test (always write to framebuffer). This trick is applied to FX and sky domes to help with sorting, and is normally used with the additive trick file. Lens flares and halos can also use this trick.</p>
+</id>
+
+<id="NoZWrite">
+<h2 style="color:orange">NoZWrite</h2>
+Dont write to depthbuffer (use for an obj fighting against itself, such as objects that are located in the same location and are approx the same size. This is also used for FX and normally is used with the additive trick file.</p>
+</id>
+
+<id="Additive">
+<h2 style="color:red">Additive</h2>
+Add the color of the object into the framebuffer instead of blending (This trick can be applied for to fire or glow.) This trick draws an additive color on top of what has already been drawn. The additive color will brighten the object. This has the same cost as alpha and is often used with z-write. common uses for this trick are lighting affects, neon, and light glows. This trick simulates illumination.</p>
+</id>
+
+<id="Subtractive">
+<h2 style="color:red">Subtractive</h2>
+Subtract the color of the object from the framebuffer. This trick has the opposite affect as additive. It also carries the same cost as additive, and alpha.</p>
+</id>
+
+<id="NoFog">
+<h2 style="color:green">NoFog</h2>
+No fog for this object. No fog is applied to the object in game. This trick can be applied to items such as lights you would like to appear in the fog.</p>
+</id>
+
+<id="LightFace">
+<h2 style="color:green">LightFace</h2>
+Rotates around y axis to face the sun. This trick can be applied to shadows for particular objects that you would like to always face the sun.</p>
+</id>
+
+<id="ReflectTex0">
+<h2 style="color:orange">ReflectTex0</h2>
+Turns on chrome / shininess for texture 0. Use for old objects and fallbacks that need reflection coordinates. This is a spherical texture generation.</p>
+</id>
+
+<id="ReflectTex1">
+<h2 style="color:orange">ReflectTex1</h2>
+Turns on chrome / shininess for texture 1. Use for old objects and fallbacks that need reflection coordinates.</p>
+</id>
+
+<id="AlphaCutout">
+<h2 style="color:lightgreen">AlphaCutout</h2>
+Uses the alpha on a texture to create a hard edge, so that it doesn't need to be alphasorted, etc. Anything such as a grate or alpha cut edge that does not need a fade out should use this flag.</p>
+This flag should be used for items more frequently than just an alpha. This also helps with perfomance.</p>
+</id>
+
+<id="SelectOnly">
+<h2 style="color:green">SelectOnly</h2>
+Makes object clickable to players.</p>
+</id>
+
+<id="NotSelectable">
+<h2 style="color:green">NotSelectable</h2>
+Not selectable. Be very careful with this trick, if you would like to apply this trick you will not be able to select the item in the game window in the editor, but you can from the tracker window. This trick is only used with Editor visible. (or if you turn on SelectNotSelectable). This trick also makes objects non collidable. </p>
+</id>
+</id>
+
+<id="WorldFx">
+<h2 style="color:Red">WorldFx</h2>
+Draws an object as an entity (gets player lighting (brighter),goes through the skinned shader) This forces a world object to be drawn like an effect, with player lighting. This will apply</p>
+the minimum ambient from players outdoors. This trick should be used for world objects that are attached to entities example would be backpacks.</p>
+</id>
+
+<id="StaticFx">
+<h2 style="color:Red">StaticFx</h2>
+forces fx and entity geometry to precalculate it's light underground, even if it is part of an effect. (skinned geometry can't use this trick) This is the opposite of world FX in that it</p>
+runs a non skinned geometry through the world lighting rather than the player lighting.</p>
+</id>
+
+<id="FullBright">
+<h2 style="color:Red">FullBright</h2>
+object is full bright, no lighting. This trick should be applied to objects that you do not want any lighting on. If an object does not have normals the object will have fullbright applied to it.</p>
+</id>
+
+<id="NoLightAngle">
+<h2 style="color:Red">NoLightAngle</h2>
+Don't use the angle between the poly and the sun when doing lighting. (just use sun color). Tree canopies and bushes would use this trick. The actual geometry of the object and its normals</p>
+would not be used. It will give the object all the same lighting value. This will give you a color but not shade the object.</p>
+</id>
+
+<id="FancyWater">
+<h2 style="color:Red">FancyWater</h2>
+Turn on water distortion effects for the object. Normally used on a material.</p>
+</id>
+
+<id="VisTray">
+<h2 style="color:Red">VisTray</h2>
+This group is a tray - only gets drawn when you are inside it, or a tray connected to it.</p>
+</id>
+
+<id="VisBlocker">
+<h2 style="color:Red">VisBlocker</h2>
+This group is the last group drawn when looking for connected trays.</p>
+</id>
+
+<id="VisOutside">
+<h2 style="color:Red">VisOutside</h2>
+Allows outside world to be visible from inside tray. Also allows tray to be visible to outside world <em>(no visibility restrictions)</em></p>
+</id>
+
+<id="VisOutsideOnly">
+<h2 style="color:Red">VisOutsideOnly</h2>
+Allows outside world to be visible from inside tray, but keeps tray invisible to outside world. <em>(one-way visibility)</em></p>
+</id>
+
+<id="VisWindow">
+<h2 style="color:Red">VisWindow</h2>
+This group uses the window stencil trick to see through Trays or Shells when you get up close to it.</p>
+</id>
+
+<id="VisShell">
+<h2 style="color:Red">VisShell</h2>
+Outside shell of a building with windows that may stencil it</p>
+</id>
+<id="RegionMarker">
+<h2 style="color:Red">RegionMarker</h2>
+To Do ......
+</id>
+
+<id="VolumeTrigger">
+<h2 style="color:Red">VolumeTrigger</h2>
+To Do ......
+</id>
+
+<id="WaterVolume">
+<h2 style="color:Red">WaterVolume</h2>
+To Do ......
+</id>
+
+<id="LavaVolume">
+<h2 style="color:Red">LavaVolume</h2>
+To Do ......
+</id>
+
+<id="DoorVolume">
+<h2 style="color:Red">DoorVolume</h2>
+To Do ......
+</id>
+
+<id="KeyLight">
+<h2 style="color:Red">KeyLight</h2>
+Light that affects player lighting direction in trays. normal omni lights only affect color.</p>
+</id>
+
+<id="SoundOccluder">
+<h2 style="color:Red">SoundOccluder</h2>
+When this flag is applied to a tray, sound can only enter the tray from a source if there is a path through portals and other trays. The same is true for sound leaving the tray.</p>
+</id>
+
+<id="CastShadow">
+<h2 style="color:Red">CastShadow</h2>
+This object will create a shadow volume</p>
+</id>
+
+<id="Sway">
+<h2 style="color:Red">Sway &lt;speed factor&gt; &lt;angle factor&gt;</h2>
+Pitch and roll the object around its pivot - used for swaying trees, grass, etc.</p>
+Ex: sway 0.5 3.3</p>
+</id>
+
+<id="SwayPitch">
+<h2 style="color:Red">SwayPitch &lt;speed factor&gt; &lt;angle factor&gt;</h2>
+<p>Pitch the object around its pivot. Can be used in conjunction with Sway or Rotate and SwayRoll.</p>
+<p>Ex: SwayPitch 0.5 3.3</p>
+</id>
+
+<id="SwayRoll">
+<h2 style="color:Red">SwayRoll &lt;speed factor&gt; &lt;angle factor&gt;</h2>
+<p>Roll the object around its pivot. Can be used in conjunction with Sway or Rotate and SwayPitch.</p>
+<p>Ex: SwayPitch 0.5 3.3</p>
+</id>
+
+<id="SwayRandomize">
+<h2 style="color:Red">SwayRandomize &lt;speed factor&gt; &lt;angle factor&gt;</h2>
+<p>Add a random amount to the sway values, varying per frame, per object. This uniformly affects Sway, SwayPitch, and SwayRoll.</p>
+<p>These are the maximum values to get added, so if you enter the following:</p>
+<p>Sway 0.2 0.5</p>
+<p>SwayRandomize 0.3 0.3</p>
+<p>The resulting values will have a speed between 0.2 and 0.5 and an angle betwen 0.5 and 0.8.</p>
+</id>
+
+<id="Rotate">
+<h2 style="color:Red">Rotate &lt;speed&gt;</h2>
+Continually yaws object around its pivot (use either this or Sway, not both)</p>
+</id>
+
+<id="RotateRandomize">
+<h2 style="color:Red">RotateRandomize &lt;speed factor&gt;</h2>
+Same rules as SwayRandomize but for Rotate</p>
+</id>
+
+<id="AlphaRef">
+<h2 style="color:Red">AlphaRef &lt;cutoff&gt;</h2>
+Adjust alpha channel from 0 to 255. The higher the value, the more opaque edges</p>
+become. Note that at 255, textures may appear completely transparent. Most desired</p>
+values seem to be around 100-200.</p>
+</id>
+
+<id="ObjTexBias">
+<h2 style="color:Red">ObjTexBias &lt;amount&gt;</h2>
+Adjust how blurry or sharp all the texture on the object are.</p>
+Ex: ObjTexBias &#45;1 (make textures draw one mip level higher - sharper)</p>
+ObjTexBias 2.5 (make textures draw 2.5 mip leves lower - very blurry)</p>
+</id>
+
+<id="NightGlow">
+<h2 style="color:Red">NightGlow &lt;start glow time&gt; &lt;end glow time&gt;</h2>
+Uses normal lighting during day, fullbright at night</p>
+Ex: NightGlow 20 4</p>
+This starts glowing at 8pm and stops at 4am.</p>
+Note that the end time must be after midnight.</p>
+</id>
+
+<id="ScrollST">
+<h2 style="color:Red">ScrollST &lt;tex unit&gt; &lt;scroll s&gt; &lt;scroll t&gt;</h2>
+Every frame, scroll the s and t of the given texture unit.</p>
+&lt;tex unit&gt; can be 0 or 1</p>
+
+<p>Ex: ScrollST 0 0.01 0</p>
+ScrollST 1 0.05 .05</p>
+This will scroll the s value of tex unit 0 0.01 every frame</p>
+</id>
+
+<id="StAnim">
+<h2 style="color:Red">StAnim &lt;speed&gt; &lt;scale&gt; &lt;anim name&gt;</h2>
+Use the given anim to modify the object's ST values every frame.
+<h3 style="color:Gray"> Speed</h3> 
+<p>adjusts how much faster/slower than normal to play the anim (1 is normal)</p>
+<h3 style="color:Gray"> Scale</h3> 
+adjusts how much to scale the motion of the anim into the st's (sts go from 0 to 1) The anim must exist in src\player_library\tscroll.txt This routine supports translating, rotating, and scaling the texture coords. To get scaling, move your anim up and down in the Y axis in 3dstudio. 10 feet up is 2x the scale, 10 feet down is 1/2x the scale. It also has two optional flags:</p>
+<h3 style="color:Gray"> Framesnap</h3> 
+&#45; don't interpolate between frames, just snap to next one
+<h3 style="color:Gray"> Pingpong</h3> 
+&#45; once you get to the end, go backwards to the beginning.
+<p>EX: StAnim 7 1 Example_TScroll_4x4_Snap FRAMESNAP</p>
+Ex: StAnim 1.2 0.1 aqua</p>
+Ex: StAnim 1.2 0.1 computer_screens FRAMESNAP</p>
+Play anim aqua 20% faster than normal, and scale the anim down 10x</p>
+<p>PS, if you want to scroll the second texture too, add a second animating object to the animation file.</p>
+(then hope the right animation gets applied to the right texture, if not, switch the names of</p>
+the two objects in the animation)</p>
+<p>PPS,</p>
+To make texture scroll animations go to src\player_library\tscroll</p>
+1. put .wrl files in ..\models,</p>
+2. modify the tscroll.txt,</p>
+3. run the two processing shortcuts "Rebuild this Anim" and "Rebuld this Sequencer".</p>
+</id>
+
+<id="Reflect">
+<h2 style="color:Red">Reflect &lt;tex unit&gt;</h2>
+Turns on chrome / shininess for the given texture unit (0 or 1)</p>
+</id>
+
+<id="SortBias">
+<h2 style="color:Red">SortBias 1.5</h2>
+&#35; Sets the distance in feet to effectively pull a Translucent object forward to make it draw on top of another object.
+</id>
+
+<id="LodNear">
+<h2 style="color:Red">LodNear</h2>
+LodNear 0 # Dont draw lod when close than this dist (only used for switching lod's)</p>
+</id>
+
+<id="LodFar">
+<h2 style="color:Red">LodFar</h2> 
+LodFar 100 # farthest distance object is full visible</p>
+</id>
+
+
+<id="LodFarFade">
+<h2 style="color:Red">LodFarFade</h2> 
+LodFarFade 10 # number of feet beyon LodFar to fade the object to translucent</p>
+</id>
+
+<id="ParentFade">
+<h2 style="color:Red">ParentFade</h2> 
+SUCKS FADE VALUE from F8 pivot obj in group
+</id>
+
+<id="TintColor0">
+<h2 style="color:Red">TintColor</h2> 
+
+TintColor0 182 108 11 
+TintColor1 255 255 255</p>
+
+Initial color a tintable object comes in with (tex1, tex2)</p>
+</id>
+
+
+<id="Flags">
+<h1 style="color:0 255 0">Flags</h1>
+<h2 style="color:128 128 128">Texture &lt;texture_name&gt </h2>
+<p>- when you see texture_name, apply these flags:You can also flag textures by directory name in the tricks files in addition to filename.
+(note you need the slashes on both sides, and don't include 'texture_libary')Texture \MAPS\</p>
+<p>Flags on lower level directories override the ones above, so if you also did this:</p>
+<p>Texture \MAPS\tech\</p>
+<p>IsBumpMap</p>
+<p>..It would ignore the Truecolor from \MAPS\</p>
+<p>The Options:</p>
+<p>Flags - all the following come after the keyword 'Flags':Jpeg Compress this texture using jpeg. Useful mainly for full screen images, since it gets good compression,but doesn't support alpha and is slower to load.</p>
+</id>
+<id="NoMip">
+<h1 style="color:Maroon">NoMip</h1>
+<p>says texure will have no mip levels and will force it to powers of 2</p>
+</id>
+
+<id="TrueColor">
+<h1 style="color:Maroon">TrueColor</h1>
+<p>Force texture to be stored uncompressed. Compressed textures take 4 or 8 bits (8 with alpha)per pixel, while uncompressed textures take 16 or 32 bits, so a good rule of thumb on when to use this option is never.</p>
+</id>
+
+<id="ClampS">
+<h1 style="color:Maroon">ClampS</h1>
+<p>Keeps the texture from repeating in the S dimension</p>
+</id>
+
+<id="ClampT">
+<h1 style="color:Maroon">ClampT</h1>
+<p>Keeps the texture from repeating in the T dimension</p>
+</id>
+
+<id="RepeatS">
+<h1 style="color:Maroon">RepeatS</h1>
+<p>Forces texture to repeat in S dimension. (Needed because player textures clamp by default)</p>
+</id>
+
+<id="RepeatT">
+<h1 style="color:Maroon">RepeatT</h1>
+<p>Forces texture to repeat in T dimension. (Needed because player textures clamp by default)</p>
+</id>
+
+<id="MirrorS">
+<h1 style="color:Maroon">MirrorS</h1>
+<p>Mirror the texture when tiling it</p>
+</id>
+
+<id="MirrorT">
+<h1 style="color:Maroon">MirrorT</h1>
+<p>Mirror the texture when tiling it</p>
+</id>
+
+<id="Replaceable">
+<h1 style="color:Maroon">Replaceable</h1>
+<p>Means this texture is a substitute for one that will be set in the game editor</p>
+</id>
+
+<id="FullBright">
+<h1 style="color:Maroon">FullBright</h1>
+<p>For MultiTextured and DualColor textures, sets the texture to FullBright (no diffuse lighting)</p>
+<p>Ex: Flags NoMip Truecolor</p>
+</id>
+
+
+<id="Fade">
+<h1 style="color:Maroon">Fade</h1>
+<p>Fade &lt;near blend&gt; &lt;far blend&gt;</p>
+<p>Controls the per-mip fade on detail textures. Detail textures are built to have an average intensity of medium grey (127 127 127.) Since they are multiplied by 2x before getting multiplied against the parent texture, this means any pixel brighted than 127 will brighten the final image, and less than 127 will darken it. Normal mipmap construction will tend to blur the smaller images to a medium gray, so you only need to use Fade for faster or slower mipmap fadeout. The first number is the amount of blend at the highest mip, and the second number is the amount of blend at the smallest mip. Since you usually want the detail texture to disappear before it's drawing the smallest mip, you can use negative numbers for the far blend. NOTE: If you add Fade to a texture after it's been processed, you need to run gettex again.</p> 
+<p>Ex: Fade 0.6 -2</p>
+</id>
+
+<id="Surface">
+<h1 style="color:Maroon">Surface</h1>
+<p>Surface &lt;string value&gt;</p>
+<p>Sets what kind of terrain this is, used to play the correct sound when characters are walking on it.</p>
+<p>Current Values:</p>
+
+<h3>    CONCRETE (the default if no sound is set)</h3>
+<h3>    GRASS</h3>
+<h3>    METAL</h3>
+<h3>    WOOD</h3>
+<h3>    LIQUID</h3>
+<h3>    GRAVEL</h3>
+</id>
+
+<id="Blend">
+<h1 style="color:Maroon">Blend</h1>
+<p>Blend &lt;texname&gt; </p>
+<p>Blending textures - whenever the named texture is found, the linked texture is automatically blended with the requested mode on any object that uses the named texture.</p>
+</id>
+
+<id="BlendType">
+<h1 style="color:Maroon">BlendType</h1>
+<p>BlendType &lt;blend type&gt; </p>
+<p>In conjunction with 'Blend' tells how to blend the second texture:</p>
+
+<h3>Multiply</h3>
+<p>Multiply just takes all the components of both textures, and multiplies them together.</p>
+<p>NOTE: the second texture gets multiplied by two, then times the first texture</p>
+<p>result_rgb = tex0_rgb * tex1_rgb * 2</p>
+<p>result_alpha = tex0_alpha * tex1_alpha</p>
+<p>Ex: Multiply ocean_tex2.tga</p>
+
+<h3>AlphaDetail</h3>
+<p>AlphaDetail uses the alpha of the first texture to control the blend between the two textures.</p>
+<p>result_rgb = tex0_rgb * (tex0_alpha) + tex1_rgb * (1-tex0_alpha)</p>
+<p>result_alpha = tex0_alpha</p>
+
+<h3>ColorBlendDual</h3>
+<p>First tex alpha controls amount of color tint, second tex color blends between 2 constant colors.Second tex alpha is frame buffer alpha, no fogging for this blend mode. (cant use it on buildings)
+</p>result_rgb = (tex0alpha * tex0rgb + (1-tex0alpha) * (c0 * tex1rgb + c1 * (1-tex1rgb))) * (diffuse * 4)</p>
+<p>result_alpha = tex1alpha</p>
+
+<h3>AddGlow</h3>
+<p>First tex alpha controls color tint, second tex color added to result with no lighting result_rgb = (tex0alpha * tex0rgb + (1-tex0alpha) * c0) * (diffuse * 4) + tex1rgb result_alpha = 1</p>
+<p>Ex: BlendType Multiply</p>
+</id>
+
+<id="Scale">
+<h1 style="color:Maroon">Scale</h1>
+<p>Scale &lt;amount&gt;</p>
+<p>How many times to scale the ST coords of a linked texture. 2 would make it tile twice as much as the parent texture, 0.5 half as much.</p>
+</id>
+
+<id="ScaleST0">
+<h1 style="color:Maroon">ScaleST</h1>
+<p>ScaleST0 &lt;S amount&gt; &lt;T amount&gt;</p>
+<p>How many times to scale the ST coords of a linked texture. ScaleST0 2 2 would make it tile twice as much as the parent texture, ScaleST0 0.5 0.5 half as much</p>
+</id>
+
+<id="ScaleST1">
+<h1 style="color:Maroon">ScaleST</h1>
+<p>ScaleST1 &lt;S amount&gt; &lt;T amount&gt;</p>
+<p>How many times to scale the ST coords of a linked texture. ScaleST1 2 2 would make it tile twice as much as the parent texture, ScaleST1 0.5 0.5 half as much</p>
+</id>
+
+<id="BumpMap">
+<h1 style="color:Maroon">BumpMap</h1>
+<p>BumpMap &lt;texname&gt;</p>
+Specifies this texture has the named bumpmap texture
+</id>
+
+<id="IsBumpMap">
+<h1 style="color:Red">IsBumpMap</h1>
+<p>To Do ....</p>
+</id>
+
+<id="Jpeg">
+<h1 style="color:Red">Jpeg</h1>
+<p>To Do ....</p>
+</id>
+
+<id="SurfaceIcy">
+<h1 style="color:Red">SurfaceIcy</h1>
+<p>To Do ....</p>
+</id>
+
+<id="SurfaceSlick">
+<h1 style="color:Red">SurfaceSlick</h1>
+<p>To Do ....</p>
+</id>
+
+<id="SurfaceBouncy">
+<h1 style="color:Red">SurfaceBouncy</h1>
+<p>To Do ....</p>
+</id>
+
+<id="PointSample">
+<h1 style="color:Red">PointSample</h1>
+<p>To Do ....</p>
+</id>
+
+<id="Border">
+<h1 style="color:Red">Border</h1>
+<p>To Do ....</p>
+</id>
+
+<id="NoDither">
+<h1 style="color:Red">NoDither</h1>
+<p>To Do ....</p>
+</id>
+
+<id="NoRandomAddGlow">
+<h1 style="color:Red">NoRandomAddGlow</h1>
+<p>To Do ....</p>
+</id>
+
+<id="FallbackForceOpaque">
+<h1 style="color:Red">FallbackForceOpaque</h1>
+<p>To Do ....</p>
+</id>
+
+<id="OldTint">
+<h1 style="color:Red">OldTint</h1>
+<p>To Do ....</p>
+</id>
+
+<id="AlwaysAddGlow">
+<h1 style="color:Red">AlwaysAddGlow</h1>
+<p>To Do ....</p>
+</id>
+
+<!--
+
+
+
+<h2><a name="TrickFilesandFlags-Texture%3Ctexturename%3Ewhenyouseetexturename%2Capplytheseflags%3A"></a><b>Texture &lt;texture_name&gt; - when you see texture_name, apply these flags:</b></h2>
+
+<p>You can also flag textures by directory name in the tricks files in addition to filename.</p>
+(note you need the slashes on both sides, and don't include 'texture_libary')</p>
+
+<p>Texture \MAPS\</p>
+Truecolor</p>
+Flags on lower level directories override the ones above, so if you also did this:</p>
+
+<p>Texture \MAPS\tech\</p>
+IsBumpMap</p>
+
+<p>..It would ignore the Truecolor from \MAPS\</p>
+
+<h2><a name="TrickFilesandFlags-TheOptions%3A"></a>The Options:</h2>
+
+<h2 style="color:Red">Flags</b> &#45; all the following come after the keyword 'Flags':Jpeg</p>
+Compress this texture using jpeg. Useful mainly for full screen images, since it gets good compression,but doesn't support alpha and is slower to load.</p>
+
+<h2 style="color:Red">NoMip</h2>
+says texure will have no mip levels and will force it to powers of 2</p>
+
+<h2 style="color:Red">TrueColor</h2>
+Force texture to be stored uncompressed. Compressed textures take 4 or 8 bits (8 with alpha)per pixel, while</p>
+uncompressed textures take 16 or 32 bits, so a good rule of thumb on when to use this option is never.</p>
+
+<h2 style="color:Red">ClampS</h2>
+<b>ClampT</h2>
+Keeps the texture from repeating in the S or T dimension</p>
+<b>RepeatS</h2>
+<b>RepeatT</h2>
+Forces texture to repeat in S or T dimension. (Needed because player textures clamp by default)</p>
+
+<h2 style="color:Red">MirrorS</h2>
+<b>MirrorT</h2>
+Mirror the texture when tiling it</p>
+
+<h2 style="color:Red">Replaceable</h2>
+Means this texture is a substitute for one that will be set in the game editor</p>
+
+<h2 style="color:Red">FullBright</h2>
+For MultiTextured and DualColor textures, sets the texture to FullBright (no diffuse lighting)</p>
+
+<p>Ex: Flags NoMip Truecolor</p>
+
+<h2 style="color:Red">Fade &lt;near blend&gt; &lt;far blend&gt;</h2>
+Controls the per-mip fade on detail textures. Detail textures are built to have an average intensity</p>
+of medium grey (127 127 127.) Since they are multiplied by 2x before getting multiplied against the</p>
+parent texture, this means any pixel brighted than 127 will brighten the final image, and less than</p>
+127 will darken it. Normal mipmap construction will tend to blur the smaller images to a medium gray,</p>
+so you only need to use Fade for faster or slower mipmap fadeout. The first number is the amount of</p>
+blend at the highest mip, and the second number is the amount of blend at the smallest mip. Since</p>
+you usually want the detail texture to disappear before it's drawing the smallest mip, you can use</p>
+negative numbers for the far blend.</p>
+
+<p><b>NOTE:</b> If you add Fade to a texture after it's been processed, you need to run gettex again.</p>
+Ex: Fade 0.6 &#45;2</p>
+
+<h2 style="color:Red">Surface &lt;string value&gt;</h2>
+Sets what kind of terrain this is, used to play the correct sound when characters are walking on it.</p>
+Current Values:</p>
+
+<p>CONCRETE (the default if no sound is set)</p>
+GRASS</p>
+METAL</p>
+WOOD</p>
+LIQUID</p>
+GRAVEL</p>
+
+<h2 style="color:Red">Blend &lt;texname&gt;</h2>
+Blending textures - whenever the named texture is found, the linked texture is automatically blended with the requested mode on any object that uses the named texture.</p>
+
+<h2 style="color:Red">BlendType &lt;blend type&gt;</h2>
+In conjunction with 'Blend' tells how to blend the second texture:</p>
+
+<h2 style="color:Red">Multiply</h2>
+Multiply just takes all the components of both textures, and multiplies them together.</p>
+
+<p>NOTE: the second texture gets multiplied by two, then times the first texture</p>
+result_rgb = tex0_rgb * tex1_rgb * 2</p>
+result_alpha = tex0_alpha * tex1_alpha</p>
+Ex: Multiply ocean_tex2.tga</p>
+
+<h2 style="color:Red">AlphaDetail</h2>
+AlphaDetail uses the alpha of the first texture to control the blend between the two textures.</p>
+result_rgb = tex0_rgb * (tex0_alpha) + tex1_rgb * (1-tex0_alpha)</p>
+result_alpha = tex0_alpha</p>
+
+<h2 style="color:Red">ColorBlendDual</h2>
+First tex alpha controls amount of color tint, second tex color blends between 2 constant colors.</p>
+Second tex alpha is frame buffer alpha, no fogging for this blend mode. (cant use it on buildings)</p>
+
+<h2 style="color:Red">result_rgb</b> = (tex0alpha * tex0rgb + (1-tex0alpha) * (c0 * tex1rgb + c1 * (1-tex1rgb))) * (diffuse * 4)</p>
+<b>result_alpha</b> = tex1alpha</p>
+
+<h2 style="color:Red">AddGlow</h2>
+First tex alpha controls color tint, second tex color added to result with no lighting result_rgb = (tex0alpha * tex0rgb + (1-tex0alpha) * c0) * (diffuse * 4) + tex1rgb result_alpha = 1</p>
+
+<p>Ex: BlendType Multiply</p>
+
+<h2 style="color:Red">Scale &lt;amount&gt;</h2>
+How many times to scale the ST coords of a linked texture. 2 would make it tile twice as much as the parent texture, 0.5 half as much.</p>
+
+<h2 style="color:Red">ScaleST &lt;S amount&gt; &lt;T amount&gt;</h2>
+Same as scale except scales them independently</p>
+
+<h2 style="color:Red">BumpMap &lt;texname&gt;</h2>
+Specifies this texture has the named bumpmap texture</p>
+<div class="code panel" style="border-style: solid;border-width: 1px;"><div class="codeContent panelContent">
+<pre class="code-java">Trick &lt;name_of_trick&gt;
+Groupflags VisOutside VisTray
+ObjFlags ForceOpaque
+End
+</pre>
+</div></div>
+<p>VisOutside to be used in conjunction with the groupflag VisTray</p>
+This is then placed on a transtion tray that connects a normal tray and an outside level. This makes it so that you can see into a normal tray set from the outside world, and vice-versa. Conor has the details if you have any questions. This is pretty significant because it means our mission sets can now be used in outside levels.</p>
+
+<p>See MultiTexture.txt for information on the new multi texture scheme</p>
+
+<h2><a name="TrickFilesandFlags-LEGACYFLAGSTHESEFLAGSSHOULDNOLONGERBEUSED"></a>LEGACY FLAGS - THESE FLAGS SHOULD NO LONGER BE USED</h2>
+
+
+<h2><a name="TrickFilesandFlags-TRICKFLAGS"></a>TRICK FLAGS</h2>
+
+<h2 style="color:Red">NoDraw</h2>
+Dont draw it.</p>
+
+<h2 style="color:Red">SimpleAlphaSort</h2>
+Does not take into account the radius of the object when alpha sorting. This sorting occurs from the camera to the center of the object. This is an old trick and in place of this trick the sortbias trick should be used in its place.</p>
+
+<h2 style="color:Red">FancyWaterOffOnly</h2>
+Only draw if fancy water is turned off (used for turning off the water bottom when murky water is turned on)</p>
+
+<h2 style="color:Red">LightmapsOffOnly</h2>
+Only draw if lightmaps are turned off or are not available (used for turning off baked-in shadows when lightmaps are on)</p>
+
+<h2><a name="TrickFilesandFlags-OBJECTFLAGS"></a>OBJECT FLAGS</h2>
+
+<h2 style="color:Red">ForceOpaque</h2>
+Force an object to be sorted as though it were opaque whether or not it has alpha textures on it. Should use alpha cutout instead of this trick.An example of an object that uses this old trick are the manholes. To be created properly they should be split into two objects and alpha cut out.</p>
+
+<h2 style="color:Red">ForceAlphaSort</h2>
+Opposite of ForceOpaque. Add the ForceAlphaSort trick to see-through geometry on animations.</p>
+
+<h2 style="color:Red">TreeDraw</h2>
+Special way to draw fuzzy tree branches without too much alpha sort nastiness. Alpha cutout should be used instead of this trick.</p>
+
+-->
+        
+</body>
+</html>

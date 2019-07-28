@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<VisualStudioPropertySheet
+	ProjectType="Visual C++"
+	Version="8.00"
+	Name="MissionServer"
+	>
+	<Tool
+		Name="VCCLCompilerTool"
+		AdditionalOptions="/wd 4389 /wd 4701"
+		AdditionalIncludeDirectories=".;.\AutoGen;..\ServerLib;..\dbserver;..\Common\persist;..\common\entity;..\common\version;..\common\utils;..\Common\turnstileserver;..\common;..\libs\UtilitiesLib\UtilsNew"
+		PreprocessorDefinitions="TURNSTILESERVER;PROJECT_TURNSTILESERVER;SECURE_STRINGS;WIN32;_CONSOLE"
+	/>
+	<Tool
+		Name="VCPreBuildEventTool"
+		CommandLine="..\utilities\bin\structparser X $(InputDir) X $(InputFileName) X $(PlatformName) X $(ConfigurationName) X $(VCInstallDir) X $(SolutionPath)"
+	/>
+</VisualStudioPropertySheet>

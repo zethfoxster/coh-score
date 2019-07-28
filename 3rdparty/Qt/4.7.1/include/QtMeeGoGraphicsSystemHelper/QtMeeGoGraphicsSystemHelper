@@ -1,0 +1,9 @@
+#ifndef QT_QTMEEGOGRAPHICSSYSTEMHELPER_MODULE_H
+#define QT_QTMEEGOGRAPHICSSYSTEMHELPER_MODULE_H
+#include <QtGui/QtGui>
+#include "qmeegographicssystemhelper.h"
+#include "qmeegoliveimage.h"
+#include "qmeegolivepixmap.h"
+#include "qmeegooverlaywidget.h"
+#include "qmeegoruntime.h"
+#endif

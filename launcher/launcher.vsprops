@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<VisualStudioPropertySheet
+	ProjectType="Visual C++"
+	Version="8.00"
+	Name="launcher"
+	>
+	<Tool
+		Name="VCCLCompilerTool"
+		AdditionalIncludeDirectories="../libs\UtilitiesLib\utils;../libs/UtilitiesLib\assert;../libs/UtilitiesLib/components;../libs/UtilitiesLib;../libs/UtilitiesLib/network;../libs/UtilitiesLib/language;../libs/UtilitiesLib/version;../3rdparty/zlibsrc;../common/utils;../common/components;../common/network;../common/entity;../common/auction;../common;../3rdparty/cryptopp;..\common\network;../dbserver"
+		PreprocessorDefinitions="SECURE_STRINGS;WIN32;_CONSOLE"
+	/>
+	<Tool
+		Name="VCLinkerTool"
+		AdditionalDependencies="psapi.lib kernel32.lib user32.lib uuid.lib shell32.lib advapi32.lib gdi32.lib $(NOINHERIT)"
+	/>
+</VisualStudioPropertySheet>

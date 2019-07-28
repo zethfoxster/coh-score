@@ -1,0 +1,263 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Full Debug|Win32">
+      <Configuration>Full Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Full Debug|x64">
+      <Configuration>Full Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Opt Debug|Win32">
+      <Configuration>Opt Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Opt Debug|x64">
+      <Configuration>Opt Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{661BE18B-FA52-4529-BB46-A2438C384F4E}</ProjectGuid>
+    <RootNamespace>dbserver</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Opt Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Full Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Opt Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Full Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Opt Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\PropertySheets\Common.props" />
+    <Import Project="..\PropertySheets\OptDebug.props" />
+    <Import Project="dbserver.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Full Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\PropertySheets\Common.props" />
+    <Import Project="..\PropertySheets\FullDebug.props" />
+    <Import Project="dbserver.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\PropertySheets\Common.props" />
+    <Import Project="..\PropertySheets\Debug.props" />
+    <Import Project="dbserver.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Opt Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\PropertySheets\Common.props" />
+    <Import Project="..\PropertySheets\x64.props" />
+    <Import Project="..\PropertySheets\OptDebug.props" />
+    <Import Project="dbserver.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Full Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\PropertySheets\Common.props" />
+    <Import Project="..\PropertySheets\x64.props" />
+    <Import Project="..\PropertySheets\FullDebug.props" />
+    <Import Project="dbserver.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\PropertySheets\Common.props" />
+    <Import Project="..\PropertySheets\x64.props" />
+    <Import Project="..\PropertySheets\Debug.props" />
+    <Import Project="dbserver.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Link />
+    <ClCompile />
+    <ClCompile />
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Link>
+      <AdditionalLibraryDirectories>../3rdparty/bin/vc10/x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="accountservercomm.c" />
+    <ClCompile Include="arenacomm.c" />
+    <ClCompile Include="..\Common\auction\Auction.c" />
+    <ClCompile Include="auctionservercomm.c" />
+    <ClCompile Include="..\Common\auth\auth.c" />
+    <ClCompile Include="authcomm.c" />
+    <ClCompile Include="..\common\auth\authUserData.c" />
+    <ClCompile Include="backup.c" />
+    <ClCompile Include="beaconservercomm.c" />
+    <ClCompile Include="chatrelay.c" />
+    <ClCompile Include="clientcomm.c" />
+    <ClCompile Include="container.c" />
+    <ClCompile Include="container_diff.c">
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Default</BasicRuntimeChecks>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Default</BasicRuntimeChecks>
+    </ClCompile>
+    <ClCompile Include="container_flatfile.c" />
+    <ClCompile Include="container_merge.c">
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Default</BasicRuntimeChecks>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Default</BasicRuntimeChecks>
+    </ClCompile>
+    <ClCompile Include="container_sql.c">
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Default</BasicRuntimeChecks>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Default</BasicRuntimeChecks>
+    </ClCompile>
+    <ClCompile Include="container_tplt.c">
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Default</BasicRuntimeChecks>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Default</BasicRuntimeChecks>
+    </ClCompile>
+    <ClCompile Include="container_tplt_utils.c">
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Default</BasicRuntimeChecks>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Default</BasicRuntimeChecks>
+    </ClCompile>
+    <ClCompile Include="..\common\container\container_util.c" />
+    <ClCompile Include="..\Common\container\containerEventHistory.c" />
+    <ClCompile Include="dbdispatch.c" />
+    <ClCompile Include="dbEventHistory.c" />
+    <ClCompile Include="dbimport.c" />
+    <ClCompile Include="dbinit.c" />
+    <ClCompile Include="dblog.c" />
+    <ClCompile Include="dbmission.c" />
+    <ClCompile Include="dbmsg.c" />
+    <ClCompile Include="dbperf.c" />
+    <ClCompile Include="dbproxy.c" />
+    <ClCompile Include="dbproxyrelay.c" />
+    <ClCompile Include="dbrelay.c" />
+    <ClCompile Include="doors.c" />
+    <ClCompile Include="launchercomm.c" />
+    <ClCompile Include="loadBalancing.c" />
+    <ClCompile Include="logserver.c" />
+    <ClCompile Include="mapcrashreport.c" />
+    <ClCompile Include="mapxfer.c" />
+    <ClCompile Include="missionservercomm.c" />
+    <ClCompile Include="namecache.c" />
+    <ClCompile Include="offline.c" />
+    <ClCompile Include="queueservercomm.c" />
+    <ClCompile Include="serverAutoStart.c" />
+    <ClCompile Include="servercfg.c" />
+    <ClCompile Include="sql_fifo.c" />
+    <ClCompile Include="statagg.c" />
+    <ClCompile Include="..\MapServer\dbcomm\staticMapInfo.c" />
+    <ClCompile Include="statservercomm.c" />
+    <ClCompile Include="status.c" />
+    <ClCompile Include="svrmoncomm.c" />
+    <ClCompile Include="turnstileDb.c" />
+    <ClCompile Include="waitingEntities.c" />
+    <ClCompile Include="weeklyTFcfg.c" />
+    <ClCompile Include="..\Common\auction\Xact.c" />
+    <ClCompile Include="..\Common\account\AccountData.c" />
+    <ClCompile Include="..\Common\ClientLogin\clientcommLogin.c" />
+    <ClCompile Include="..\Common\MissionSearch.c" />
+    <ClCompile Include="..\Common\MissionServer\missionserver_meta.c" />
+    <ClCompile Include="..\Common\TurnstileServer\TurnstileCommon.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="accountservercomm.h" />
+    <ClInclude Include="..\Common\auction\Auction.h" />
+    <ClInclude Include="auctionservercomm.h" />
+    <ClInclude Include="beaconservercomm.h" />
+    <ClInclude Include="dbproxy.h" />
+    <ClInclude Include="dbproxyrelay.h" />
+    <ClInclude Include="..\Common\entity\gametypes.h" />
+    <ClInclude Include="loadBalancing.h" />
+    <ClInclude Include="missionservercomm.h" />
+    <ClInclude Include="queueservercomm.h" />
+    <ClInclude Include="serverAutoStart.h" />
+    <ClInclude Include="statagg.h" />
+    <ClInclude Include="turnstileDb.h" />
+    <ClInclude Include="..\Common\auction\Xact.h" />
+    <ClInclude Include="..\MapServer\entity\SgrpStats.h" />
+    <ClInclude Include="..\Common\account\AccountData.h" />
+    <ClInclude Include="..\Common\ClientLogin\clientcommLogin.h" />
+    <ClInclude Include="..\Common\container\containerEventHistory.h" />
+    <ClInclude Include="..\Common\MissionSearch.h" />
+    <ClInclude Include="..\Common\MissionServer\missionserver_meta.h" />
+    <ClInclude Include="arenacomm.h" />
+    <ClInclude Include="..\Common\auth\auth.h" />
+    <ClInclude Include="authcomm.h" />
+    <ClInclude Include="..\Common\auth\authconn.h" />
+    <ClInclude Include="..\common\auth\authUserData.h" />
+    <ClInclude Include="backup.h" />
+    <ClInclude Include="chatrelay.h" />
+    <ClInclude Include="clientcomm.h" />
+    <ClInclude Include="..\Common\comm_backend.h" />
+    <ClInclude Include="container.h" />
+    <ClInclude Include="container_diff.h" />
+    <ClInclude Include="container_flatfile.h" />
+    <ClInclude Include="container_merge.h" />
+    <ClInclude Include="container_sql.h" />
+    <ClInclude Include="container_tplt.h" />
+    <ClInclude Include="container_tplt_utils.h" />
+    <ClInclude Include="..\common\container\container_util.h" />
+    <ClInclude Include="dbdispatch.h" />
+    <ClInclude Include="dbEventHistory.h" />
+    <ClInclude Include="dbimport.h" />
+    <ClInclude Include="dbinit.h" />
+    <ClInclude Include="dblog.h" />
+    <ClInclude Include="dbmission.h" />
+    <ClInclude Include="dbmsg.h" />
+    <ClInclude Include="dbperf.h" />
+    <ClInclude Include="dbrelay.h" />
+    <ClInclude Include="doors.h" />
+    <ClInclude Include="launchercomm.h" />
+    <ClInclude Include="logserver.h" />
+    <ClInclude Include="mapcrashreport.h" />
+    <ClInclude Include="mapxfer.h" />
+    <ClInclude Include="namecache.h" />
+    <ClInclude Include="offline.h" />
+    <ClInclude Include="..\launcher\performance.h" />
+    <ClInclude Include="servercfg.h" />
+    <ClInclude Include="sql_fifo.h" />
+    <ClInclude Include="..\MapServer\dbcomm\staticMapInfo.h" />
+    <ClInclude Include="statservercomm.h" />
+    <ClInclude Include="status.h" />
+    <ClInclude Include="svrmoncomm.h" />
+    <ClInclude Include="..\Common\TurnstileServer\TurnstileCommon.h" />
+    <ClInclude Include="waitingEntities.h" />
+    <ClInclude Include="weeklyTFcfg.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\libs\UtilitiesLib\UtilitiesLib.vcxproj">
+      <Project>{a6741f6e-5476-4f9f-9d65-62b54aaf1d08}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

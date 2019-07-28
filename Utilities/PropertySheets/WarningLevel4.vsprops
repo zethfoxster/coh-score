@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="shift_jis"?>
+<VisualStudioPropertySheet
+	ProjectType="Visual C++"
+	Version="8.00"
+	Name="WarningLevel4"
+	>
+	<Tool
+		Name="VCCLCompilerTool"
+		WarningLevel="4"
+	/>
+	<Tool
+		Name="VCCLX360CompilerTool"
+		WarningLevel="4"
+	/>
+</VisualStudioPropertySheet>

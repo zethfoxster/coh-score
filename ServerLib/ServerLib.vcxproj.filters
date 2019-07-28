@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="External">
+      <UniqueIdentifier>{1aab1329-5096-4554-a86b-b1ed578d43d8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="External\persist">
+      <UniqueIdentifier>{d0a5eb86-333b-4e52-aa22-b0092ccdfca9}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="serverlib.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\ServerLib\serverlib_meta.h">
+      <Filter>External</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\persist\persist.h">
+      <Filter>External\persist</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\persist\persist_diffbig.h">
+      <Filter>External\persist</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\persist\persist_diffsmall.h">
+      <Filter>External\persist</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\persist\persist_flat.h">
+      <Filter>External\persist</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\persist\persist_internal.h">
+      <Filter>External\persist</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\persist\textcrcdb.h">
+      <Filter>External\persist</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\persist\textcrcjournal.h">
+      <Filter>External\persist</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="serverlib_main.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\ServerLib\serverlib_meta.c">
+      <Filter>External</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\persist\persist.c">
+      <Filter>External\persist</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\persist\persist_diffbig.c">
+      <Filter>External\persist</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\persist\persist_diffsmall.c">
+      <Filter>External\persist</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\persist\persist_flat.c">
+      <Filter>External\persist</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\persist\textcrcdb.c">
+      <Filter>External\persist</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\persist\textcrcjournal.c">
+      <Filter>External\persist</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

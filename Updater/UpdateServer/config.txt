@@ -1,0 +1,305 @@
+// NOTE: This config.txt should be in the same folder as updateserver.exe and is crippled
+// due to the deprecation of CohUpdater.  But, the updateserver is still needed to redirect
+// returning players and new players who may still use CohUpdater
+
+// 
+Project
+{
+	Name		"Coh Updater"
+	NoUpdate	1
+	Current		0.0.0
+	AllowIp		*.*.*.*
+	PatchRecent	0
+	NoSyncDelete	1
+}
+
+
+Project
+{
+	Name		"Coh"
+	NoUpdate	1
+	Current		0.0.0
+	AllowIp		*.*.*.*
+	PatchRecent	0
+	NoSyncDelete	1
+
+	RegKey
+	{
+		name	WebPage
+		Value	http://na.cityofheroes.com/en/updater/live.html
+	}
+	RegKey
+	{
+		name	WebPageEnglish
+		Value	http://na.cityofheroes.com/en/updater/live.html
+	}
+	RegKey
+	{
+		name	EulaWebPage
+		Value	http://na.cityofheroes.com/en/updater/live.html
+	}
+	RegKey
+	{
+		name	EulaWebPageEnglish
+		Value	http://na.cityofheroes.com/en/updater/live.html
+	}
+}
+
+Project
+{
+	Name		"euCoh"
+	NoUpdate	1
+	Current		0.0.0
+	AllowIp		*.*.*.*
+	PatchRecent	0
+	NoSyncDelete	1
+
+	RegKey
+	{
+		name	WebPage
+		Value	http://eu.cityofheroes.com/uk/updater/live.html
+	}
+	RegKey
+	{
+		name	WebPageEnglish
+		Value	http://eu.cityofheroes.com/uk/updater/live.html
+	}
+	RegKey
+	{
+		name	WebPageFrench
+		Value	http://eu.cityofheroes.com/fr/updater/live.html
+	}
+	RegKey
+	{
+		name	WebPageGerman
+		Value	http://eu.cityofheroes.com/de/updater/live.html
+	}
+	RegKey
+	{
+		name	EulaWebPage
+		Value	http://eu.cityofheroes.com/uk/updater/live.html
+	}
+	RegKey
+	{
+		name	EulaWebPageEnglish
+		Value	http://eu.cityofheroes.com/uk/updater/live.html
+	}
+	RegKey
+	{
+		name	EulaPageFrench
+		Value	http://eu.cityofheroes.com/fr/updater/live.html
+	}
+	RegKey
+	{
+		name	EulaPageGerman
+		Value	http://eu.cityofheroes.com/de/updater/live.html
+	}
+}
+
+
+Project
+{
+	Name		"CohTest"
+	NoUpdate	1
+	Current		0.0.0
+	AllowIp		*.*.*.*
+	PatchRecent	0
+	NoSyncDelete	1
+
+	RegKey
+	{
+		name	WebPage
+		Value	http://eu.cityofheroes.com/uk/updater/live.html
+	}
+	RegKey
+	{
+		name	WebPageEnglish
+		Value	http://eu.cityofheroes.com/uk/updater/live.html
+	}
+	RegKey
+	{
+		name	WebPageFrench
+		Value	http://eu.cityofheroes.com/fr/updater/live.html
+	}
+	RegKey
+	{
+		name	WebPageGerman
+		Value	http://eu.cityofheroes.com/de/updater/live.html
+	}
+	RegKey
+	{
+		name	EulaWebPage
+		Value	http://eu.cityofheroes.com/uk/updater/live.html
+	}
+	RegKey
+	{
+		name	EulaWebPageEnglish
+		Value	http://eu.cityofheroes.com/uk/updater/live.html
+	}
+	RegKey
+	{
+		name	EulaPageFrench
+		Value	http://eu.cityofheroes.com/fr/updater/live.html
+	}
+	RegKey
+	{
+		name	EulaPageGerman
+		Value	http://eu.cityofheroes.com/de/updater/live.html
+	}
+}
+
+Project
+{
+	Name		"euCohTest"
+	NoUpdate	1
+	Current		0.0.0
+	AllowIp		*.*.*.*
+	PatchRecent	0
+	NoSyncDelete	1
+
+	RegKey
+	{
+		name	WebPage
+		Value	http://eu.cityofheroes.com/uk/updater/live.html
+	}
+	RegKey
+	{
+		name	WebPageEnglish
+		Value	http://eu.cityofheroes.com/uk/updater/live.html
+	}
+	RegKey
+	{
+		name	WebPageFrench
+		Value	http://eu.cityofheroes.com/fr/updater/live.html
+	}
+	RegKey
+	{
+		name	WebPageGerman
+		Value	http://eu.cityofheroes.com/de/updater/live.html
+	}
+	RegKey
+	{
+		name	EulaWebPage
+		Value	http://eu.cityofheroes.com/uk/updater/live.html
+	}
+	RegKey
+	{
+		name	EulaWebPageEnglish
+		Value	http://eu.cityofheroes.com/uk/updater/live.html
+	}
+	RegKey
+	{
+		name	EulaPageFrench
+		Value	http://eu.cityofheroes.com/fr/updater/live.html
+	}
+	RegKey
+	{
+		name	EulaPageGerman
+		Value	http://eu.cityofheroes.com/de/updater/live.html
+	}
+}
+
+
+Project
+{
+	Name		"CohBeta"
+	NoUpdate	1
+	Current		0.0.0
+	AllowIp		*.*.*.*
+	PatchRecent	0
+	NoSyncDelete	1
+
+	RegKey
+	{
+		name	WebPage
+		Value	http://eu.cityofheroes.com/uk/updater/live.html
+	}
+	RegKey
+	{
+		name	WebPageEnglish
+		Value	http://eu.cityofheroes.com/uk/updater/live.html
+	}
+	RegKey
+	{
+		name	WebPageFrench
+		Value	http://eu.cityofheroes.com/fr/updater/live.html
+	}
+	RegKey
+	{
+		name	WebPageGerman
+		Value	http://eu.cityofheroes.com/de/updater/live.html
+	}
+	RegKey
+	{
+		name	EulaWebPage
+		Value	http://eu.cityofheroes.com/uk/updater/live.html
+	}
+	RegKey
+	{
+		name	EulaWebPageEnglish
+		Value	http://eu.cityofheroes.com/uk/updater/live.html
+	}
+	RegKey
+	{
+		name	EulaPageFrench
+		Value	http://eu.cityofheroes.com/fr/updater/live.html
+	}
+	RegKey
+	{
+		name	EulaPageGerman
+		Value	http://eu.cityofheroes.com/de/updater/live.html
+	}
+}
+
+Project
+{
+	Name		"euCohBeta"
+	NoUpdate	1
+	Current		0.0.0
+	AllowIp		*.*.*.*
+	PatchRecent	0
+	NoSyncDelete	1
+
+	RegKey
+	{
+		name	WebPage
+		Value	http://eu.cityofheroes.com/uk/updater/live.html
+	}
+	RegKey
+	{
+		name	WebPageEnglish
+		Value	http://eu.cityofheroes.com/uk/updater/live.html
+	}
+	RegKey
+	{
+		name	WebPageFrench
+		Value	http://eu.cityofheroes.com/fr/updater/live.html
+	}
+	RegKey
+	{
+		name	WebPageGerman
+		Value	http://eu.cityofheroes.com/de/updater/live.html
+	}
+	RegKey
+	{
+		name	EulaWebPage
+		Value	http://eu.cityofheroes.com/uk/updater/live.html
+	}
+	RegKey
+	{
+		name	EulaWebPageEnglish
+		Value	http://eu.cityofheroes.com/uk/updater/live.html
+	}
+	RegKey
+	{
+		name	EulaPageFrench
+		Value	http://eu.cityofheroes.com/fr/updater/live.html
+	}
+	RegKey
+	{
+		name	EulaPageGerman
+		Value	http://eu.cityofheroes.com/de/updater/live.html
+	}
+}
+
+

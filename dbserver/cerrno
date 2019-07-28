@@ -1,0 +1,4 @@
+#ifdef CLIENT
+#pragma message("You've added MapServer or DbServer to the game's includes!  The game project can only include from Game/ and Common/")
+"You've added MapServer or DbServer to the game's includes!  The game project can only include from Game/ and Common/";
+#endif

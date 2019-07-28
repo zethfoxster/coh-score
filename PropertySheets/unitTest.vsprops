@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<VisualStudioPropertySheet
+	ProjectType="Visual C++"
+	Version="8.00"
+	Name="unitTest"
+	OutputDirectory="$(ProjectDir)..\bin\UnitTest\$(PlatformName)\$(ConfigurationName)\"
+	IntermediateDirectory="$(ProjectDir)$(PlatformName)\$(ConfigurationName)"
+	>
+	<Tool
+		Name="VCCLCompilerTool"
+		AdditionalIncludeDirectories="..\3rdParty\UnitTest++\src"
+		PreprocessorDefinitions="WIN32;_CONSOLE;NO_TEXT_PARSER;UNITTEST"
+		BasicRuntimeChecks="0"
+		Detect64BitPortabilityProblems="true"
+	/>
+	<Tool
+		Name="VCLinkerTool"
+		AdditionalDependencies="psapi.lib"
+		OutputFile="$(OutDir)$(ProjectName).exe"
+		AdditionalLibraryDirectories=""
+		IgnoreDefaultLibraryNames=""
+	/>
+	<Tool
+		Name="VCPostBuildEventTool"
+		Description="Running $(TargetName)"
+		CommandLine="&quot;$(TargetPath)&quot;&#x0D;&#x0A;if errorlevel 1 del &quot;$(TargetPath)&quot;&#x0D;&#x0A;"
+	/>
+</VisualStudioPropertySheet>

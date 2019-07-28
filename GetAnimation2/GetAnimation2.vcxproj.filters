@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{1b912ccb-a918-4412-b589-b0700c4acbd8}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;def;odl;idl;hpj;bat;asm</Extensions>
+    </Filter>
+    <Filter Include="Source Files\GetAnimation">
+      <UniqueIdentifier>{63391de8-4e29-4396-9da5-96db0fc87144}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\FromGetVrml">
+      <UniqueIdentifier>{2e816f71-744f-4c80-81d7-ef9a064bd075}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Common">
+      <UniqueIdentifier>{521966c7-55eb-4076-9676-6112f9d8d507}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{cc9391de-2e74-4a1f-a86c-0112f6759423}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="mainanim.c">
+      <Filter>Source Files\GetAnimation</Filter>
+    </ClCompile>
+    <ClCompile Include="outputanim.c">
+      <Filter>Source Files\GetAnimation</Filter>
+    </ClCompile>
+    <ClCompile Include="process_animx.c">
+      <Filter>Source Files\GetAnimation</Filter>
+    </ClCompile>
+    <ClCompile Include="process_skelx.c">
+      <Filter>Source Files\GetAnimation</Filter>
+    </ClCompile>
+    <ClCompile Include="process_vrml.c">
+      <Filter>Source Files\GetAnimation</Filter>
+    </ClCompile>
+    <ClCompile Include="processanim.c">
+      <Filter>Source Files\GetAnimation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\GetVrml\tree.c">
+      <Filter>Source Files\FromGetVrml</Filter>
+    </ClCompile>
+    <ClCompile Include="..\GetVrml\vrml.c">
+      <Filter>Source Files\FromGetVrml</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\seq\animtrack.c">
+      <Filter>Source Files\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\seq\animtrackanimate.c">
+      <Filter>Source Files\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\seq\bones.c">
+      <Filter>Source Files\Common</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="outputanim.h">
+      <Filter>Source Files\GetAnimation</Filter>
+    </ClInclude>
+    <ClInclude Include="process_animx.h">
+      <Filter>Source Files\GetAnimation</Filter>
+    </ClInclude>
+    <ClInclude Include="process_skelx.h">
+      <Filter>Source Files\GetAnimation</Filter>
+    </ClInclude>
+    <ClInclude Include="process_vrml.h">
+      <Filter>Source Files\GetAnimation</Filter>
+    </ClInclude>
+    <ClInclude Include="processanim.h">
+      <Filter>Source Files\GetAnimation</Filter>
+    </ClInclude>
+    <ClInclude Include="..\GetVrml\tree.h">
+      <Filter>Source Files\FromGetVrml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\GetVrml\vrml.h">
+      <Filter>Source Files\FromGetVrml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\seq\animtrack.h">
+      <Filter>Source Files\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\seq\animtrackanimate.h">
+      <Filter>Source Files\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\seq\bones.h">
+      <Filter>Source Files\Common</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="GetAnimation2.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="small.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="GetAnimation2.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>

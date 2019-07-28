@@ -1,0 +1,51 @@
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "mapserver", "mapserver.vcproj", "{63678ADE-8025-4E76-BCC9-A4F869A5937D}"
+	ProjectSection(ProjectDependencies) = postProject
+		{10980900-D4E8-420B-ADE5-06AFDDD419BF} = {10980900-D4E8-420B-ADE5-06AFDDD419BF}
+		{A6741F6E-5476-4F9F-9D65-62B54AAF1D08} = {A6741F6E-5476-4F9F-9D65-62B54AAF1D08}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "UtilitiesLib", "..\libs\UtilitiesLib\UtilitiesLib.vcproj", "{A6741F6E-5476-4F9F-9D65-62B54AAF1D08}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "AILib", "..\libs\AILib\AILib.vcproj", "{10980900-D4E8-420B-ADE5-06AFDDD419BF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Beaconizer|Win32 = Beaconizer|Win32
+		Debug|Win32 = Debug|Win32
+		Full Debug|Win32 = Full Debug|Win32
+		Opt Debug|Win32 = Opt Debug|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{63678ADE-8025-4E76-BCC9-A4F869A5937D}.Beaconizer|Win32.ActiveCfg = Beaconizer|Win32
+		{63678ADE-8025-4E76-BCC9-A4F869A5937D}.Beaconizer|Win32.Build.0 = Beaconizer|Win32
+		{63678ADE-8025-4E76-BCC9-A4F869A5937D}.Debug|Win32.ActiveCfg = Debug|Win32
+		{63678ADE-8025-4E76-BCC9-A4F869A5937D}.Debug|Win32.Build.0 = Debug|Win32
+		{63678ADE-8025-4E76-BCC9-A4F869A5937D}.Full Debug|Win32.ActiveCfg = Full Debug|Win32
+		{63678ADE-8025-4E76-BCC9-A4F869A5937D}.Full Debug|Win32.Build.0 = Full Debug|Win32
+		{63678ADE-8025-4E76-BCC9-A4F869A5937D}.Opt Debug|Win32.ActiveCfg = Opt Debug|Win32
+		{63678ADE-8025-4E76-BCC9-A4F869A5937D}.Opt Debug|Win32.Build.0 = Opt Debug|Win32
+		{A6741F6E-5476-4F9F-9D65-62B54AAF1D08}.Beaconizer|Win32.ActiveCfg = Opt Debug|Win32
+		{A6741F6E-5476-4F9F-9D65-62B54AAF1D08}.Beaconizer|Win32.Build.0 = Opt Debug|Win32
+		{A6741F6E-5476-4F9F-9D65-62B54AAF1D08}.Debug|Win32.ActiveCfg = Debug|Win32
+		{A6741F6E-5476-4F9F-9D65-62B54AAF1D08}.Debug|Win32.Build.0 = Debug|Win32
+		{A6741F6E-5476-4F9F-9D65-62B54AAF1D08}.Full Debug|Win32.ActiveCfg = Full Debug|Win32
+		{A6741F6E-5476-4F9F-9D65-62B54AAF1D08}.Full Debug|Win32.Build.0 = Full Debug|Win32
+		{A6741F6E-5476-4F9F-9D65-62B54AAF1D08}.Opt Debug|Win32.ActiveCfg = Opt Debug|Win32
+		{A6741F6E-5476-4F9F-9D65-62B54AAF1D08}.Opt Debug|Win32.Build.0 = Opt Debug|Win32
+		{10980900-D4E8-420B-ADE5-06AFDDD419BF}.Beaconizer|Win32.ActiveCfg = Opt Debug|Win32
+		{10980900-D4E8-420B-ADE5-06AFDDD419BF}.Beaconizer|Win32.Build.0 = Opt Debug|Win32
+		{10980900-D4E8-420B-ADE5-06AFDDD419BF}.Debug|Win32.ActiveCfg = Debug|Win32
+		{10980900-D4E8-420B-ADE5-06AFDDD419BF}.Debug|Win32.Build.0 = Debug|Win32
+		{10980900-D4E8-420B-ADE5-06AFDDD419BF}.Full Debug|Win32.ActiveCfg = Full Debug|Win32
+		{10980900-D4E8-420B-ADE5-06AFDDD419BF}.Full Debug|Win32.Build.0 = Full Debug|Win32
+		{10980900-D4E8-420B-ADE5-06AFDDD419BF}.Opt Debug|Win32.ActiveCfg = Opt Debug|Win32
+		{10980900-D4E8-420B-ADE5-06AFDDD419BF}.Opt Debug|Win32.Build.0 = Opt Debug|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(DevPartner Solution Properties) = postSolution
+	EndGlobalSection
+EndGlobal
